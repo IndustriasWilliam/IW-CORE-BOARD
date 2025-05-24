@@ -1,0 +1,4 @@
+/HARDWARE/*.lck
+/HARDWARE/*-backups
+/STMCubeMX/iW-CORE-BOARD/Debug
+/STMCubeMX/iW-CORE-BOARD/Release
