@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "696567ca-eb60-4c1b-95fc-85195a4a98ae")
+	(uuid "ea2fa28b-f56c-4215-a400-af582894d3b7")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Connector_Generic_MountingPin:Conn_01x06_MountingPin"
@@ -4344,7 +4344,7 @@
 		(uuid "edbe1c08-4ee5-4fdd-b8a0-a58a97cad656")
 	)
 	(global_label "LTDC_HSYNC"
-		(shape output)
+		(shape input)
 		(at 147.32 105.41 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4366,7 +4366,7 @@
 		)
 	)
 	(global_label "LTDC_B4"
-		(shape output)
+		(shape input)
 		(at 147.32 87.63 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4388,7 +4388,7 @@
 		)
 	)
 	(global_label "LTDC_CLK"
-		(shape output)
+		(shape input)
 		(at 147.32 100.33 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4410,7 +4410,7 @@
 		)
 	)
 	(global_label "LTDC_R4"
-		(shape output)
+		(shape input)
 		(at 147.32 46.99 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4454,7 +4454,7 @@
 		)
 	)
 	(global_label "LTDC_G2"
-		(shape output)
+		(shape input)
 		(at 147.32 62.23 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4476,7 +4476,7 @@
 		)
 	)
 	(global_label "LTDC_G5"
-		(shape output)
+		(shape input)
 		(at 147.32 69.85 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4520,7 +4520,7 @@
 		)
 	)
 	(global_label "LTDC_R7"
-		(shape output)
+		(shape input)
 		(at 147.32 54.61 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4542,7 +4542,7 @@
 		)
 	)
 	(global_label "LTDC_G4"
-		(shape output)
+		(shape input)
 		(at 147.32 67.31 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4564,7 +4564,7 @@
 		)
 	)
 	(global_label "LTDC_G6"
-		(shape output)
+		(shape input)
 		(at 147.32 72.39 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4586,7 +4586,7 @@
 		)
 	)
 	(global_label "LTDC_G3"
-		(shape output)
+		(shape input)
 		(at 147.32 64.77 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4608,7 +4608,7 @@
 		)
 	)
 	(global_label "LTDC_B6"
-		(shape output)
+		(shape input)
 		(at 147.32 92.71 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4630,7 +4630,7 @@
 		)
 	)
 	(global_label "LTDC_R3"
-		(shape output)
+		(shape input)
 		(at 147.32 44.45 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4652,7 +4652,7 @@
 		)
 	)
 	(global_label "LTDC_B3"
-		(shape output)
+		(shape input)
 		(at 147.32 85.09 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4674,7 +4674,7 @@
 		)
 	)
 	(global_label "LTDC_VSYNC"
-		(shape output)
+		(shape input)
 		(at 147.32 107.95 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4696,7 +4696,7 @@
 		)
 	)
 	(global_label "LTDC_B7"
-		(shape output)
+		(shape input)
 		(at 147.32 95.25 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4718,7 +4718,7 @@
 		)
 	)
 	(global_label "LTDC_G7"
-		(shape output)
+		(shape input)
 		(at 147.32 74.93 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4740,7 +4740,7 @@
 		)
 	)
 	(global_label "LTDC_DE"
-		(shape output)
+		(shape input)
 		(at 147.32 110.49 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4784,7 +4784,7 @@
 		)
 	)
 	(global_label "LTDC_R5"
-		(shape output)
+		(shape input)
 		(at 147.32 49.53 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4806,7 +4806,7 @@
 		)
 	)
 	(global_label "LTDC_B5"
-		(shape output)
+		(shape input)
 		(at 147.32 90.17 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4828,7 +4828,7 @@
 		)
 	)
 	(global_label "LTDC_B2"
-		(shape output)
+		(shape input)
 		(at 147.32 82.55 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4850,7 +4850,7 @@
 		)
 	)
 	(global_label "LTDC_R6"
-		(shape output)
+		(shape input)
 		(at 147.32 52.07 180)
 		(fields_autoplaced yes)
 		(effects
@@ -4915,7 +4915,7 @@
 		)
 	)
 	(global_label "LTDC_R2"
-		(shape output)
+		(shape input)
 		(at 147.32 41.91 180)
 		(fields_autoplaced yes)
 		(effects

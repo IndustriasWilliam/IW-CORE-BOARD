@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "9c53ec6a-b90a-4507-81ef-02c65dccc43c")
+	(uuid "ab273827-eb29-46d9-b3e1-1484d9fb13d4")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:C_Small"
@@ -1606,7 +1606,7 @@
 		)
 		(uuid "a9f90387-b0e5-435e-9b55-6eee7293224a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 196.4295 107.95 0)
+			(at 196.5089 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)

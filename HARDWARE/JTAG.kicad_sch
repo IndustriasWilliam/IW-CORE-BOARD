@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "4ca3b988-dc46-4e9a-b397-1d213101f267")
+	(uuid "c61d1113-1afb-4379-8ff6-a86ec59d71c3")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Connector:USB_C_Receptacle_USB2.0"
@@ -4468,7 +4468,7 @@
 		(uuid "eb562fdc-9dc0-48e5-8655-a9a49faf550f")
 	)
 	(global_label "UART7_TX"
-		(shape bidirectional)
+		(shape input)
 		(at 165.1 87.63 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4479,7 +4479,7 @@
 		)
 		(uuid "1bfb0d20-46fa-4cd7-95f9-93cfb52f7610")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.2074 87.63 0)
+			(at 177.0961 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4490,7 +4490,7 @@
 		)
 	)
 	(global_label "SDMMC2_D2"
-		(shape output)
+		(shape input)
 		(at 165.1 69.85 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4600,7 +4600,7 @@
 		)
 	)
 	(global_label "SWDCLK_OB"
-		(shape output)
+		(shape input)
 		(at 242.57 119.38 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4622,7 +4622,7 @@
 		)
 	)
 	(global_label "SWDCLK"
-		(shape output)
+		(shape input)
 		(at 180.34 67.31 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4633,7 +4633,7 @@
 		)
 		(uuid "6b5a233b-6e69-47ec-b13f-639525c6fe60")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 190.7448 67.31 0)
+			(at 190.8242 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4754,7 +4754,7 @@
 		)
 	)
 	(global_label "UART7_RX"
-		(shape bidirectional)
+		(shape output)
 		(at 165.1 85.09 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4765,7 +4765,7 @@
 		)
 		(uuid "b5be330f-1070-4c38-869c-7c2e9bd396aa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 178.5098 85.09 0)
+			(at 177.3985 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4842,7 +4842,7 @@
 		)
 	)
 	(global_label "NRST_OB"
-		(shape output)
+		(shape input)
 		(at 242.57 127 0)
 		(fields_autoplaced yes)
 		(effects
