@@ -4447,7 +4447,7 @@
 		)
 		(uuid "fe26df24-1d2f-41d4-853e-14513c7a46db")
 	)
-	(label "USB_OB_N"
+	(label "USB_O_N"
 		(at 229.87 68.58 0)
 		(effects
 			(font
@@ -4457,7 +4457,7 @@
 		)
 		(uuid "e5308534-de66-49d2-b2f0-6976216867ff")
 	)
-	(label "USB_OB_P"
+	(label "USB_O_P"
 		(at 229.87 92.71 0)
 		(effects
 			(font
