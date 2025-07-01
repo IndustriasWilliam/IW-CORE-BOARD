@@ -13491,7 +13491,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_IDC:IDC-Header_2x09_P2.54mm_Vertical_SMD"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x09_P2.54mm_Vertical_SMD"
 			(at 38.1 104.14 0)
 			(effects
 				(font
@@ -14733,7 +14733,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_IDC:IDC-Header_2x09_P2.54mm_Vertical_SMD"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x09_P2.54mm_Vertical_SMD"
 			(at 38.1 138.43 0)
 			(effects
 				(font
@@ -17117,7 +17117,7 @@
 				)
 			)
 		)
-		(property "Value" "100R"
+		(property "Value" "0R"
 			(at 246.38 57.15 90)
 			(effects
 				(font
@@ -17125,7 +17125,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 246.38 59.69 0)
 			(effects
 				(font
