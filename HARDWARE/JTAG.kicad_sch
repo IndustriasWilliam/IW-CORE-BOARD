@@ -3687,12 +3687,6 @@
 		(uuid "1805e03a-70c4-482f-b8f4-737f1da991a6")
 	)
 	(junction
-		(at 218.44 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2613dd0d-c808-4455-be08-084c1c275716")
-	)
-	(junction
 		(at 215.9 127)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3775,6 +3769,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eb444e0f-64e1-46f4-920c-2b553f9fb623")
+	)
+	(junction
+		(at 218.44 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f912bec6-a7c8-464c-913d-e244629fe180")
 	)
 	(no_connect
 		(at 246.38 68.58)
@@ -4222,7 +4222,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 53.34) (xy 218.44 54.61)
+			(xy 218.44 52.07) (xy 218.44 53.34)
 		)
 		(stroke
 			(width 0)
@@ -4279,6 +4279,16 @@
 			(type default)
 		)
 		(uuid "71e033ae-1187-46a4-87af-73c7b9f9745b")
+	)
+	(wire
+		(pts
+			(xy 218.44 53.34) (xy 218.44 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75fcd79f-1bd9-4118-868e-e3bdf875b3ac")
 	)
 	(wire
 		(pts
@@ -4379,16 +4389,6 @@
 			(type default)
 		)
 		(uuid "951f1823-fe9e-4b82-bfc0-fc15846302ad")
-	)
-	(wire
-		(pts
-			(xy 240.03 60.96) (xy 246.38 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96e7a7d2-4d93-4852-95e8-2d15849db6ac")
 	)
 	(wire
 		(pts
@@ -4512,7 +4512,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 60.96) (xy 234.95 60.96)
+			(xy 227.33 60.96) (xy 246.38 60.96)
 		)
 		(stroke
 			(width 0)
@@ -5226,73 +5226,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 237.49 60.96 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1a072d59-49b9-422a-8f9f-f44921d7c8c8")
-		(property "Reference" "R40"
-			(at 237.49 55.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100R"
-			(at 237.49 58.42 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 237.49 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 237.49 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 237.49 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "33c3c537-64b4-4019-a8f0-948d25cc30fb")
-		)
-		(pin "2"
-			(uuid "92ca21e1-9071-4059-a1c6-1270189baddd")
-		)
-		(instances
-			(project "iW-CORE-BOARD"
-				(path "/8e673f85-6c19-4236-92ba-1263b1e08ba7/588dae47-126f-4ff5-81a5-f645d070de87"
-					(reference "R40")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 111.76 46.99 0)
 		(unit 1)
@@ -5815,71 +5748,6 @@
 			(project "iW-CORE-BOARD"
 				(path "/8e673f85-6c19-4236-92ba-1263b1e08ba7/588dae47-126f-4ff5-81a5-f645d070de87"
 					(reference "J9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 218.44 53.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "398fe3b1-8858-45da-b968-c2ddc146e4b7")
-		(property "Reference" "#PWR064"
-			(at 218.44 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5VBUS"
-			(at 218.44 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 218.44 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 218.44 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 218.44 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2e359bb7-7192-4649-9add-3a5177e1d5d9")
-		)
-		(instances
-			(project "iW-CORE-BOARD"
-				(path "/8e673f85-6c19-4236-92ba-1263b1e08ba7/588dae47-126f-4ff5-81a5-f645d070de87"
-					(reference "#PWR064")
 					(unit 1)
 				)
 			)
@@ -6911,6 +6779,71 @@
 			(project "iW-CORE-BOARD"
 				(path "/8e673f85-6c19-4236-92ba-1263b1e08ba7/588dae47-126f-4ff5-81a5-f645d070de87"
 					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 218.44 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b8af58e8-ad04-4f58-be9c-6e41be586c3b")
+		(property "Reference" "#PWR078"
+			(at 218.44 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V_USB_JLOB"
+			(at 218.44 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.44 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 218.44 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1a0650a6-15b3-48b2-8a0e-ba479d6f0682")
+		)
+		(instances
+			(project "iW-CORE-BOARD"
+				(path "/8e673f85-6c19-4236-92ba-1263b1e08ba7/588dae47-126f-4ff5-81a5-f645d070de87"
+					(reference "#PWR078")
 					(unit 1)
 				)
 			)
