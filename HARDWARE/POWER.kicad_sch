@@ -1513,6 +1513,89 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "MountingHole_1"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_1_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Linear:AMS1117-3.3"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2188,16 +2271,16 @@
 		(uuid "213bf9f2-36d4-414d-88a1-d59de8b8f1c8")
 	)
 	(junction
-		(at 87.63 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "41eb03a0-ae99-4cad-9731-8c1bdc59fdf3")
-	)
-	(junction
 		(at 261.62 62.23)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "584e0058-abda-436b-851b-da6cbeb173c1")
+	)
+	(junction
+		(at 87.63 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6afa7d94-f953-42b4-b791-e41a239c2500")
 	)
 	(junction
 		(at 198.12 57.15)
@@ -2303,16 +2386,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 55.88) (xy 87.63 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0dc3bc4d-e654-4a21-8ffd-6e9e006d0dec")
-	)
-	(wire
-		(pts
 			(xy 261.62 59.69) (xy 261.62 62.23)
 		)
 		(stroke
@@ -2330,16 +2403,6 @@
 			(type default)
 		)
 		(uuid "0ea01893-2acf-4db7-a970-89d88ab329e0")
-	)
-	(wire
-		(pts
-			(xy 87.63 57.15) (xy 102.87 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f2bd360-58b0-4ae3-b4f8-6cc720a80739")
 	)
 	(wire
 		(pts
@@ -2513,6 +2576,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 57.15) (xy 87.63 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5181bba8-61c1-4e0a-99a8-6aba21bc08ba")
+	)
+	(wire
+		(pts
 			(xy 124.46 72.39) (xy 121.92 72.39)
 		)
 		(stroke
@@ -2580,6 +2653,16 @@
 			(type default)
 		)
 		(uuid "6ea40b4b-b286-4e35-b090-34d4e94777e7")
+	)
+	(wire
+		(pts
+			(xy 87.63 57.15) (xy 102.87 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "708a008f-8dc5-401f-910e-85b4c8d6293e")
 	)
 	(wire
 		(pts
@@ -2813,6 +2896,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 52.07) (xy 55.88 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "baa072b8-843f-4bdb-b00a-66b52c37cb89")
+	)
+	(wire
+		(pts
 			(xy 171.45 123.19) (xy 171.45 127)
 		)
 		(stroke
@@ -2863,6 +2956,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 57.15) (xy 87.63 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d061ed69-79f0-4edc-84cd-875e90f585e9")
+	)
+	(wire
+		(pts
 			(xy 115.57 137.16) (xy 124.46 137.16)
 		)
 		(stroke
@@ -2880,16 +2983,6 @@
 			(type default)
 		)
 		(uuid "d92ceca4-3cd6-42ac-8abb-b47f32792862")
-	)
-	(wire
-		(pts
-			(xy 87.63 57.15) (xy 87.63 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dbffba1e-a429-462f-a656-69a536ae4e77")
 	)
 	(wire
 		(pts
@@ -3360,6 +3453,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 55.88 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "12a43db9-f06c-4f16-838b-7a94273cfcdd")
+		(property "Reference" "#PWR030"
+			(at 55.88 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V_SERIAL"
+			(at 55.88 47.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 55.88 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "11852217-bc25-43fb-8382-ede47fd71852")
+		)
+		(instances
+			(project "iW-CORE-BOARD"
+				(path "/8e673f85-6c19-4236-92ba-1263b1e08ba7/ced8c1e0-9357-4387-8a18-0f61c1461310"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "LED_1")
 		(lib_id "Device:LED")
 		(at 109.22 68.58 90)
@@ -3530,7 +3689,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 161.29 130.81 0)
 			(effects
 				(font
@@ -3843,6 +4002,71 @@
 		)
 	)
 	(symbol
+		(lib_name "MountingHole_1")
+		(lib_id "Mechanical:MountingHole")
+		(at 245.11 80.01 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2e0f67af-15d5-47c5-94f4-5582f3fbce7c")
+		(property "Reference" "H6"
+			(at 247.65 78.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 247.65 81.2799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.5mm"
+			(at 245.11 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 245.11 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 245.11 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "iW-CORE-BOARD"
+				(path "/8e673f85-6c19-4236-92ba-1263b1e08ba7/ced8c1e0-9357-4387-8a18-0f61c1461310"
+					(reference "H6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "IP5306:IP5306")
 		(at 137.16 64.77 0)
 		(unit 1)
@@ -4148,6 +4372,71 @@
 		)
 	)
 	(symbol
+		(lib_name "MountingHole_1")
+		(lib_id "Mechanical:MountingHole")
+		(at 245.11 73.66 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b629d16-dcb0-4434-bd32-91620f7afd81")
+		(property "Reference" "H5"
+			(at 247.65 72.3899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 247.65 74.9299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.5mm"
+			(at 245.11 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 245.11 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 245.11 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/8e673f85-6c19-4236-92ba-1263b1e08ba7/ced8c1e0-9357-4387-8a18-0f61c1461310"
+					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 124.46 129.54 0)
 		(unit 1)
@@ -4393,7 +4682,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 102.87 60.96 0)
 			(effects
 				(font
@@ -4528,7 +4817,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 87.63 68.58 0)
 			(effects
 				(font
@@ -4565,71 +4854,6 @@
 			(project ""
 				(path "/8e673f85-6c19-4236-92ba-1263b1e08ba7/ced8c1e0-9357-4387-8a18-0f61c1461310"
 					(reference "C17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 87.63 55.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "64dda882-64ea-4746-ac0d-8f71142f4e5a")
-		(property "Reference" "#PWR062"
-			(at 87.63 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5VBUS"
-			(at 87.63 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 87.63 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 87.63 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 87.63 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d230d130-b2f0-4840-b69f-44bf9341b1ca")
-		)
-		(instances
-			(project "iW-CORE-BOARD"
-				(path "/8e673f85-6c19-4236-92ba-1263b1e08ba7/ced8c1e0-9357-4387-8a18-0f61c1461310"
-					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -5741,7 +5965,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 115.57 129.54 0)
 			(effects
 				(font
@@ -6005,7 +6229,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_CK_RS282G05A3"
+		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T-MP_NO_Horizontal_Alps_SKRTLAE010"
 			(at 168.91 81.28 0)
 			(effects
 				(font

@@ -62,8 +62,8 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "588dae47-126f-4ff5-81a5-f645d070de87")
-		(property "Sheetname" "JTAG"
+		(uuid "7c82ecdf-d401-48d8-8feb-7255e25a7ccc")
+		(property "Sheetname" "USB-SERIAL"
 			(at 133.35 93.2684 0)
 			(effects
 				(font
@@ -72,7 +72,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "JTAG.kicad_sch"
+		(property "Sheetfile" "USB-SERIAL.kicad_sch"
 			(at 133.35 117.4246 0)
 			(effects
 				(font
