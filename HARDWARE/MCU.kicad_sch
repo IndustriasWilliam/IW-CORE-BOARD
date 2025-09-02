@@ -6554,23 +6554,25 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at -8.89 8.89 0)
+			(property "Reference" "U7"
+				(at -4.064 -14.478 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "W25Q128JVS"
-				(at 7.62 8.89 0)
+			(property "Value" "W25Q256JVS"
+				(at -13.462 -12.446 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm"
+			(property "Footprint" "Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -6588,13 +6590,12 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "128Mb Serial Flash Memory, Standard/Dual/Quad SPI, SOIC-8"
+			(property "Description" ""
 				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(hide yes)
 				)
 			)
 			(property "ki_keywords" "flash memory SPI QPI DTR"
@@ -6766,6 +6767,24 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -12.7 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8097,6 +8116,12 @@
 		(uuid "9be11a50-d63e-4a16-8024-1717c1679d42")
 	)
 	(junction
+		(at 81.28 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9c9d3d69-a8f9-424f-b3af-5963ed63c902")
+	)
+	(junction
 		(at 172.72 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8644,7 +8669,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 120.65) (xy 81.28 124.46)
+			(xy 81.28 120.65) (xy 81.28 121.92)
 		)
 		(stroke
 			(width 0)
@@ -8891,6 +8916,16 @@
 			(type default)
 		)
 		(uuid "476b6d31-a5aa-431c-a57f-1be7ce3e88c2")
+	)
+	(wire
+		(pts
+			(xy 78.74 120.65) (xy 78.74 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48187533-f2da-4e93-b409-aa38f68035fe")
 	)
 	(wire
 		(pts
@@ -9341,6 +9376,16 @@
 			(type default)
 		)
 		(uuid "79d0e64c-ed5c-4631-98e3-a2f984d6494c")
+	)
+	(wire
+		(pts
+			(xy 78.74 121.92) (xy 81.28 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b8d2bf4-3f9b-4cb2-8bf8-93877da4cc73")
 	)
 	(wire
 		(pts
@@ -9941,6 +9986,16 @@
 			(type default)
 		)
 		(uuid "bf34491e-6930-4d67-b17d-11cd0b9d7daa")
+	)
+	(wire
+		(pts
+			(xy 81.28 121.92) (xy 81.28 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c41b76e0-4f28-4e86-8089-2b9a810a0727")
 	)
 	(wire
 		(pts
@@ -14906,6 +14961,9 @@
 		)
 		(pin "8"
 			(uuid "f55e06a0-6c8e-4728-987f-32fed10575dc")
+		)
+		(pin "9"
+			(uuid "889da327-dc70-47bd-ada9-210e0c19cc08")
 		)
 		(instances
 			(project "iW-CORE-BOARD"
