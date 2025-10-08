@@ -2,3 +2,5 @@
 /HARDWARE/*-backups
 /STMCubeMX/iW-CORE-BOARD/Debug
 /STMCubeMX/iW-CORE-BOARD/Release
+/ExternalLoader/ExternalLoader/Debug
+/ExternalLoader/ExternalLoader/Release
