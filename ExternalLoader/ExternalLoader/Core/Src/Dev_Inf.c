@@ -7,7 +7,6 @@
 
 #include "Dev_Inf.h"
 
-#if EXTERNAL_MEM == W25Q256
 
 struct StorageInfo const StorageInfo  =  {
 		"IW-CORE-BOARD-32MB",			// Device Name + version number
@@ -24,7 +23,3 @@ struct StorageInfo const StorageInfo  =  {
 };
 
 
-#else
-
-
-#endif

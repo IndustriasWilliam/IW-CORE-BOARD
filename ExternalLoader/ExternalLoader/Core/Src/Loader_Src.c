@@ -41,7 +41,7 @@ int Init(uint8_t configureMemoryMappedMode)
      * change VTOR setting for H7 device
      * SCB->VTOR = 0x24000000 | 0x200;
      *
-     * change VTOR setting for other devices
+     * change VTOR setting for othr devices
      * SCB->VTOR = 0x20000000 | 0x200;
      *
      * */
@@ -89,7 +89,7 @@ int Init(uint8_t configureMemoryMappedMode)
  * @retval  LOADER_OK = 1       : Operation succeeded
  * @retval  LOADER_FAIL = 0 : Operation failed
  */
-int Write(uint32_t Address, uint32_t Size, uint8_t* buffer)
+KeepInCompilation int Write(uint32_t Address, uint32_t Size, uint8_t* buffer)
 {
 
     __set_PRIMASK(0); //enable interrupts
@@ -116,7 +116,7 @@ int Write(uint32_t Address, uint32_t Size, uint8_t* buffer)
  * @retval  LOADER_OK = 1       : Operation succeeded
  * @retval  LOADER_FAIL = 0 : Operation failed
  */
-int SectorErase(uint32_t EraseStartAddress, uint32_t EraseEndAddress)
+KeepInCompilation int SectorErase(uint32_t EraseStartAddress, uint32_t EraseEndAddress)
 {
 
     __set_PRIMASK(0); //enable interrupts
@@ -147,7 +147,7 @@ int SectorErase(uint32_t EraseStartAddress, uint32_t EraseEndAddress)
  *     none
  * Note: Optional for all types of device
  */
-int MassErase(void)
+KeepInCompilation int MassErase(void)
 {
 
     __set_PRIMASK(0); //enable interrupts
@@ -181,7 +181,7 @@ int MassErase(void)
  *     R0             : Checksum value
  * Note: Optional for all types of device
  */
-uint32_t CheckSum(uint32_t StartAddress, uint32_t Size, uint32_t InitVal) {
+KeepInCompilation uint32_t CheckSum(uint32_t StartAddress, uint32_t Size, uint32_t InitVal) {
     uint8_t missalignementAddress = StartAddress % 4;
     uint8_t missalignementSize = Size;
     int cnt;
@@ -254,7 +254,7 @@ uint32_t CheckSum(uint32_t StartAddress, uint32_t Size, uint32_t InitVal) {
  *     R1             : Checksum value
  * Note: Optional for all types of device
  */
-uint64_t Verify(uint32_t MemoryAddr, uint32_t RAMBufferAddr, uint32_t Size, uint32_t missalignement)
+KeepInCompilation uint64_t Verify(uint32_t MemoryAddr, uint32_t RAMBufferAddr, uint32_t Size, uint32_t missalignement)
 {
 
     __set_PRIMASK(0); //enable interrupts

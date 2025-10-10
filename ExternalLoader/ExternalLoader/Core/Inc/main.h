@@ -63,6 +63,7 @@ void Error_Handler(void);
 #define LOADER_OK   0x1
 #define LOADER_FAIL 0x0
 
+#define KeepInCompilation __attribute__((used))
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
