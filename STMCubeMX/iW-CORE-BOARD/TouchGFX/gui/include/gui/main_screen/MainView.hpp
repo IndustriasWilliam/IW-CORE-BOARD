@@ -12,15 +12,11 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
-    virtual void handleTickEvent();
+    virtual void updatePoolLight();
+
+    void setPoolLight(bool state);
+
 protected:
-    int tickCounter;
-    int analogHours;
-    int analogMinutes;
-    int analogSeconds;
-    int digitalHours;
-    int digitalMinutes;
-    int digitalSeconds;
 };
 
 #endif // MAIN_VIEW_HPP

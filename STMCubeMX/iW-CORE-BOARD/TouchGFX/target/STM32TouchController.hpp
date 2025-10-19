@@ -63,6 +63,12 @@ public:
      * @return True if a touch has been detected, otherwise false.
      */
     virtual bool sampleTouch(int32_t& x, int32_t& y);
+
+	int32_t map_coord(uint32_t coordenada_touchscreen, uint32_t max_touchscreen, uint32_t max_tela) {
+		float x_abs = (float)coordenada_touchscreen / max_touchscreen;
+		int32_t pos_cal = (int32_t)(x_abs * (float)max_tela);
+		return pos_cal;
+    }
 };
 
 #endif // STM32TOUCHCONTROLLER_HPP

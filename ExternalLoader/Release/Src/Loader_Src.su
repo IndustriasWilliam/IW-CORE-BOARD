@@ -1,0 +1,7 @@
+../Src/Loader_Src.c:17:5:__io_putchar	24	static
+../Src/Loader_Src.c:31:5:Init	32	static,ignoring_inline_asm
+../Src/Loader_Src.c:86:5:Write	40	static,ignoring_inline_asm
+../Src/Loader_Src.c:113:5:SectorErase	32	static,ignoring_inline_asm
+../Src/Loader_Src.c:144:5:MassErase	24	static,ignoring_inline_asm
+../Src/Loader_Src.c:177:10:CheckSum	40	static
+../Src/Loader_Src.c:257:10:Verify	80	static,ignoring_inline_asm

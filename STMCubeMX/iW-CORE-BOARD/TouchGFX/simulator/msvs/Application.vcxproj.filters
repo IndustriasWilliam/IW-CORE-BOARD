@@ -130,6 +130,78 @@
     <Filter Include="Source Files\generated\simulator">
       <UniqueIdentifier>{C07B02B9-A55E-47AA-AD61-59A6AAD754E6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui">
+      <UniqueIdentifier>02A6E1C2-8C6B-48F0-7B41-41E45C2088F3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui">
+      <UniqueIdentifier>28F4E850-8078-2950-CA55-08E6861243C2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated">
+      <UniqueIdentifier>E6025A87-D4B3-4060-639A-A1D5F97F740C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated">
+      <UniqueIdentifier>CB7376F5-3F7E-5F0E-1093-8AC6328E1084</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\common">
+      <UniqueIdentifier>53D2F580-3109-90C7-1654-738571BEC536</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\model">
+      <UniqueIdentifier>497A207E-CE3C-980B-5AE1-00E2DFC53C90</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\model">
+      <UniqueIdentifier>73A8C8A9-51D1-1071-770F-6F402BDFC998</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\common">
+      <UniqueIdentifier>D774CDA3-4C9A-A775-87B4-208DDE64C2CC</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\common">
+      <UniqueIdentifier>31DDAD10-B7A9-C0E3-CEC1-EDA5DF5D91DA</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\simulator\include">
+      <UniqueIdentifier>E47BE1FC-4C5F-DA85-4472-B6AB9434BBAF</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\common">
+      <UniqueIdentifier>8C4C6CE2-85F0-ECD4-CB2C-FCFC3857E089</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\simulator\video">
+      <UniqueIdentifier>AF3BB2C4-1308-C2DE-B0FF-AB019031480A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\simulator\include\simulator">
+      <UniqueIdentifier>6C8F0F04-D357-5DCD-7943-F94B03C8C121</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\simulator\include\simulator\video">
+      <UniqueIdentifier>F1A23A59-99BC-1DC9-592A-653A4843A630</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\containers">
+      <UniqueIdentifier>42D888F7-0259-1311-A3A5-9A26D418D144</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\containers">
+      <UniqueIdentifier>351E43F9-FA23-72CD-8371-18014BD5CEF0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\pooltemp_screen">
+      <UniqueIdentifier>CD2260EA-70AA-506C-A454-65489E15862F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\main_screen">
+      <UniqueIdentifier>645099DD-03CA-A979-F86B-4425621C71E4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\pooltemp_screen">
+      <UniqueIdentifier>83A2BE8E-5273-B329-11FC-6ECB7ABE5B47</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\main_screen">
+      <UniqueIdentifier>FF4FBFF1-A2EA-4C4E-9C28-8C7CF87001BD</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\pooltemp_screen">
+      <UniqueIdentifier>7638C236-967A-A8FE-2BA8-64B391BB76CA</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\main_screen">
+      <UniqueIdentifier>B60E1771-4F96-F2B9-D8D8-C80930089F8B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\main_screen">
+      <UniqueIdentifier>B89B4FF6-B852-2343-FE69-EED418577C74</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\pooltemp_screen">
+      <UniqueIdentifier>599F1E97-40AA-F4A6-6C36-DA3F900B7294</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -149,6 +221,36 @@
     </ClCompile>
     <ClCompile Include="$(ApplicationRoot)\generated\simulator\src\mainBase.cpp">
       <Filter>Source Files\generated\simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\common\FrontendApplication.cpp">
+      <Filter>Source Files\gui\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp">
+      <Filter>Source Files\generated\gui_generated\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\model\Model.cpp">
+      <Filter>Source Files\gui\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
+      <Filter>Source Files\generated\simulator\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\main_screen\MainPresenter.cpp">
+      <Filter>Source Files\gui\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\main_screen\MainView.cpp">
+      <Filter>Source Files\gui\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\main_screen\MainViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\pooltemp_screen\PoolTempPresenter.cpp">
+      <Filter>Source Files\gui\pooltemp_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\pooltemp_screen\PoolTempView.cpp">
+      <Filter>Source Files\gui\pooltemp_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\pooltemp_screen\PoolTempViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\pooltemp_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -561,6 +663,54 @@
     </ClInclude>
     <ClInclude Include="$(ApplicationRoot)\generated\simulator\include\simulator\mainBase.hpp">
       <Filter>Header Files\generated\simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\simulator\include\simulator\video\DirectFrameBufferVideoController.hpp">
+      <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\FrontendApplication.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendApplicationBase.hpp">
+      <Filter>Header Files\generated\gui_generated\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\FrontendHeap.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendHeapBase.hpp">
+      <Filter>Header Files\generated\gui_generated\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\simulator\include\simulator\video\MJPEGDecoder.hpp">
+      <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\model\Model.hpp">
+      <Filter>Header Files\gui\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp">
+      <Filter>Header Files\gui\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
+      <Filter>Header Files\generated\gui_generated\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
+      <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainPresenter.hpp">
+      <Filter>Header Files\gui\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainView.hpp">
+      <Filter>Header Files\gui\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\main_screen\MainViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\pooltemp_screen\PoolTempPresenter.hpp">
+      <Filter>Header Files\gui\pooltemp_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\pooltemp_screen\PoolTempView.hpp">
+      <Filter>Header Files\gui\pooltemp_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\pooltemp_screen\PoolTempViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\pooltemp_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

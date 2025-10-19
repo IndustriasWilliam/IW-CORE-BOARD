@@ -1,0 +1,7 @@
+../Src/Loader_Src.c:17:5:__io_putchar	1
+../Src/Loader_Src.c:31:5:Init	4
+../Src/Loader_Src.c:86:5:Write	3
+../Src/Loader_Src.c:113:5:SectorErase	3
+../Src/Loader_Src.c:144:5:MassErase	3
+../Src/Loader_Src.c:177:10:CheckSum	14
+../Src/Loader_Src.c:257:10:Verify	4

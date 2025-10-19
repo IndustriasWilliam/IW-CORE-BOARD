@@ -5,70 +5,175 @@
         "Name": "Main",
         "Components": [
           {
-            "Type": "TiledImage",
+            "Type": "Image",
             "Name": "background",
             "Width": 480,
             "Height": 272,
-            "FileName": "background.png"
+            "RelativeFilename": "Main_Background.png"
           },
           {
-            "Type": "DigitalClock",
-            "Name": "digitalClock",
-            "X": 20,
-            "Y": 40,
-            "Width": 150,
-            "Height": 30,
-            "TextColor": {
-              "Red": 122,
-              "Green": 122,
-              "Blue": 122
-            },
-            "TextId": "Digital_clock",
-            "DisplaySeconds": true,
-            "DisplayLeadingZeroForHourIndicator": true,
-            "InitialHour": 10,
-            "InitialMinute": 10
+            "Type": "ToggleButton",
+            "Name": "onOffButton",
+            "X": 97,
+            "Y": 136,
+            "Width": 128,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png"
           },
           {
-            "Type": "AnalogClock",
-            "Name": "analogClock",
-            "X": 202,
-            "Y": 15,
-            "Width": 233,
-            "Height": 243,
-            "FileNameBackground": "clocks_backgrounds_clock_classic_background.png",
-            "RotationCenterX": 116,
-            "RotationCenterY": 116,
-            "UseAnimation": true,
-            "Duration": 10,
-            "Easing": "Cubic",
-            "EasingOption": "InOut",
-            "ClockHands": [
-              {
-                "Type": "SecondClockHand",
-                "FileNameHandImage": "clocks_hands_clock_classic_second_hand.png",
-                "RotationCenterX": 4,
-                "RotationCenterY": 79
-              },
-              {
-                "Type": "MinuteClockHand",
-                "FileNameHandImage": "clocks_hands_clock_classic_minute_hand.png",
-                "RotationCenterX": 2,
-                "RotationCenterY": 64
-              },
-              {
-                "Type": "HourClockHand",
-                "FileNameHandImage": "clocks_hands_clock_classic_hour_hand.png",
-                "RotationCenterX": 2,
-                "RotationCenterY": 44,
-                "HourHandMinuteCorrection": true
-              }
-            ],
-            "InitialHour": 10,
-            "InitialMinute": 10
+            "Type": "Button",
+            "Name": "buttonAdjust",
+            "X": 345,
+            "Y": 133,
+            "Width": 120,
+            "Height": 44,
+            "Pressed": "adjust_button_pressed.png",
+            "Released": "adjust_button.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bulpWhite",
+            "X": 27,
+            "Y": 117,
+            "Width": 60,
+            "Height": 60,
+            "RelativeFilename": "peare_hvid.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bulbYellow",
+            "X": 27,
+            "Y": 117,
+            "Width": 60,
+            "Height": 60,
+            "Visible": false,
+            "RelativeFilename": "peare_gul.png"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "AdjustClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonAdjust"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "PoolTemp"
+            }
+          },
+          {
+            "InteractionName": "toggleBulbColor",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "onOffButton"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "bulbYellow.setVisible(!bulbYellow.isVisible());\r\nbulbYellow.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "ChangePoolLight",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "onOffButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "updatePoolLight"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "PoolTemp",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "RelativeFilename": "settings_background.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "buttonOK",
+            "X": 180,
+            "Y": 207,
+            "Width": 120,
+            "Height": 44,
+            "Pressed": "ok_button_pressed.png",
+            "Released": "ok_button.png"
+          },
+          {
+            "Type": "Slider",
+            "Name": "slider",
+            "X": 11,
+            "Y": 121,
+            "Width": 357,
+            "Height": 50,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\Blue_Slider_Horizontal_Medium_Slider_Round_back.png",
+            "BackgroundSelected": "__designer\\Blue_Slider_Horizontal_Medium_Slider_Round_fill.png",
+            "Indicator": "__designer\\Blue_Slider_Horizontal_Medium_Indicators_Slider_Round_nob.png",
+            "BackgroundX": 2,
+            "BackgroundY": 19,
+            "IndicatorPos": 2,
+            "IndicatorMax": 309,
+            "ValueMax": 28,
+            "ValueMin": 12,
+            "InitValue": 18
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tempText",
+            "X": 381,
+            "Y": 117,
+            "Width": 115,
+            "Height": 46,
+            "TextId": "TextId2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "OkClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonOK"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "SliderChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "slider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "sliderMoved"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
@@ -124,5 +229,5 @@
     "OptionalComponents": [],
     "AdditionalFeatures": []
   },
-  "Version": "4.24.1"
+  "Version": "4.26.0"
 }

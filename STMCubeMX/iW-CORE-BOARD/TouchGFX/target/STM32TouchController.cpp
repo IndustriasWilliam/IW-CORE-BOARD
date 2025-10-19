@@ -21,8 +21,14 @@
 /* USER CODE END Header */
 
 /* USER CODE BEGIN STM32TouchController */
-
+#include <stdio.h>
 #include <STM32TouchController.hpp>
+
+extern "C"{
+	#include "bsp_bus.h"
+	#include "ts.h"
+
+}
 
 void STM32TouchController::init()
 {
@@ -30,6 +36,18 @@ void STM32TouchController::init()
      * Initialize touch controller and driver
      *
      */
+
+	int32_t probeStatus;
+	TS_Init_t hTS;
+
+	probeStatus = GT911_Probe(0);
+	if (probeStatus == BSP_ERROR_NONE) {
+		hTS.Orientation = TS_SWAP_NONE;
+	}
+	hTS.Accuracy = 8;
+	hTS.Width = LCD_GetXSize();
+	hTS.Height = LCD_GetYSize();
+	BSP_TS_Init(0, &hTS);
 }
 
 bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
@@ -44,6 +62,17 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
      * By default sampleTouch is called every tick, this can be adjusted by HAL::setTouchSampleRate(int8_t);
      *
      */
+//	TS_State_t TS_State = { 0 };
+//	BSP_TS_GetState(0, &TS_State);
+//
+//	if (TS_State.TouchDetected) {
+//
+//		x = map_coord(TS_State.TouchX, 1017, 480);
+//		y = map_coord(TS_State.TouchY, 593, 272);
+//
+//		printf("%i %i | %i %i\r\n", x, y, TS_State.TouchX, TS_State.TouchY);
+//		return true;
+//	}
     return false;
 }
 

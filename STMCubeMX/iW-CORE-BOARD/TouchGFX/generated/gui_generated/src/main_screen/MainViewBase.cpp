@@ -4,37 +4,36 @@
 #include <gui_generated/main_screen/MainViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 
-MainViewBase::MainViewBase()
+MainViewBase::MainViewBase() :
+    buttonCallback(this, &MainViewBase::buttonCallbackHandler)
 {
     __background.setPosition(0, 0, 480, 272);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    background.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_ID));
-    background.setPosition(0, 0, 480, 272);
-    background.setOffset(0, 0);
+    background.setXY(0, 0);
+    background.setBitmap(touchgfx::Bitmap(BITMAP_MAIN_BACKGROUND_ID));
     add(background);
 
-    digitalClock.setPosition(20, 40, 150, 30);
-    digitalClock.setColor(touchgfx::Color::getColorFromRGB(122, 122, 122));
-    digitalClock.setTypedText(touchgfx::TypedText(T_DIGITAL_CLOCK));
-    digitalClock.displayLeadingZeroForHourIndicator(true);
-    digitalClock.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR);
-    digitalClock.setTime24Hour(10, 10, 0);
-    add(digitalClock);
+    onOffButton.setXY(97, 136);
+    onOffButton.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
+    onOffButton.setAction(buttonCallback);
+    add(onOffButton);
 
-    analogClock.setXY(202, 15);
-    analogClock.setBackground(BITMAP_CLOCKS_BACKGROUNDS_CLOCK_CLASSIC_BACKGROUND_ID, 116, 116);
-    analogClock.setupHourHand(BITMAP_CLOCKS_HANDS_CLOCK_CLASSIC_HOUR_HAND_ID, 2, 44);
-    analogClock.setHourHandMinuteCorrection(true);
-    analogClock.setupMinuteHand(BITMAP_CLOCKS_HANDS_CLOCK_CLASSIC_MINUTE_HAND_ID, 2, 64);
-    analogClock.setMinuteHandSecondCorrection(false);
-    analogClock.setupSecondHand(BITMAP_CLOCKS_HANDS_CLOCK_CLASSIC_SECOND_HAND_ID, 4, 79);
-    analogClock.initializeTime24Hour(10, 10, 0);
-    analogClock.setAnimation(10, touchgfx::EasingEquations::cubicEaseInOut);
-    add(analogClock);
+    buttonAdjust.setXY(345, 133);
+    buttonAdjust.setBitmaps(touchgfx::Bitmap(BITMAP_ADJUST_BUTTON_ID), touchgfx::Bitmap(BITMAP_ADJUST_BUTTON_PRESSED_ID));
+    buttonAdjust.setAction(buttonCallback);
+    add(buttonAdjust);
+
+    bulpWhite.setXY(27, 117);
+    bulpWhite.setBitmap(touchgfx::Bitmap(BITMAP_PEARE_HVID_ID));
+    add(bulpWhite);
+
+    bulbYellow.setXY(27, 117);
+    bulbYellow.setBitmap(touchgfx::Bitmap(BITMAP_PEARE_GUL_ID));
+    bulbYellow.setVisible(false);
+    add(bulbYellow);
 }
 
 MainViewBase::~MainViewBase()
@@ -45,4 +44,27 @@ MainViewBase::~MainViewBase()
 void MainViewBase::setupScreen()
 {
 
+}
+
+void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &buttonAdjust)
+    {
+        //AdjustClicked
+        //When buttonAdjust clicked change screen to PoolTemp
+        //Go to PoolTemp with screen transition towards East
+        application().gotoPoolTempScreenSlideTransitionEast();
+    }
+    if (&src == &onOffButton)
+    {
+        //toggleBulbColor
+        //When onOffButton clicked execute C++ code
+        //Execute C++ code
+        bulbYellow.setVisible(!bulbYellow.isVisible());
+        bulbYellow.invalidate();
+        //ChangePoolLight
+        //When onOffButton clicked call virtual function
+        //Call updatePoolLight
+        updatePoolLight();
+    }
 }

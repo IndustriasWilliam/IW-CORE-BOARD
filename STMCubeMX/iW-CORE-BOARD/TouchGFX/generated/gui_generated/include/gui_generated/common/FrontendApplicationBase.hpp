@@ -23,6 +23,11 @@ public:
     // Main
     void gotoMainScreenNoTransition();
 
+    void gotoMainScreenSlideTransitionWest();
+
+    // PoolTemp
+    void gotoPoolTempScreenSlideTransitionEast();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -30,6 +35,11 @@ protected:
 
     // Main
     void gotoMainScreenNoTransitionImpl();
+
+    void gotoMainScreenSlideTransitionWestImpl();
+
+    // PoolTemp
+    void gotoPoolTempScreenSlideTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

@@ -8,8 +8,14 @@ MainPresenter::MainPresenter(MainView& v)
 
 void MainPresenter::activate()
 {
+    view.setPoolLight(model->getPoolLight());
 }
 
 void MainPresenter::deactivate()
 {
+}
+
+void MainPresenter::setPoolLight(bool state)
+{
+    model->userSetPoolLight(state);
 }

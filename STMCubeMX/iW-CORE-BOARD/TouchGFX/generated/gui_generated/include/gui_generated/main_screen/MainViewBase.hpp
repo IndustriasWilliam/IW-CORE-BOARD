@@ -8,9 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TiledImage.hpp>
-#include <touchgfx/containers/clock/DigitalClock.hpp>
-#include <touchgfx/containers/clock/AnalogClock.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
+#include <touchgfx/widgets/Button.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -18,6 +18,14 @@ public:
     MainViewBase();
     virtual ~MainViewBase();
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void updatePoolLight()
+    {
+        // Override and implement this function in Main
+    }
 
 protected:
     FrontendApplication& application() {
@@ -28,11 +36,23 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::TiledImage background;
-    touchgfx::DigitalClock digitalClock;
-    touchgfx::AnalogClock analogClock;
+    touchgfx::Image background;
+    touchgfx::ToggleButton onOffButton;
+    touchgfx::Button buttonAdjust;
+    touchgfx::Image bulpWhite;
+    touchgfx::Image bulbYellow;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 
