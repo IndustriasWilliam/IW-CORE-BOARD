@@ -62,17 +62,20 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
      * By default sampleTouch is called every tick, this can be adjusted by HAL::setTouchSampleRate(int8_t);
      *
      */
-//	TS_State_t TS_State = { 0 };
-//	BSP_TS_GetState(0, &TS_State);
-//
-//	if (TS_State.TouchDetected) {
-//
-//		x = map_coord(TS_State.TouchX, 1017, 480);
-//		y = map_coord(TS_State.TouchY, 593, 272);
-//
-//		printf("%i %i | %i %i\r\n", x, y, TS_State.TouchX, TS_State.TouchY);
-//		return true;
-//	}
+	TS_State_t TS_State = { 0 };
+	BSP_TS_GetState(0, &TS_State);
+
+	if (TS_State.TouchDetected) {
+
+//		x = map_coord(TS_State.TouchX, 476, 480);
+//		y = map_coord(TS_State.TouchY, 268, 272);
+
+		x = (int32_t)TS_State.TouchX;
+		y = (int32_t)TS_State.TouchY;
+
+		printf("%i %i | %i %i\r\n", x, y, TS_State.TouchX, TS_State.TouchY);
+		return true;
+	}
     return false;
 }
 

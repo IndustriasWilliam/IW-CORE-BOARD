@@ -113,8 +113,6 @@ int main(void)
 
   DWT_Delay_Init();
 
-  Init_GpioTouch();
-
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */

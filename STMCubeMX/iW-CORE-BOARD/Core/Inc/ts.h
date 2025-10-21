@@ -39,7 +39,7 @@
   * @brief TouchScreen Slave I2C address 1
   */
 #define TS_I2C_ADDRESS              0x70U
-#define TS_I2C_ADDRESS_GT           0xBAU
+#define TS_I2C_ADDRESS_GT           0x28U
 #define TS_I2C_ADDRESS_BACK         0x28U
 
 /**
