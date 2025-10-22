@@ -23,6 +23,9 @@
 /*Stdio is chosen for File storage*/
 #include <stdio.h>
 
+/*FreeRtos Api*/
+#include "cmsis_os.h"
+
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -31,8 +34,8 @@
 /* Private functions ---------------------------------------------------------*/
 
 /*This defines the memory allocation methods.*/
-#define JMALLOC   malloc
-#define JFREE     free
+#define JMALLOC   pvPortMalloc
+#define JFREE     vPortFree
 
 /*This defines the File data manager type.*/
 #define JFILE            FILE

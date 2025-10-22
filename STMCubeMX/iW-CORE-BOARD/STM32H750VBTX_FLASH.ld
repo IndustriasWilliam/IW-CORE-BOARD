@@ -37,7 +37,7 @@ ENTRY(Reset_Handler)
 /* Highest address of the user mode stack */
 _estack = ORIGIN(RAM_D1) + LENGTH(RAM_D1);    /* end of RAM */
 /* Generate a link error if heap and stack don't fit into RAM */
-_Min_Heap_Size = 0x1000;      /* required amount of heap  */
+_Min_Heap_Size = 0x200;      /* required amount of heap  */
 _Min_Stack_Size = 0x400; /* required amount of stack */
 
 /* Specify the memory areas */
@@ -165,7 +165,45 @@ SECTIONS
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
   } >RAM_D2
+	  .ExtThirdPartyHeaderSection :
+  {
+  ExtThirdPartyHeader = .;
+  KEEP(*(.ExtThirdPartyHeaderSection));
+  ExtThirdPartyHeader_end = .;
+   } >FLASH 
 
+  .IntThirdPartyHeaderSection : 
+   {   . = ALIGN(4);
+   KEEP(*(.IntThirdPartyHeaderSection)) 
+  . = ALIGN(4);
+  } >FLASH
+demo_icon_section :
+  {
+  demo_icon = .;
+  KEEP(*(demo_icon_section));
+  demo_icon_end = .;
+   } >FLASH  
+ 
+ demo_logo_section :
+  {
+  demo_logo = .;
+  KEEP(*(demo_logo_section ));
+  demo_logo_end = .;
+   } >FLASH 
+
+ washer_video_section :
+  {
+  washer_video = .;
+  KEEP(*(washer_video_section ));
+  washer_video_end = .;
+   } >FLASH 
+   
+  receipe_video_section :
+  {
+  receipe_video = .;
+  KEEP(*(receipe_video_section ));
+  receipe_video_end = .;
+   } >FLASH 
   /* Remove information from the standard libraries */
   /DISCARD/ :
   {

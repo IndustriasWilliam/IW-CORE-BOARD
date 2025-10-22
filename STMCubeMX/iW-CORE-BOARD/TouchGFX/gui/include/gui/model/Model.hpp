@@ -1,45 +1,9 @@
-/******************************************************************************
- *
- * @brief     This file is part of the TouchGFX 4.8.0 evaluation distribution.
- *
- * @author    Draupner Graphics A/S <http://www.touchgfx.com>
- *
- ******************************************************************************
- *
- * @section Copyright
- *
- * This file is free software and is provided for example purposes. You may
- * use, copy, and modify within the terms and conditions of the license
- * agreement.
- *
- * This is licensed software for evaluation use, any use must strictly comply
- * with the evaluation license agreement provided with delivery of the
- * TouchGFX software.
- *
- * The evaluation license agreement can be seen on www.touchgfx.com
- *
- * @section Disclaimer
- *
- * DISCLAIMER OF WARRANTY/LIMITATION OF REMEDIES: Draupner Graphics A/S has
- * no obligation to support this software. Draupner Graphics A/S is providing
- * the software "AS IS", with no express or implied warranties of any kind,
- * including, but not limited to, any implied warranties of merchantability
- * or fitness for any particular purpose or warranties against infringement
- * of any proprietary rights of a third party.
- *
- * Draupner Graphics A/S can not be held liable for any consequential,
- * incidental, or special damages, or any other relief, or for any claim by
- * any third party, arising from your use of this software.
- *
- *****************************************************************************/
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
 #include <touchgfx/Utils.hpp>
 #include <stdint.h>
 
-
-#include <touchgfx/hal/Types.hpp>
 
 class ModelListener;
 
@@ -55,6 +19,10 @@ class ModelListener;
  * pointer, which is automatically configured to point to the current presenter.
  * Conversely, the current presenter can trigger events in the backend through the Model.
  */
+
+#define AUTO_DEMO_SCALER    10
+#define AUTO_DEMO_TIMEOUT   1000
+
 class Model
 {
 public:
@@ -69,6 +37,23 @@ public:
         modelListener = listener;
     }
 
+
+    // The enum keeps track of which view there is active
+    enum Views
+    {
+        Hallway,
+        Kitchen,
+        Bathroom,
+        ExtractorHood,
+        Oven,
+        HomeUI,
+        RecipeSelector,
+        Recipe,
+        Washer,
+        Bathtub,
+        About
+    } currentView;
+
     /**
      * This function will be called automatically every frame. Can be used to e.g. sample hardware
      * peripherals or read events from the surrounding system and inject events to the GUI through
@@ -76,29 +61,113 @@ public:
      */
     void tick();
 
-    uint32_t getPoolTemperature() const
-    {
-        return poolTemperature;
-    }
+    /* Function to handle the states of the kitchen elements*/
+    void setShowLight(bool show);
+    bool getShowLight();
+    void setShowPot(bool show);
+    bool getShowPot();
+    void setShowOven(bool show);
+    bool getShowOven();
+    void setFanState(bool state);
+    bool getFanState();
+    void setFanSpeed(uint16_t speed);
+    uint16_t getFanSpeed();
 
-    bool getPoolLight()
-    {
-        return poolLightState;
-    }
+    void setSelectedOvenMode(uint16_t mode);
+    uint16_t getSelectedOvenMode();
+    void setOvenTimerHour(int16_t hour);
+    int16_t getOvenTimerHour();
+    void setOvenTimerMinute(int16_t minute);
+    int16_t getOvenTimerMinute();
+    void setOvenTemperature(uint16_t temp);
+    uint16_t getOvenTemperature();
 
-    void userSetPoolLight(bool state);
-    void userSetTemperature(uint32_t temp);
+    /*get/set bathroom*/
+    void setBathtubOn(bool on);
+    bool getBathtubOn();
+    void setTempCelcius(bool celcius);
+    bool getTempCelcius();
+    void setJetOn(bool on);
+    bool getJetOn();
+    void setLightOn(bool on);
+    bool getLightOn();
+
+    void setTempValue(uint16_t temp);
+    uint16_t getTempValue();
+    void setJetLevel(uint16_t level);
+    uint16_t getJetLevel();
+    void setColorCoordinates(uint32_t x, uint32_t y);
+    void getColorCoordinates(uint32_t& x, uint32_t& y);
+
+    void setWashingProgram(uint16_t program);
+    uint16_t getWashingProgram();
+    void setWashingTime(uint16_t time);
+    uint16_t getWashingTime();
+
+    void setBathroomHomeUI(bool bathroom);
+    bool getBathroomHomeUI();
+
+    void setHoodEntered(bool entered);
+    bool getHoodEntered();
+    void setOvenEntered(bool entered);
+    bool getOvenEntered();
+    void setKitchenUIEntered(bool entered);
+    bool getKitchenUIEntered();
+
+    void setBathtubUIEntered(bool entered);
+    bool getBathtubUIEntered();
+    void setBathroomUIEntered(bool entered);
+    bool getBathroomUIEntered();
+    void setWasherUIEntered(bool entered);
+    bool getWasherUIEntered();
+
+    void setFromRecipeScreen(bool recipeScreen);
+    bool getFromRecipeScreen();
+
+    void setCurrentView(Views view);
 protected:
+
     /**
      * Pointer to the currently active presenter.
      */
     ModelListener* modelListener;
 
-private:
+    /* Varibles to handle the states of the kitchen elements*/
+    bool showLight;
+    bool showPot;
+    bool showOven;
+    bool hoodUIEntered;
+    bool ovenUIEntered;
+    bool kitchenUIEntered;
 
-    //state variables
-    bool poolLightState;
-    uint32_t poolTemperature;
+    bool fanState;
+    uint16_t fanSpeed;
+
+    uint16_t selectedOvenMode;
+    int16_t ovenTimerHour;
+    int16_t ovenTimerMinute;
+    uint16_t ovenTemperature;
+
+    /* Varibles to handle the states of the bathroom elements*/
+    bool washerUIEntered;
+    bool bathtubUIEntered;
+    bool bathroomUIEntered;
+
+    bool bathtubOn;
+    bool tempCelcius;
+    bool jetOn;
+    bool lightOn;
+
+    uint16_t tempValue;
+    uint16_t jetLevel;
+    uint32_t colorCoordinateX;
+    uint32_t colorCoordinateY;
+
+    uint16_t currentProgram;
+    uint16_t washingTime;
+
+    bool bathroomHomeUI;
+    bool fromRecipeScreen;
 };
 
 #endif /* MODEL_HPP */

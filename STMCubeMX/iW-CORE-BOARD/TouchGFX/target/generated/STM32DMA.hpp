@@ -21,6 +21,32 @@
 #include <touchgfx/Bitmap.hpp>
 #include <touchgfx/hal/DMA.hpp>
 
+#define JPEG_BUFFER_EMPTY 0
+#define JPEG_BUFFER_FULL  1
+#define NB_OUTPUT_DATA_BUFFERS 2
+
+extern volatile uint32_t JPEG_OUT_Read_BufferIndex;
+extern volatile uint32_t DMA2D_CopyBufferEnd;
+
+typedef struct
+{
+    uint8_t State;
+    uint8_t* DataBuffer;
+    uint32_t DataBufferSize;
+    uint32_t MCU_index;
+    uint8_t* OutputBuffer;
+    bool FirstJob;
+    bool LastJob;
+    uint32_t MCU_drawn;
+    bool DoCropping;
+} JPEG_Data_BufferTypeDef;
+
+extern JPEG_Data_BufferTypeDef Jpeg_OUT_BufferTab[NB_OUTPUT_DATA_BUFFERS];
+
+extern "C" void DMA2D_CropBuffer(JPEG_Data_BufferTypeDef& job);
+extern "C" void DMA2D_CopyBuffer(JPEG_Data_BufferTypeDef& job);
+extern "C" void DMA2D_ExternalJobCompleted(JPEG_Data_BufferTypeDef& job);
+
 /**
  * @class STM32DMA
  *
@@ -106,7 +132,42 @@ public:
      */
     virtual void signalDMAInterrupt()
     {
-        executeCompleted();
+        if (!started_by_external_job)
+        {
+            executeCompleted();
+
+            /* Start new external job if next buffer is full */
+            if (Jpeg_OUT_BufferTab[JPEG_OUT_Read_BufferIndex].State == JPEG_BUFFER_FULL && !DMA2D_CopyBufferEnd && !isRunning)
+            {
+                started_by_external_job = true;
+                externalJobExecute();
+            }
+        }
+        else
+        {
+            externalJobCompleted();
+
+            /* Prioritize BlitOps if there are any pending */
+            if (!queue.isEmpty() && isAllowed)
+            {
+                started_by_external_job = false;
+                execute();
+            }
+        }
+    }
+
+    virtual void start()
+    {
+        if (!queue.isEmpty() && isAllowed && !isRunning)
+        {
+            started_by_external_job = false;
+            execute();
+        }
+        else if ((Jpeg_OUT_BufferTab[JPEG_OUT_Read_BufferIndex].State == JPEG_BUFFER_FULL) && !isRunning)
+        {
+            started_by_external_job = true;
+            externalJobExecute();
+        }
     }
 
 protected:
@@ -132,9 +193,46 @@ protected:
      */
     virtual void setupDataFill(const touchgfx::BlitOp& blitOp);
 
+    /**
+     * @fn void STM32DMA::externalJobCompleted();
+     *
+     * @brief Handle DMA2D when an external job has been executed
+     *
+     * @param None
+     */
+    void externalJobCompleted()
+    {
+        if (isRunning)
+        {
+            isRunning = false;
+            DMA2D_ExternalJobCompleted(Jpeg_OUT_BufferTab[JPEG_OUT_Read_BufferIndex]);
+        }
+    }
+
+    /**
+     * @fn void STM32DMA::externalJobExecute();
+     *
+     * @brief Executes an external DMA2D job
+     *
+     * @param None
+     */
+    void externalJobExecute()
+    {
+        isRunning = true;
+        if (Jpeg_OUT_BufferTab[JPEG_OUT_Read_BufferIndex].DoCropping)
+        {
+            DMA2D_CropBuffer(Jpeg_OUT_BufferTab[JPEG_OUT_Read_BufferIndex]);
+        }
+        else
+        {
+            DMA2D_CopyBuffer(Jpeg_OUT_BufferTab[JPEG_OUT_Read_BufferIndex]);
+        }
+    }
+
 private:
     touchgfx::LockFreeDMA_Queue dma_queue;
     touchgfx::BlitOp queue_storage[96];
+    bool started_by_external_job;
 
     /**
      * @fn void STM32DMA::getChromARTInputFormat()

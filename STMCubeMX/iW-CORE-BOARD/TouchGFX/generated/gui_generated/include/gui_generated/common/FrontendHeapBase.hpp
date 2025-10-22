@@ -9,15 +9,32 @@
 #include <mvp/MVPHeap.hpp>
 
 #include <touchgfx/transitions/NoTransition.hpp>
-#include <touchgfx/transitions/SlideTransition.hpp>
+#include <touchgfx/transitions/WipeTransition.hpp>
+#include <touchgfx/transitions/CoverTransition.hpp>
 
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/main_screen/MainView.hpp>
-#include <gui/main_screen/MainPresenter.hpp>
-#include <gui/pooltemp_screen/PoolTempView.hpp>
-#include <gui/pooltemp_screen/PoolTempPresenter.hpp>
+#include <gui/hallwayscreen_screen/HallwayScreenView.hpp>
+#include <gui/hallwayscreen_screen/HallwayScreenPresenter.hpp>
+#include <gui/kitchenscreen_screen/KitchenScreenView.hpp>
+#include <gui/kitchenscreen_screen/KitchenScreenPresenter.hpp>
+#include <gui/bathtubscreen_screen/BathtubScreenView.hpp>
+#include <gui/bathtubscreen_screen/BathtubScreenPresenter.hpp>
+#include <gui/bathroomscreen_screen/BathroomScreenView.hpp>
+#include <gui/bathroomscreen_screen/BathroomScreenPresenter.hpp>
+#include <gui/washerscreen_screen/WasherScreenView.hpp>
+#include <gui/washerscreen_screen/WasherScreenPresenter.hpp>
+#include <gui/extractorhoodscreen_screen/ExtractorHoodScreenView.hpp>
+#include <gui/extractorhoodscreen_screen/ExtractorHoodScreenPresenter.hpp>
+#include <gui/recipescreen_screen/RecipeScreenView.hpp>
+#include <gui/recipescreen_screen/RecipeScreenPresenter.hpp>
+#include <gui/recipeselectedscreen_screen/RecipeSelectedScreenView.hpp>
+#include <gui/recipeselectedscreen_screen/RecipeSelectedScreenPresenter.hpp>
+#include <gui/ovenscreen_screen/OvenScreenView.hpp>
+#include <gui/ovenscreen_screen/OvenScreenPresenter.hpp>
+#include <gui/homecontrolscreen_screen/HomeControlScreenView.hpp>
+#include <gui/homecontrolscreen_screen/HomeControlScreenPresenter.hpp>
 
 
 /**
@@ -40,9 +57,17 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< MainView,
-            touchgfx::meta::TypeList< PoolTempView,
-            touchgfx::meta::Nil >
+    typedef touchgfx::meta::TypeList< HallwayScreenView,
+            touchgfx::meta::TypeList< KitchenScreenView,
+            touchgfx::meta::TypeList< BathtubScreenView,
+            touchgfx::meta::TypeList< BathroomScreenView,
+            touchgfx::meta::TypeList< WasherScreenView,
+            touchgfx::meta::TypeList< ExtractorHoodScreenView,
+            touchgfx::meta::TypeList< RecipeScreenView,
+            touchgfx::meta::TypeList< RecipeSelectedScreenView,
+            touchgfx::meta::TypeList< OvenScreenView,
+            touchgfx::meta::TypeList< HomeControlScreenView,
+            touchgfx::meta::Nil > > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -54,9 +79,17 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< MainPresenter,
-            touchgfx::meta::TypeList< PoolTempPresenter,
-            touchgfx::meta::Nil >
+    typedef touchgfx::meta::TypeList< HallwayScreenPresenter,
+            touchgfx::meta::TypeList< KitchenScreenPresenter,
+            touchgfx::meta::TypeList< BathtubScreenPresenter,
+            touchgfx::meta::TypeList< BathroomScreenPresenter,
+            touchgfx::meta::TypeList< WasherScreenPresenter,
+            touchgfx::meta::TypeList< ExtractorHoodScreenPresenter,
+            touchgfx::meta::TypeList< RecipeScreenPresenter,
+            touchgfx::meta::TypeList< RecipeSelectedScreenPresenter,
+            touchgfx::meta::TypeList< OvenScreenPresenter,
+            touchgfx::meta::TypeList< HomeControlScreenPresenter,
+            touchgfx::meta::Nil > > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -69,9 +102,11 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
-            touchgfx::meta::TypeList< SlideTransition<EAST>,
-            touchgfx::meta::TypeList< SlideTransition<WEST>,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< WipeTransition<EAST>,
+            touchgfx::meta::TypeList< WipeTransition<WEST>,
+            touchgfx::meta::TypeList< CoverTransition<NORTH>,
+            touchgfx::meta::TypeList< CoverTransition<SOUTH>,
+            touchgfx::meta::Nil > > > >
             > GeneratedTransitionTypes;
 
     /**
@@ -81,7 +116,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoMainScreenNoTransition();
+        app.gotoHallwayScreenScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

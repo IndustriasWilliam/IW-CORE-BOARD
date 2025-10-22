@@ -24,6 +24,7 @@
     "OptionalComponents": [
     ],
     "AdditionalFeatures": [
+      "Video"
     ]
   },
   "Version": "4.26.0"

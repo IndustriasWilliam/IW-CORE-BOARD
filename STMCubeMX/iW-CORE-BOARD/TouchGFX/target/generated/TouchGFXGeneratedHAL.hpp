@@ -109,6 +109,19 @@ public:
     }
 
     /**
+     * @fn virtual void TouchGFXGeneratedHAL::unlockFrameBuffer();
+     *
+     * @brief Unlocks the framebuffer.
+     *
+     * This specialization is marks DMA2D as un-reserved by the framwork.
+     * @see HAL::unlockFrameBuffer
+     */
+    virtual void unlockFrameBuffer()
+    {
+        HAL::unlockFrameBuffer();
+    }
+
+    /**
      * @fn virtual void TouchGFXGeneratedHAL::flushFrameBuffer(const touchgfx::Rect& rect);
      *
      * @brief This function is called whenever the framework has performed a partial draw.

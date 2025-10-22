@@ -60,7 +60,7 @@ void HAL_JPEG_MspInit(JPEG_HandleTypeDef* jpegHandle)
     __HAL_RCC_JPEG_CLK_ENABLE();
 
     /* JPEG interrupt Init */
-    HAL_NVIC_SetPriority(JPEG_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(JPEG_IRQn, 5, 0);
     HAL_NVIC_EnableIRQ(JPEG_IRQn);
   /* USER CODE BEGIN JPEG_MspInit 1 */
 

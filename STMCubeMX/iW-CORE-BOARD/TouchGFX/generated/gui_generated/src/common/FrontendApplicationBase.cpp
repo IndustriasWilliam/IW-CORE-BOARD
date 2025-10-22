@@ -9,10 +9,26 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD24bpp.hpp>
-#include <gui/main_screen/MainView.hpp>
-#include <gui/main_screen/MainPresenter.hpp>
-#include <gui/pooltemp_screen/PoolTempView.hpp>
-#include <gui/pooltemp_screen/PoolTempPresenter.hpp>
+#include <gui/hallwayscreen_screen/HallwayScreenView.hpp>
+#include <gui/hallwayscreen_screen/HallwayScreenPresenter.hpp>
+#include <gui/kitchenscreen_screen/KitchenScreenView.hpp>
+#include <gui/kitchenscreen_screen/KitchenScreenPresenter.hpp>
+#include <gui/bathtubscreen_screen/BathtubScreenView.hpp>
+#include <gui/bathtubscreen_screen/BathtubScreenPresenter.hpp>
+#include <gui/bathroomscreen_screen/BathroomScreenView.hpp>
+#include <gui/bathroomscreen_screen/BathroomScreenPresenter.hpp>
+#include <gui/washerscreen_screen/WasherScreenView.hpp>
+#include <gui/washerscreen_screen/WasherScreenPresenter.hpp>
+#include <gui/extractorhoodscreen_screen/ExtractorHoodScreenView.hpp>
+#include <gui/extractorhoodscreen_screen/ExtractorHoodScreenPresenter.hpp>
+#include <gui/recipescreen_screen/RecipeScreenView.hpp>
+#include <gui/recipescreen_screen/RecipeScreenPresenter.hpp>
+#include <gui/recipeselectedscreen_screen/RecipeSelectedScreenView.hpp>
+#include <gui/recipeselectedscreen_screen/RecipeSelectedScreenPresenter.hpp>
+#include <gui/ovenscreen_screen/OvenScreenView.hpp>
+#include <gui/ovenscreen_screen/OvenScreenPresenter.hpp>
+#include <gui/homecontrolscreen_screen/HomeControlScreenView.hpp>
+#include <gui/homecontrolscreen_screen/HomeControlScreenPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -33,39 +49,176 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
  * Screen Transition Declarations
  */
 
-// Main
+// HallwayScreen
 
-void FrontendApplicationBase::gotoMainScreenNoTransition()
+void FrontendApplicationBase::gotoHallwayScreenScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoMainScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoHallwayScreenScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoMainScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoHallwayScreenScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<HallwayScreenView, HallwayScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-void FrontendApplicationBase::gotoMainScreenSlideTransitionWest()
+void FrontendApplicationBase::gotoHallwayScreenScreenWipeTransitionWest()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoMainScreenSlideTransitionWestImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoHallwayScreenScreenWipeTransitionWestImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoMainScreenSlideTransitionWestImpl()
+void FrontendApplicationBase::gotoHallwayScreenScreenWipeTransitionWestImpl()
 {
-    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<HallwayScreenView, HallwayScreenPresenter, touchgfx::WipeTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// PoolTemp
+// KitchenScreen
 
-void FrontendApplicationBase::gotoPoolTempScreenSlideTransitionEast()
+void FrontendApplicationBase::gotoKitchenScreenScreenWipeTransitionEast()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoPoolTempScreenSlideTransitionEastImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoKitchenScreenScreenWipeTransitionEastImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoPoolTempScreenSlideTransitionEastImpl()
+void FrontendApplicationBase::gotoKitchenScreenScreenWipeTransitionEastImpl()
 {
-    touchgfx::makeTransition<PoolTempView, PoolTempPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<KitchenScreenView, KitchenScreenPresenter, touchgfx::WipeTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoKitchenScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoKitchenScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoKitchenScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<KitchenScreenView, KitchenScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// BathtubScreen
+
+void FrontendApplicationBase::gotoBathtubScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoBathtubScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoBathtubScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<BathtubScreenView, BathtubScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// BathroomScreen
+
+void FrontendApplicationBase::gotoBathroomScreenScreenWipeTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoBathroomScreenScreenWipeTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoBathroomScreenScreenWipeTransitionWestImpl()
+{
+    touchgfx::makeTransition<BathroomScreenView, BathroomScreenPresenter, touchgfx::WipeTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoBathroomScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoBathroomScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoBathroomScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<BathroomScreenView, BathroomScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// WasherScreen
+
+void FrontendApplicationBase::gotoWasherScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoWasherScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoWasherScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<WasherScreenView, WasherScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// ExtractorHoodScreen
+
+void FrontendApplicationBase::gotoExtractorHoodScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoExtractorHoodScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoExtractorHoodScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<ExtractorHoodScreenView, ExtractorHoodScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// RecipeScreen
+
+void FrontendApplicationBase::gotoRecipeScreenScreenCoverTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoRecipeScreenScreenCoverTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoRecipeScreenScreenCoverTransitionSouthImpl()
+{
+    touchgfx::makeTransition<RecipeScreenView, RecipeScreenPresenter, touchgfx::CoverTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoRecipeScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoRecipeScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoRecipeScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<RecipeScreenView, RecipeScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// RecipeSelectedScreen
+
+void FrontendApplicationBase::gotoRecipeSelectedScreenScreenCoverTransitionNorth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoRecipeSelectedScreenScreenCoverTransitionNorthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoRecipeSelectedScreenScreenCoverTransitionNorthImpl()
+{
+    touchgfx::makeTransition<RecipeSelectedScreenView, RecipeSelectedScreenPresenter, touchgfx::CoverTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// OvenScreen
+
+void FrontendApplicationBase::gotoOvenScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoOvenScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoOvenScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<OvenScreenView, OvenScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// HomeControlScreen
+
+void FrontendApplicationBase::gotoHomeControlScreenScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoHomeControlScreenScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoHomeControlScreenScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<HomeControlScreenView, HomeControlScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

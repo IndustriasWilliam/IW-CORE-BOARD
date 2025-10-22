@@ -67,6 +67,7 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp \
  gui/include/gui/common/FrontendApplication.hpp \
  generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -74,83 +75,22 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
  gui/include/gui/model/Model.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
- gui/include/gui/model/Time.hpp \
- gui/include/gui/mainmenu_screen/MainMenuView.hpp \
- generated/gui_generated/include/gui_generated/mainmenu_screen/MainMenuViewBase.hpp \
+ gui/include/gui/hallwayscreen_screen/HallwayScreenView.hpp \
+ generated/gui_generated/include/gui_generated/hallwayscreen_screen/HallwayScreenViewBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
- gui/include/gui/mainmenu_screen/MainMenuPresenter.hpp \
+ gui/include/gui/hallwayscreen_screen/HallwayScreenPresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- gui/include/gui/containers/McuLoadWidget.hpp \
- generated/gui_generated/include/gui_generated/containers/mcuLoadWidgetBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- gui/include/gui/containers/LogoBar.hpp \
- generated/gui_generated/include/gui_generated/containers/LogoBarBase.hpp \
- generated/texts/include/texts/TextKeysAndLanguages.hpp \
- gui/include/gui/customcontrols_screen/CustomControlsView.hpp \
- generated/gui_generated/include/gui_generated/customcontrols_screen/CustomControlsViewBase.hpp \
- gui/include/gui/customcontrols_screen/CustomControlsPresenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheel.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp \
- gui/include/gui/containers/MenuIconCustomContainer.hpp \
- generated/gui_generated/include/gui_generated/containers/MenuIconCustomContainerBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Gauge.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp \
- gui/include/gui/containers/ThreeWayProgressCustomContainer.hpp \
- generated/gui_generated/include/gui_generated/containers/ThreeWayProgressCustomContainerBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/CircleProgress.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterBitmap.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
- gui/include/gui/containers/CircularIcon.hpp \
- generated/gui_generated/include/gui_generated/containers/CircularIconBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
- gui/include/gui/containers/PercentageBarCustomContainer.hpp \
- generated/gui_generated/include/gui_generated/containers/PercentageBarCustomContainerBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/TextProgress.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
- gui/include/gui/containers/DatePickerCustomContainer.hpp \
- generated/gui_generated/include/gui_generated/containers/DatePickerCustomContainerBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelWithSelectionStyle.hpp \
- gui/include/gui/containers/Date.hpp \
- generated/gui_generated/include/gui_generated/containers/DateBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
- gui/include/gui/graph_screen/GraphView.hpp \
- generated/gui_generated/include/gui_generated/graph_screen/GraphViewBase.hpp \
- gui/include/gui/graph_screen/GraphPresenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/Graph.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphElements.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SlideMenu.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
- gui/include/gui/piechart_screen/PieChartView.hpp \
- generated/gui_generated/include/gui_generated/piechart_screen/PieChartViewBase.hpp \
- gui/include/gui/piechart_screen/PieChartPresenter.hpp \
+ gui/include/gui/kitchenscreen_screen/KitchenScreenView.hpp \
+ generated/gui_generated/include/gui_generated/kitchenscreen_screen/KitchenScreenViewBase.hpp \
+ gui/include/gui/kitchenscreen_screen/KitchenScreenPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
@@ -162,27 +102,105 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
- gui/include/gui/easingequation_screen/EasingEquationView.hpp \
- generated/gui_generated/include/gui_generated/easingequation_screen/EasingEquationViewBase.hpp \
- gui/include/gui/easingequation_screen/EasingEquationPresenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
- gui/include/gui/containers/EasingEquationButtons.hpp \
- generated/gui_generated/include/gui_generated/containers/EasingEquationButtonsBase.hpp \
+ gui/include/gui/bathtubscreen_screen/BathtubScreenView.hpp \
+ generated/gui_generated/include/gui_generated/bathtubscreen_screen/BathtubScreenViewBase.hpp \
+ gui/include/gui/bathtubscreen_screen/BathtubScreenPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelWithSelectionStyle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp \
+ gui/include/gui/containers/BathtubWheelElement.hpp \
+ generated/gui_generated/include/gui_generated/containers/BathtubWheelElementBase.hpp \
+ gui/include/gui/containers/BathtubWheelElementCenter.hpp \
+ generated/gui_generated/include/gui_generated/containers/BathtubWheelElementCenterBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButtonGroup.hpp \
- gui/include/gui/easingequation_screen/EasingEquationsEnum.hpp \
- gui/include/gui/containers/EasingTypeButtons.hpp \
- generated/gui_generated/include/gui_generated/containers/EasingTypeButtonsBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphScroll.hpp \
- gui/include/gui/productpresenter_screen/ProductPresenterView.hpp \
- generated/gui_generated/include/gui_generated/productpresenter_screen/ProductPresenterViewBase.hpp \
- gui/include/gui/productpresenter_screen/ProductPresenterPresenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp \
+ gui/include/gui/bathroomscreen_screen/BathroomScreenView.hpp \
+ generated/gui_generated/include/gui_generated/bathroomscreen_screen/BathroomScreenViewBase.hpp \
+ gui/include/gui/bathroomscreen_screen/BathroomScreenPresenter.hpp \
+ gui/include/gui/washerscreen_screen/WasherScreenView.hpp \
+ generated/gui_generated/include/gui_generated/washerscreen_screen/WasherScreenViewBase.hpp \
+ gui/include/gui/washerscreen_screen/WasherScreenPresenter.hpp \
+ gui/include/gui/containers/WasherContainer.hpp \
+ generated/gui_generated/include/gui_generated/containers/WasherContainerBase.hpp \
+ gui/include/gui/containers/WasherWheelItem.hpp \
+ generated/gui_generated/include/gui_generated/containers/WasherWheelItemBase.hpp \
+ gui/include/gui/containers/WasherWheelCenterItem.hpp \
+ generated/gui_generated/include/gui_generated/containers/WasherWheelCenterItemBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TouchArea.hpp \
+ gui/include/gui/extractorhoodscreen_screen/ExtractorHoodScreenView.hpp \
+ generated/gui_generated/include/gui_generated/extractorhoodscreen_screen/ExtractorHoodScreenViewBase.hpp \
+ gui/include/gui/extractorhoodscreen_screen/ExtractorHoodScreenPresenter.hpp \
+ gui/include/gui/containers/FanKnob.hpp \
+ generated/gui_generated/include/gui_generated/containers/FanKnobBase.hpp \
+ gui/include/gui/extractorhoodscreen_screen/AnimatedImage2.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
+ gui/include/gui/recipescreen_screen/RecipeScreenView.hpp \
+ generated/gui_generated/include/gui_generated/recipescreen_screen/RecipeScreenViewBase.hpp \
+ gui/include/gui/recipescreen_screen/RecipeScreenPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp \
+ gui/include/gui/containers/RecipeListElement.hpp \
+ generated/gui_generated/include/gui_generated/containers/RecipeListElementBase.hpp \
+ gui/include/gui/recipeselectedscreen_screen/RecipeSelectedScreenView.hpp \
+ generated/gui_generated/include/gui_generated/recipeselectedscreen_screen/RecipeSelectedScreenViewBase.hpp \
+ gui/include/gui/recipeselectedscreen_screen/RecipeSelectedScreenPresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
+ gui/include/gui/ovenscreen_screen/OvenScreenView.hpp \
+ generated/gui_generated/include/gui_generated/ovenscreen_screen/OvenScreenViewBase.hpp \
+ gui/include/gui/ovenscreen_screen/OvenScreenPresenter.hpp \
+ gui/include/gui/containers/OvenWheelElement.hpp \
+ generated/gui_generated/include/gui_generated/containers/OvenWheelElementBase.hpp \
+ gui/include/gui/containers/OvenTimerContainer.hpp \
+ generated/gui_generated/include/gui_generated/containers/OvenTimerContainerBase.hpp \
+ gui/include/gui/containers/OvenTimerWheelElement.hpp \
+ generated/gui_generated/include/gui_generated/containers/OvenTimerWheelElementBase.hpp \
+ gui/include/gui/containers/OvenTimerWheelCenterElement.hpp \
+ generated/gui_generated/include/gui_generated/containers/OvenTimerWheelCenterElementBase.hpp \
+ gui/include/gui/containers/OvenTemperatureContainer.hpp \
+ generated/gui_generated/include/gui_generated/containers/OvenTemperatureContainerBase.hpp \
+ gui/include/gui/containers/OvenSplashScreen.hpp \
+ generated/gui_generated/include/gui_generated/containers/OvenSplashScreenBase.hpp \
+ gui/include/gui/homecontrolscreen_screen/HomeControlScreenView.hpp \
+ generated/gui_generated/include/gui_generated/homecontrolscreen_screen/HomeControlScreenViewBase.hpp \
+ gui/include/gui/homecontrolscreen_screen/HomeControlScreenPresenter.hpp \
+ gui/include/gui/containers/HomeUIWheelElement.hpp \
+ generated/gui_generated/include/gui_generated/containers/HomeUIWheelElementBase.hpp \
+ gui/include/gui/containers/HomeUIWheelLargeElements.hpp \
+ generated/gui_generated/include/gui_generated/containers/HomeUIWheelLargeElementsBase.hpp \
+ gui/include/gui/containers/HomeUIWheelSmallElements.hpp \
+ generated/gui_generated/include/gui_generated/containers/HomeUIWheelSmallElementsBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheel.hpp \
+ gui/include/gui/containers/RoomInfoWheelElements.hpp \
+ generated/gui_generated/include/gui_generated/containers/RoomInfoWheelElementsBase.hpp \
+ gui/include/gui/containers/RoomInfo.hpp \
+ generated/gui_generated/include/gui_generated/containers/RoomInfoBase.hpp \
+ gui/include/gui/containers/DeviceInfoWheelElements.hpp \
+ generated/gui_generated/include/gui_generated/containers/DeviceInfoWheelElementsBase.hpp \
+ gui/include/gui/containers/DeviceInfo.hpp \
+ generated/gui_generated/include/gui_generated/containers/DeviceInfoBase.hpp \
+ gui/include/gui/containers/HomeUISplashContainer.hpp \
+ generated/gui_generated/include/gui_generated/containers/HomeUISplashContainerBase.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/SDL2TouchController.hpp \
  generated/simulator/include/simulator/mainBase.hpp
@@ -254,6 +272,7 @@ generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/WipeTransition.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/CoverTransition.hpp:
 gui/include/gui/common/FrontendApplication.hpp:
 generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
@@ -261,83 +280,22 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
 gui/include/gui/model/Model.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
-gui/include/gui/model/Time.hpp:
-gui/include/gui/mainmenu_screen/MainMenuView.hpp:
-generated/gui_generated/include/gui_generated/mainmenu_screen/MainMenuViewBase.hpp:
+gui/include/gui/hallwayscreen_screen/HallwayScreenView.hpp:
+generated/gui_generated/include/gui_generated/hallwayscreen_screen/HallwayScreenViewBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
-gui/include/gui/mainmenu_screen/MainMenuPresenter.hpp:
+gui/include/gui/hallwayscreen_screen/HallwayScreenPresenter.hpp:
 gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SwipeContainer.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
-gui/include/gui/containers/McuLoadWidget.hpp:
-generated/gui_generated/include/gui_generated/containers/mcuLoadWidgetBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
-gui/include/gui/containers/LogoBar.hpp:
-generated/gui_generated/include/gui_generated/containers/LogoBarBase.hpp:
-generated/texts/include/texts/TextKeysAndLanguages.hpp:
-gui/include/gui/customcontrols_screen/CustomControlsView.hpp:
-generated/gui_generated/include/gui_generated/customcontrols_screen/CustomControlsViewBase.hpp:
-gui/include/gui/customcontrols_screen/CustomControlsPresenter.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheel.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp:
-gui/include/gui/containers/MenuIconCustomContainer.hpp:
-generated/gui_generated/include/gui_generated/containers/MenuIconCustomContainerBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Gauge.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:
-gui/include/gui/containers/ThreeWayProgressCustomContainer.hpp:
-generated/gui_generated/include/gui_generated/containers/ThreeWayProgressCustomContainerBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/CircleProgress.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888Bitmap.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterBitmap.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
-gui/include/gui/containers/CircularIcon.hpp:
-generated/gui_generated/include/gui_generated/containers/CircularIconBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
-gui/include/gui/containers/PercentageBarCustomContainer.hpp:
-generated/gui_generated/include/gui_generated/containers/PercentageBarCustomContainerBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/TextProgress.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
-gui/include/gui/containers/DatePickerCustomContainer.hpp:
-generated/gui_generated/include/gui_generated/containers/DatePickerCustomContainerBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelWithSelectionStyle.hpp:
-gui/include/gui/containers/Date.hpp:
-generated/gui_generated/include/gui_generated/containers/DateBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
-gui/include/gui/graph_screen/GraphView.hpp:
-generated/gui_generated/include/gui_generated/graph_screen/GraphViewBase.hpp:
-gui/include/gui/graph_screen/GraphPresenter.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/Graph.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphElements.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SlideMenu.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
-gui/include/gui/piechart_screen/PieChartView.hpp:
-generated/gui_generated/include/gui_generated/piechart_screen/PieChartViewBase.hpp:
-gui/include/gui/piechart_screen/PieChartPresenter.hpp:
+gui/include/gui/kitchenscreen_screen/KitchenScreenView.hpp:
+generated/gui_generated/include/gui_generated/kitchenscreen_screen/KitchenScreenViewBase.hpp:
+gui/include/gui/kitchenscreen_screen/KitchenScreenPresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:
@@ -349,27 +307,105 @@ gui/include/gui/piechart_screen/PieChartPresenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
-gui/include/gui/easingequation_screen/EasingEquationView.hpp:
-generated/gui_generated/include/gui_generated/easingequation_screen/EasingEquationViewBase.hpp:
-gui/include/gui/easingequation_screen/EasingEquationPresenter.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
-gui/include/gui/containers/EasingEquationButtons.hpp:
-generated/gui_generated/include/gui_generated/containers/EasingEquationButtonsBase.hpp:
+gui/include/gui/bathtubscreen_screen/BathtubScreenView.hpp:
+generated/gui_generated/include/gui_generated/bathtubscreen_screen/BathtubScreenViewBase.hpp:
+gui/include/gui/bathtubscreen_screen/BathtubScreenPresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelWithSelectionStyle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelBase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp:
+gui/include/gui/containers/BathtubWheelElement.hpp:
+generated/gui_generated/include/gui_generated/containers/BathtubWheelElementBase.hpp:
+gui/include/gui/containers/BathtubWheelElementCenter.hpp:
+generated/gui_generated/include/gui_generated/containers/BathtubWheelElementCenterBase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButton.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/RadioButtonGroup.hpp:
-gui/include/gui/easingequation_screen/EasingEquationsEnum.hpp:
-gui/include/gui/containers/EasingTypeButtons.hpp:
-generated/gui_generated/include/gui_generated/containers/EasingTypeButtonsBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphScroll.hpp:
-gui/include/gui/productpresenter_screen/ProductPresenterView.hpp:
-generated/gui_generated/include/gui_generated/productpresenter_screen/ProductPresenterViewBase.hpp:
-gui/include/gui/productpresenter_screen/ProductPresenterPresenter.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp:
+gui/include/gui/bathroomscreen_screen/BathroomScreenView.hpp:
+generated/gui_generated/include/gui_generated/bathroomscreen_screen/BathroomScreenViewBase.hpp:
+gui/include/gui/bathroomscreen_screen/BathroomScreenPresenter.hpp:
+gui/include/gui/washerscreen_screen/WasherScreenView.hpp:
+generated/gui_generated/include/gui_generated/washerscreen_screen/WasherScreenViewBase.hpp:
+gui/include/gui/washerscreen_screen/WasherScreenPresenter.hpp:
+gui/include/gui/containers/WasherContainer.hpp:
+generated/gui_generated/include/gui_generated/containers/WasherContainerBase.hpp:
+gui/include/gui/containers/WasherWheelItem.hpp:
+generated/gui_generated/include/gui_generated/containers/WasherWheelItemBase.hpp:
+gui/include/gui/containers/WasherWheelCenterItem.hpp:
+generated/gui_generated/include/gui_generated/containers/WasherWheelCenterItemBase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TouchArea.hpp:
+gui/include/gui/extractorhoodscreen_screen/ExtractorHoodScreenView.hpp:
+generated/gui_generated/include/gui_generated/extractorhoodscreen_screen/ExtractorHoodScreenViewBase.hpp:
+gui/include/gui/extractorhoodscreen_screen/ExtractorHoodScreenPresenter.hpp:
+gui/include/gui/containers/FanKnob.hpp:
+generated/gui_generated/include/gui_generated/containers/FanKnobBase.hpp:
+gui/include/gui/extractorhoodscreen_screen/AnimatedImage2.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
+gui/include/gui/recipescreen_screen/RecipeScreenView.hpp:
+generated/gui_generated/include/gui_generated/recipescreen_screen/RecipeScreenViewBase.hpp:
+gui/include/gui/recipescreen_screen/RecipeScreenPresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp:
+gui/include/gui/containers/RecipeListElement.hpp:
+generated/gui_generated/include/gui_generated/containers/RecipeListElementBase.hpp:
+gui/include/gui/recipeselectedscreen_screen/RecipeSelectedScreenView.hpp:
+generated/gui_generated/include/gui_generated/recipeselectedscreen_screen/RecipeSelectedScreenViewBase.hpp:
+gui/include/gui/recipeselectedscreen_screen/RecipeSelectedScreenPresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
+gui/include/gui/ovenscreen_screen/OvenScreenView.hpp:
+generated/gui_generated/include/gui_generated/ovenscreen_screen/OvenScreenViewBase.hpp:
+gui/include/gui/ovenscreen_screen/OvenScreenPresenter.hpp:
+gui/include/gui/containers/OvenWheelElement.hpp:
+generated/gui_generated/include/gui_generated/containers/OvenWheelElementBase.hpp:
+gui/include/gui/containers/OvenTimerContainer.hpp:
+generated/gui_generated/include/gui_generated/containers/OvenTimerContainerBase.hpp:
+gui/include/gui/containers/OvenTimerWheelElement.hpp:
+generated/gui_generated/include/gui_generated/containers/OvenTimerWheelElementBase.hpp:
+gui/include/gui/containers/OvenTimerWheelCenterElement.hpp:
+generated/gui_generated/include/gui_generated/containers/OvenTimerWheelCenterElementBase.hpp:
+gui/include/gui/containers/OvenTemperatureContainer.hpp:
+generated/gui_generated/include/gui_generated/containers/OvenTemperatureContainerBase.hpp:
+gui/include/gui/containers/OvenSplashScreen.hpp:
+generated/gui_generated/include/gui_generated/containers/OvenSplashScreenBase.hpp:
+gui/include/gui/homecontrolscreen_screen/HomeControlScreenView.hpp:
+generated/gui_generated/include/gui_generated/homecontrolscreen_screen/HomeControlScreenViewBase.hpp:
+gui/include/gui/homecontrolscreen_screen/HomeControlScreenPresenter.hpp:
+gui/include/gui/containers/HomeUIWheelElement.hpp:
+generated/gui_generated/include/gui_generated/containers/HomeUIWheelElementBase.hpp:
+gui/include/gui/containers/HomeUIWheelLargeElements.hpp:
+generated/gui_generated/include/gui_generated/containers/HomeUIWheelLargeElementsBase.hpp:
+gui/include/gui/containers/HomeUIWheelSmallElements.hpp:
+generated/gui_generated/include/gui_generated/containers/HomeUIWheelSmallElementsBase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheel.hpp:
+gui/include/gui/containers/RoomInfoWheelElements.hpp:
+generated/gui_generated/include/gui_generated/containers/RoomInfoWheelElementsBase.hpp:
+gui/include/gui/containers/RoomInfo.hpp:
+generated/gui_generated/include/gui_generated/containers/RoomInfoBase.hpp:
+gui/include/gui/containers/DeviceInfoWheelElements.hpp:
+generated/gui_generated/include/gui_generated/containers/DeviceInfoWheelElementsBase.hpp:
+gui/include/gui/containers/DeviceInfo.hpp:
+generated/gui_generated/include/gui_generated/containers/DeviceInfoBase.hpp:
+gui/include/gui/containers/HomeUISplashContainer.hpp:
+generated/gui_generated/include/gui_generated/containers/HomeUISplashContainerBase.hpp:
 generated/gui_generated/include/gui_generated/common/SimConstants.hpp:
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/SDL2TouchController.hpp:
 generated/simulator/include/simulator/mainBase.hpp:

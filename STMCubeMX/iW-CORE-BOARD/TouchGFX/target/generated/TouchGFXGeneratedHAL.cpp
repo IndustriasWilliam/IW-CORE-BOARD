@@ -21,6 +21,23 @@
 #include <gui/common/FrontendHeap.hpp>
 #include <touchgfx/hal/GPIO.hpp>
 
+#include <HardwareMJPEGDecoder.hpp>
+#include <DirectFrameBufferVideoController.hpp>
+#include <stm32h7xx_hal.h>
+
+HardwareMJPEGDecoder mjpegdecoder1;
+
+namespace
+{
+DirectFrameBufferVideoController<1, Bitmap::RGB888> videoController;
+}
+
+//Singleton Factory
+VideoController& VideoController::getInstance()
+{
+    return videoController;
+}
+
 #include "stm32h7xx.h"
 #include "stm32h7xx_hal_ltdc.h"
 
@@ -41,9 +58,17 @@ void TouchGFXGeneratedHAL::initialize()
     {
         while (1);
     }
-    enableLCDControllerInterrupt();
-    enableInterrupts();
     setFrameBufferStartAddresses((void*)0x24000000, (void*)0, (void*)0);
+
+    /*
+     * Add DMA2D to hardware decoder
+     */
+    mjpegdecoder1.addDMA(dma);
+
+    /*
+     * Add hardware decoder to video controller
+     */
+    videoController.addDecoder(mjpegdecoder1, 0);
 }
 
 void TouchGFXGeneratedHAL::configureInterrupts()
@@ -83,7 +108,6 @@ bool TouchGFXGeneratedHAL::beginFrame()
 void TouchGFXGeneratedHAL::endFrame()
 {
     HAL::endFrame();
-    touchgfx::OSWrappers::signalRenderingDone();
 }
 
 uint16_t* TouchGFXGeneratedHAL::getTFTFrameBuffer() const

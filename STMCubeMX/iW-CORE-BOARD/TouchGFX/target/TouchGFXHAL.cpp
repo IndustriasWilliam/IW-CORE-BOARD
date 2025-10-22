@@ -21,6 +21,9 @@
 /* USER CODE END Header */
 
 #include <TouchGFXHAL.hpp>
+#include <touchgfx/hal/OSWrappers.hpp>
+#include "FreeRTOS.h"
+#include "task.h"
 
 /* USER CODE BEGIN TouchGFXHAL.cpp */
 
@@ -156,6 +159,18 @@ bool TouchGFXHAL::beginFrame()
 void TouchGFXHAL::endFrame()
 {
     TouchGFXGeneratedHAL::endFrame();
+}
+
+
+void TouchGFXHAL::taskEntry(){
+	enableLCDControllerInterrupt();
+	enableInterrupts();
+	OSWrappers::waitForVSync();
+	backPorchExited();
+	for(;;){
+        OSWrappers::waitForVSync();
+        backPorchExited();
+	}
 }
 
 /* USER CODE END TouchGFXHAL.cpp */

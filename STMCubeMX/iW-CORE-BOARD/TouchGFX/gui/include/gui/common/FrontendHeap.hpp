@@ -21,6 +21,8 @@ public:
             meta::Nil  //List must always end with meta::Nil !
             > UserDefinedTransitionTypes;
 
+
+
     /* Calculate largest view, both from generated and user-defined typelists */
     typedef meta::select_type_maxsize< UserDefinedViewTypes >::type MaxUserViewType;
 

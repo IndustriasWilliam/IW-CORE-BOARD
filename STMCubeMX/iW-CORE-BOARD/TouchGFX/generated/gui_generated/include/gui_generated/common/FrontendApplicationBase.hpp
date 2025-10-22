@@ -17,29 +17,89 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoMainScreenNoTransition();
+        gotoHallwayScreenScreenNoTransition();
     }
 
-    // Main
-    void gotoMainScreenNoTransition();
+    // HallwayScreen
+    void gotoHallwayScreenScreenNoTransition();
 
-    void gotoMainScreenSlideTransitionWest();
+    void gotoHallwayScreenScreenWipeTransitionWest();
 
-    // PoolTemp
-    void gotoPoolTempScreenSlideTransitionEast();
+    // KitchenScreen
+    void gotoKitchenScreenScreenWipeTransitionEast();
+
+    void gotoKitchenScreenScreenNoTransition();
+
+    // BathtubScreen
+    void gotoBathtubScreenScreenNoTransition();
+
+    // BathroomScreen
+    void gotoBathroomScreenScreenWipeTransitionWest();
+
+    void gotoBathroomScreenScreenNoTransition();
+
+    // WasherScreen
+    void gotoWasherScreenScreenNoTransition();
+
+    // ExtractorHoodScreen
+    void gotoExtractorHoodScreenScreenNoTransition();
+
+    // RecipeScreen
+    void gotoRecipeScreenScreenCoverTransitionSouth();
+
+    void gotoRecipeScreenScreenNoTransition();
+
+    // RecipeSelectedScreen
+    void gotoRecipeSelectedScreenScreenCoverTransitionNorth();
+
+    // OvenScreen
+    void gotoOvenScreenScreenNoTransition();
+
+    // HomeControlScreen
+    void gotoHomeControlScreenScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // Main
-    void gotoMainScreenNoTransitionImpl();
+    // HallwayScreen
+    void gotoHallwayScreenScreenNoTransitionImpl();
 
-    void gotoMainScreenSlideTransitionWestImpl();
+    void gotoHallwayScreenScreenWipeTransitionWestImpl();
 
-    // PoolTemp
-    void gotoPoolTempScreenSlideTransitionEastImpl();
+    // KitchenScreen
+    void gotoKitchenScreenScreenWipeTransitionEastImpl();
+
+    void gotoKitchenScreenScreenNoTransitionImpl();
+
+    // BathtubScreen
+    void gotoBathtubScreenScreenNoTransitionImpl();
+
+    // BathroomScreen
+    void gotoBathroomScreenScreenWipeTransitionWestImpl();
+
+    void gotoBathroomScreenScreenNoTransitionImpl();
+
+    // WasherScreen
+    void gotoWasherScreenScreenNoTransitionImpl();
+
+    // ExtractorHoodScreen
+    void gotoExtractorHoodScreenScreenNoTransitionImpl();
+
+    // RecipeScreen
+    void gotoRecipeScreenScreenCoverTransitionSouthImpl();
+
+    void gotoRecipeScreenScreenNoTransitionImpl();
+
+    // RecipeSelectedScreen
+    void gotoRecipeSelectedScreenScreenCoverTransitionNorthImpl();
+
+    // OvenScreen
+    void gotoOvenScreenScreenNoTransitionImpl();
+
+    // HomeControlScreen
+    void gotoHomeControlScreenScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

@@ -18,6 +18,10 @@ public:
         model.tick();
         FrontendApplicationBase::handleTickEvent();
     }
+
+    virtual void handleClickEvent(const ClickEvent& evt);
+    virtual void handleDragEvent(const DragEvent& evt);
+
 private:
 };
 

@@ -138,6 +138,7 @@ public:
      */
     virtual bool blockCopy(void* RESTRICT dest, const void* RESTRICT src, uint32_t numBytes);
 
+    virtual void taskEntry();
 protected:
     /**
      * @fn virtual uint16_t* TouchGFXHAL::getTFTFrameBuffer() const;
