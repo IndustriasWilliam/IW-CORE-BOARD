@@ -25,6 +25,7 @@
 #include "jpeg.h"
 #include "libjpeg.h"
 #include "ltdc.h"
+#include "mdma.h"
 #include "sdmmc.h"
 #include "tim.h"
 #include "usart.h"
@@ -124,6 +125,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_MDMA_Init();
   MX_I2C3_Init();
 //  MX_SDMMC2_SD_Init();
 //  MX_USB_OTG_FS_HCD_Init();

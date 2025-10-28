@@ -57,7 +57,7 @@ const osThreadAttr_t TouchGFXTask_attributes = {
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
-  .stack_size = 1024 * 4,
+  .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 
@@ -152,8 +152,8 @@ void MX_FREERTOS_Init(void) {
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
-	TickType_t start_tick = xTaskGetTickCount();
   /* USER CODE BEGIN StartDefaultTask */
+	TickType_t start_tick = 0;
   /* Infinite loop */
   for(;;)
   {

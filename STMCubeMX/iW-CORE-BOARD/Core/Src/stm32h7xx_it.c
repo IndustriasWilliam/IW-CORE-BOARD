@@ -56,6 +56,8 @@
 
 /* External variables --------------------------------------------------------*/
 extern DMA2D_HandleTypeDef hdma2d;
+extern MDMA_HandleTypeDef hmdma_jpeg_infifo_th;
+extern MDMA_HandleTypeDef hmdma_jpeg_outfifo_th;
 extern JPEG_HandleTypeDef hjpeg;
 extern LTDC_HandleTypeDef hltdc;
 extern TIM_HandleTypeDef htim17;
@@ -230,6 +232,21 @@ void JPEG_IRQHandler(void)
   /* USER CODE BEGIN JPEG_IRQn 1 */
 
   /* USER CODE END JPEG_IRQn 1 */
+}
+
+/**
+  * @brief This function handles MDMA global interrupt.
+  */
+void MDMA_IRQHandler(void)
+{
+  /* USER CODE BEGIN MDMA_IRQn 0 */
+
+  /* USER CODE END MDMA_IRQn 0 */
+  HAL_MDMA_IRQHandler(&hmdma_jpeg_infifo_th);
+  HAL_MDMA_IRQHandler(&hmdma_jpeg_outfifo_th);
+  /* USER CODE BEGIN MDMA_IRQn 1 */
+
+  /* USER CODE END MDMA_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

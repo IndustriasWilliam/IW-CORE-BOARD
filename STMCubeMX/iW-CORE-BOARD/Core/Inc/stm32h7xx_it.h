@@ -57,6 +57,7 @@ void LTDC_ER_IRQHandler(void);
 void DMA2D_IRQHandler(void);
 void TIM17_IRQHandler(void);
 void JPEG_IRQHandler(void);
+void MDMA_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */

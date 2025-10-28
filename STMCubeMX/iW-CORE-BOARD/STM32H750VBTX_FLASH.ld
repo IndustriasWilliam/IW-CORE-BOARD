@@ -164,7 +164,7 @@ SECTIONS
     . = . + _Min_Heap_Size;
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
-  } >RAM_D2
+  } >DTCMRAM
 	  .ExtThirdPartyHeaderSection :
   {
   ExtThirdPartyHeader = .;
@@ -211,6 +211,8 @@ demo_icon_section :
     libm.a ( * )
     libgcc.a ( * )
   }
+  .TouchGFX_MCU_Data_OutBuffer0 (NOLOAD) : { *(.TouchGFX_MCU_Data_OutBuffer0) } >DTCMRAM
+  .TouchGFX_MCU_Data_OutBuffer1 (NOLOAD) : { *(.TouchGFX_MCU_Data_OutBuffer1) } >DTCMRAM
   //.FBSection (NOLOAD) : { *(.FBSection) } >RAM_D1
 	ExtFlashSection  : { *(ExtFlashSection) } >FLASH
 	FontFlashSection  : { *(FontFlashSection) } >FLASH
