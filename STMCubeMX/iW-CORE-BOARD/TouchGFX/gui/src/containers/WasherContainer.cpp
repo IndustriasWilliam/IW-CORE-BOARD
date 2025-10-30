@@ -3,10 +3,11 @@
 #include "BitmapDatabase.hpp"
 
 WasherContainer::WasherContainer()
-    :  washerWheelAnimateToCallback(this, &WasherContainer::washerWheelAnimateToHandler),
-       fadeAnimatonEndedCallBack(this, &WasherContainer::fadeAnimationEndedHandler),
-       buttonPressedCallBack(this, &WasherContainer::buttonPressedHandler),
-       centerAnimatedImageCallback(this, &WasherContainer::centerAnimatedImageDone)
+    : washerWheelAnimateToCallback(this, &WasherContainer::washerWheelAnimateToHandler),
+      fadeAnimatonEndedCallBack(this, &WasherContainer::fadeAnimationEndedHandler),
+      buttonPressedCallBack(this, &WasherContainer::buttonPressedHandler),
+      centerAnimatedImageCallback(this, &WasherContainer::centerAnimatedImageDone),
+      washerWheelanimationEndedCallback(this, &WasherContainer::washerWheelanimationEndedHandler)
 {
     animationState = WAITING;
     currentItem = 0;
@@ -15,6 +16,7 @@ WasherContainer::WasherContainer()
     animationTimer = 0;
     currentProgram = 0;
     washingTime = 0;
+    totalDrag = 0;
 }
 
 
@@ -23,18 +25,26 @@ void WasherContainer::initialize()
     WasherContainerBase::initialize();
 
     washerWheel.setAnimationSteps(40);
+
     washerWheel.setAnimateToCallback(washerWheelAnimateToCallback);
 
+    washerWheel.setAnimationEndedCallback(washerWheelanimationEndedCallback);
+
     textAreaDash.setFadeAnimationEndedAction(fadeAnimatonEndedCallBack);
+
     buttonStart.setAction(buttonPressedCallBack);
 
     centerAnimation.setDoneAction(centerAnimatedImageCallback);
 
     currentItem = washerWheel.getSelectedItem();
+    setProgramTextAndTime(currentItem);
 
-    updateProgramTexts();
+
+    // Fadein the washer wheel program text
+    fadeInOutProgramTexts(washerProgramTextFadeDuration, washerProgramTextFadeDelay, true);
 
     progressBar.setCapPrecision(15);
+
 }
 
 
@@ -60,6 +70,26 @@ void WasherContainer::rightButtonClicked()
 }
 
 
+void WasherContainer::handleDragEvent(const DragEvent& evt)
+{
+    totalDrag += evt.getDeltaX();
+
+    /* Fadeout the program text when a dragevent occurs, only if the washer wheel animation has ended.
+       This include minimum values of +6 and -6 for the amount of drag that trigger the program text fadeout.
+    */
+    if (washerWheel.isAnimating())
+    {
+        if (totalDrag > 10 || totalDrag < -10)
+        {
+            if (!textAreaProgramName.isFadeAnimationRunning() && textAreaProgramName.getAlpha() != 0)
+            {
+                fadeInOutProgramTexts(washerProgramTextFadeDuration, washerProgramTextFadeDelay, false);
+                totalDrag = 0;
+            }
+        }
+    }
+}
+
 void WasherContainer::leftButtonClicked()
 {
     if (!washerWheel.isAnimating())
@@ -72,13 +102,21 @@ void WasherContainer::leftButtonClicked()
 
 void WasherContainer::washerWheelAnimateToHandler(int16_t item)
 {
+    // Set the current washing program.
     if (currentItem != (item % 7))
     {
         currentItem = (item % 7);
-        fadeOutProgramTexts();
     }
+    // Fadeout the program text when the washer wheel animation starts.
+    fadeInOutProgramTexts(washerProgramTextFadeDuration, washerProgramTextFadeDelay, false);
 }
 
+void WasherContainer::washerWheelanimationEndedHandler()
+{
+    // Set the the program text and washer time for the item that is selected and fadein the program text.
+    setProgramTextAndTime(currentItem);
+    fadeInOutProgramTexts(washerProgramTextFadeDuration, washerProgramTextFadeDelay, true);
+}
 
 void WasherContainer::fadeAnimationEndedHandler(const FadeAnimator<TextArea>& txt)
 {
@@ -86,11 +124,6 @@ void WasherContainer::fadeAnimationEndedHandler(const FadeAnimator<TextArea>& tx
     {
     case WAITING:
         {
-            if (textAreaDash.getAlpha() == 0)
-            {
-                updateProgramTexts();
-            }
-
             break;
         }
 
@@ -123,9 +156,11 @@ void WasherContainer::fadeAnimationEndedHandler(const FadeAnimator<TextArea>& tx
     }
 }
 
+
+// Sets the program text and time for the selected program.
 void WasherContainer::setProgramTextAndTime(int16_t item)
 {
-    int totalTime;
+    int totalTime = 160;
 
     switch (item)
     {
@@ -191,46 +226,6 @@ void WasherContainer::setProgramTextAndTime(int16_t item)
 }
 
 
-void WasherContainer::fadeOutProgramTexts()
-{
-    // only start fade once
-    if (textAreaDash.isFadeAnimationRunning())
-    {
-        return;
-    }
-
-    const int duration = 10;
-    const int delay = 15;
-
-    textAreaProgramName.setFadeAnimationDelay(delay);
-    textAreaProgramName.startFadeAnimation(0, duration);
-
-    textAreaDash.setFadeAnimationDelay(delay);
-    textAreaDash.startFadeAnimation(0, duration);
-
-    textAreaProgramLength.setFadeAnimationDelay(delay);
-    textAreaProgramLength.startFadeAnimation(0, duration);
-}
-
-
-void WasherContainer::updateProgramTexts()
-{
-    setProgramTextAndTime(currentItem);
-
-    textAreaProgramName.setFadeAnimationDelay(0);
-    textAreaProgramName.startFadeAnimation(255, 5);
-    textAreaProgramName.invalidate();
-
-    textAreaDash.setFadeAnimationDelay(0);
-    textAreaDash.startFadeAnimation(255, 5);
-    textAreaDash.invalidate();
-
-    textAreaProgramLength.setFadeAnimationDelay(0);
-    textAreaProgramLength.startFadeAnimation(255, 5);
-    textAreaProgramLength.invalidate();
-}
-
-
 void WasherContainer::tickEvent()
 {
     touchTimer++;
@@ -242,7 +237,6 @@ void WasherContainer::tickEvent()
             if (currentItem != washerWheel.getSelectedItem())
             {
                 currentItem = washerWheel.getSelectedItem();
-                updateProgramTexts();
             }
 
             if (touchTimer == TOUCH_START_TIMEOUT && !washerWheel.isAnimating())
@@ -384,12 +378,12 @@ void WasherContainer::tickEvent()
                 buttonStart.setVisible(true);
                 buttonStart.invalidate();
 
-                updateProgramTexts();
+                // Set the the program text for the item that is selected and fadein the program text after the washing is done.
+                setProgramTextAndTime(currentItem);
+                fadeInOutProgramTexts(washerProgramTextFadeDuration, washerProgramTextFadeDelay, true);
             }
-
             break;
         }
-
     default:
         {
             break;
@@ -434,32 +428,41 @@ void WasherContainer::gotoWaitingStart()
 
 void WasherContainer::buttonPressedHandler(const AbstractButton& src)
 {
+    // Start the button pressed handler only if the washing wheel animation is not running.
     if (washerWheel.isAnimating())
     {
         return;
     }
 
-    fadeOutProgramTextsNow();
+    // Fadeout the program text.
+    fadeInOutProgramTexts(washerProgramTextFadeDuration, washerProgramTextFadeDelay, false);
+
+    // Set animation state
     animationState = STARTING;
 
+    // Replace image and move wahser wheels left side.
     leftReplacementImage.setX(washerWheel.getX() + washerWheel.getSelectedItemMarginBefore());
     leftReplacementImage.setBitmap(getIconBitmap(washerWheel.getSelectedItem() - 1));
     leftReplacementImage.setVisible(true);
     leftReplacementImage.invalidate();
 
+    // Replace image and move wahser wheels right side.
     rightReplacementImage.setX(5 * washerWheel.getX() + 4 * washerWheel.getDrawableMargin() + washerWheel.getSelectedItemMarginBefore());
     rightReplacementImage.setBitmap(getIconBitmap(washerWheel.getSelectedItem() + 1));
     rightReplacementImage.setVisible(true);
     rightReplacementImage.invalidate();
 
+    // Invalidate the change and show the washer wheel-
     washerWheel.invalidate();
     washerWheel.setVisible(false);
 
+    // Show the shading
     leftShade.setVisible(false);
     leftShade.invalidate();
     rightShade.setVisible(false);
     rightShade.invalidate();
 
+    // Start the move animation of the wheel with parameters for the left side.
     leftReplacementImage.startMoveAnimation(
         leftReplacementImage.getX() - START_MOVE_ANIMATION_LENGTH,
         leftReplacementImage.getY(),
@@ -467,6 +470,7 @@ void WasherContainer::buttonPressedHandler(const AbstractButton& src)
         EasingEquations::cubicEaseIn
     );
 
+    // Start the move animation of the wheel with parameters for the right side.
     rightReplacementImage.startMoveAnimation(
         rightReplacementImage.getX() + START_MOVE_ANIMATION_LENGTH,
         rightReplacementImage.getY(),
@@ -474,6 +478,7 @@ void WasherContainer::buttonPressedHandler(const AbstractButton& src)
         EasingEquations::cubicEaseIn
     );
 
+    // Start the move animation of the button parameters for the left side.
     leftButton.startMoveAnimation(
         leftButton.getX() - START_MOVE_ANIMATION_LENGTH,
         leftButton.getY(),
@@ -481,6 +486,7 @@ void WasherContainer::buttonPressedHandler(const AbstractButton& src)
         EasingEquations::cubicEaseIn
     );
 
+    // Start the move animation of the button parameters for the right side.
     rightButton.startMoveAnimation(
         rightButton.getX() + START_MOVE_ANIMATION_LENGTH,
         rightButton.getY(),
@@ -603,17 +609,22 @@ Bitmap WasherContainer::getIconBitmap(int16_t index) const
     }
 }
 
-
-void WasherContainer::fadeOutProgramTextsNow()
+// Fade in or out the program text.
+void WasherContainer::fadeInOutProgramTexts(const int duration, const int delay, bool fadeInOut)
 {
-    const int duration = 10;
-    const int delay = 0;
+    int _fadeAlpha = 0;
+
+    if (fadeInOut)
+    {
+        _fadeAlpha = 255;
+    }
+
     textAreaProgramName.setFadeAnimationDelay(delay);
-    textAreaProgramName.startFadeAnimation(0, duration);
+    textAreaProgramName.startFadeAnimation(_fadeAlpha, duration);
     textAreaDash.setFadeAnimationDelay(delay);
-    textAreaDash.startFadeAnimation(0, duration);
+    textAreaDash.startFadeAnimation(_fadeAlpha, duration);
     textAreaProgramLength.setFadeAnimationDelay(delay);
-    textAreaProgramLength.startFadeAnimation(0, duration);
+    textAreaProgramLength.startFadeAnimation(_fadeAlpha, duration);
 }
 
 
@@ -772,5 +783,5 @@ void WasherContainer::resetContainer()
 
     currentItem = washerWheel.getSelectedItem();
 
-    updateProgramTexts();
+    fadeInOutProgramTexts(washerProgramTextFadeDuration, washerProgramTextFadeDelay, true);
 }

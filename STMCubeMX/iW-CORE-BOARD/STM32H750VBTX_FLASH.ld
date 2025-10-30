@@ -37,8 +37,8 @@ ENTRY(Reset_Handler)
 /* Highest address of the user mode stack */
 _estack = ORIGIN(RAM_D1) + LENGTH(RAM_D1);    /* end of RAM */
 /* Generate a link error if heap and stack don't fit into RAM */
-_Min_Heap_Size = 0x200;      /* required amount of heap  */
-_Min_Stack_Size = 0x400; /* required amount of stack */
+_Min_Heap_Size = 0xA00;      /* required amount of heap  */
+_Min_Stack_Size = 0xA00; /* required amount of stack */
 
 /* Specify the memory areas */
 MEMORY
@@ -86,6 +86,7 @@ SECTIONS
     *(.rodata)         /* .rodata sections (constants, strings, etc.) */
     *(.rodata*)        /* .rodata* sections (constants, strings, etc.) */
     . = ALIGN(4);
+
   } >FLASH
 
   .ARM.extab (READONLY) : /* The READONLY keyword is only supported in GCC11 and later, remove it if using GCC10 or earlier. */
@@ -189,14 +190,8 @@ demo_icon_section :
   demo_logo = .;
   KEEP(*(demo_logo_section ));
   demo_logo_end = .;
-   } >FLASH 
-
- washer_video_section :
-  {
-  washer_video = .;
-  KEEP(*(washer_video_section ));
-  washer_video_end = .;
-   } >FLASH 
+   } >FLASH
+  
    
   receipe_video_section :
   {

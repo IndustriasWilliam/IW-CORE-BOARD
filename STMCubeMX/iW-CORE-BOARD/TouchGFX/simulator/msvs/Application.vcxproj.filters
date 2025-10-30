@@ -184,125 +184,53 @@
     <Filter Include="Source Files\gui\containers">
       <UniqueIdentifier>BF9AB77C-E046-5598-3B78-C400BA79AB5B</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\extractorhoodscreen_screen">
-      <UniqueIdentifier>E17D453C-EE96-9942-AD0F-8064668B050D</UniqueIdentifier>
+    <Filter Include="Header Files\gui\washing_screen">
+      <UniqueIdentifier>DE1A70F1-8EB7-BCBC-0AFD-E3B08154A9C9</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\extractorhoodscreen_screen">
-      <UniqueIdentifier>03FC269B-7053-F110-804F-F4B23F8CCC5D</UniqueIdentifier>
+    <Filter Include="Header Files\gui\screensaver_screen">
+      <UniqueIdentifier>84D03F62-C59F-0738-A0BF-D6616FAD63DC</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\ovenscreen_screen">
-      <UniqueIdentifier>D13E590C-E1E1-184E-8960-5213498D34D2</UniqueIdentifier>
+    <Filter Include="Source Files\gui\screensaver_screen">
+      <UniqueIdentifier>33C0B403-BE22-1985-D4C9-2DA8D1DD932D</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\ovenscreen_screen">
-      <UniqueIdentifier>80AB4634-9D9E-A0CF-CBB7-E6FFE16BFB46</UniqueIdentifier>
+    <Filter Include="Source Files\gui\washing_screen">
+      <UniqueIdentifier>92600076-A1E1-1B79-5DD5-D9918EB41EE0</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\bathroomscreen_screen">
-      <UniqueIdentifier>5F2FF6F7-121B-525C-3E28-B8B9C1EA9790</UniqueIdentifier>
+    <Filter Include="Source Files\gui\about_screen">
+      <UniqueIdentifier>9AC0656A-3C96-A726-7311-682F110E8BCC</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\bathroomscreen_screen">
-      <UniqueIdentifier>90018650-0CFC-16E7-9296-6BACCE1549D1</UniqueIdentifier>
+    <Filter Include="Header Files\gui\about_screen">
+      <UniqueIdentifier>B721BFA5-3A27-AE11-52C5-D4223E73F086</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\kitchenscreen_screen">
-      <UniqueIdentifier>5EF03C15-AAFD-21CF-59EE-790A7C86F6C7</UniqueIdentifier>
+    <Filter Include="Header Files\gui\instructions_screen">
+      <UniqueIdentifier>0752A64C-CFA9-A1BF-3F21-59E9186A8919</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\kitchenscreen_screen">
-      <UniqueIdentifier>DA1FF82C-4D70-A364-9AB9-FC816CE7A7DA</UniqueIdentifier>
+    <Filter Include="Source Files\gui\instructions_screen">
+      <UniqueIdentifier>BDF2CD84-9591-039E-67C8-DD22E67642DA</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\bathtubscreen_screen">
-      <UniqueIdentifier>5F4A702F-4BEE-6938-318D-E4A2A94ECC5A</UniqueIdentifier>
+    <Filter Include="Source Files\generated\gui_generated\screensaver_screen">
+      <UniqueIdentifier>E8C76705-256A-40A3-F5D0-A18BC71FEB48</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\bathtubscreen_screen">
-      <UniqueIdentifier>C691AD29-4F9E-1877-18DE-9E19B59F3B0B</UniqueIdentifier>
+    <Filter Include="Source Files\generated\gui_generated\instructions_screen">
+      <UniqueIdentifier>E600207B-7714-741B-788C-984129C853E1</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\washerscreen_screen">
-      <UniqueIdentifier>EA21A7B1-1EC1-EAB3-019C-48D01ADF9297</UniqueIdentifier>
+    <Filter Include="Header Files\generated\gui_generated\instructions_screen">
+      <UniqueIdentifier>5BC88864-1793-FA75-128A-BC01DA11CCC4</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\washerscreen_screen">
-      <UniqueIdentifier>E14E2894-9032-DE95-05F5-879C24462DB8</UniqueIdentifier>
+    <Filter Include="Source Files\generated\gui_generated\washing_screen">
+      <UniqueIdentifier>C18E8D24-1FE4-B7BB-B846-7E787BBE5514</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\homecontrolscreen_screen">
-      <UniqueIdentifier>7F15C2B2-F3DE-CE97-6932-6D6748721E47</UniqueIdentifier>
+    <Filter Include="Header Files\generated\gui_generated\about_screen">
+      <UniqueIdentifier>0E19AA32-5EE0-5F73-3B50-06EAE43E4928</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\homecontrolscreen_screen">
-      <UniqueIdentifier>58ECA03E-F1A2-4EA1-B837-6C067AF4231B</UniqueIdentifier>
+    <Filter Include="Source Files\generated\gui_generated\about_screen">
+      <UniqueIdentifier>62042E3C-3C2D-9966-E026-567524B87228</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\recipescreen_screen">
-      <UniqueIdentifier>837989AE-A9FF-487D-CEB7-E856607C4A12</UniqueIdentifier>
+    <Filter Include="Header Files\generated\gui_generated\screensaver_screen">
+      <UniqueIdentifier>81B68093-A199-40EA-4592-B7954A40E8C0</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\recipescreen_screen">
-      <UniqueIdentifier>7EB6BB23-17C0-D1F5-7C5E-BE3A6D620500</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\hallwayscreen_screen">
-      <UniqueIdentifier>E7F5CCA5-B864-0B8E-C898-267D5D546153</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\hallwayscreen_screen">
-      <UniqueIdentifier>1C4538AE-5240-86F5-3ED0-6044A3835E5A</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\recipeselectedscreen_screen">
-      <UniqueIdentifier>DA3AB880-3A5B-322A-6077-416340C98839</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\recipeselectedscreen_screen">
-      <UniqueIdentifier>5A1322B5-03F3-846A-4998-A09D44A73081</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\ovenscreen_screen">
-      <UniqueIdentifier>98E1B616-6A91-3428-3AE3-901FD5D9CCC4</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\ovenscreen_screen">
-      <UniqueIdentifier>402488C0-2B6D-1FBA-B2FA-55E6B0FC3D96</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\extractorhoodscreen_screen">
-      <UniqueIdentifier>864356D9-CE6F-290F-2FAA-739E72EF38DE</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\extractorhoodscreen_screen">
-      <UniqueIdentifier>562E778C-96E1-E1F4-7D3E-7848ED1F9AF3</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\recipeselectedscreen_screen">
-      <UniqueIdentifier>09BAE7F5-5654-8C23-AAE4-5C6896BE4D85</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\recipeselectedscreen_screen">
-      <UniqueIdentifier>A4560BBC-A004-13C7-1734-3C1C16F066DD</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\recipescreen_screen">
-      <UniqueIdentifier>C345038F-0753-17BE-2539-950D9BE391A3</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\recipescreen_screen">
-      <UniqueIdentifier>0A4E56E1-4AFA-71F2-9326-35B837C45DC7</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\hallwayscreen_screen">
-      <UniqueIdentifier>67CD0875-8D4E-B631-DB91-71686FCEB9B9</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\hallwayscreen_screen">
-      <UniqueIdentifier>22C60255-F071-BFF6-5BD2-7740883D2BC9</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\homecontrolscreen_screen">
-      <UniqueIdentifier>F0B18150-0D90-F6B6-953B-197D84431A9D</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\homecontrolscreen_screen">
-      <UniqueIdentifier>E19EF448-90D2-17E0-5FF5-A68D91F3D486</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\washerscreen_screen">
-      <UniqueIdentifier>BE44AD38-F6C6-19D7-2829-15B74509554E</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\bathtubscreen_screen">
-      <UniqueIdentifier>631665C9-8BC8-AC49-8758-EF9F62AFF4CB</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\washerscreen_screen">
-      <UniqueIdentifier>65E6376F-637F-34B8-CD50-541CC6B8D021</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\bathtubscreen_screen">
-      <UniqueIdentifier>2D2B9EBB-75DE-FB08-C5D6-9F693588CD57</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\bathroomscreen_screen">
-      <UniqueIdentifier>0601EF90-A2DA-AD7E-F77C-1B7DC9A1090D</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\kitchenscreen_screen">
-      <UniqueIdentifier>F1DF0EB0-9157-F28F-08D7-597FFA7E242D</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\bathroomscreen_screen">
-      <UniqueIdentifier>A281C6AF-8B9A-5DF5-B1D4-673D69822A91</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\kitchenscreen_screen">
-      <UniqueIdentifier>79798622-C288-8509-68CC-5FE96FA2A21D</UniqueIdentifier>
+    <Filter Include="Header Files\generated\gui_generated\washing_screen">
+      <UniqueIdentifier>BE36A372-68B0-EC3E-7017-EC0A7FF75C13</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -336,212 +264,11 @@
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\extractorhoodscreen_screen\AnimatedImage2.cpp">
-      <Filter>Source Files\gui\extractorhoodscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\bathroomscreen_screen\BathroomScreenPresenter.cpp">
-      <Filter>Source Files\gui\bathroomscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\bathroomscreen_screen\BathroomScreenView.cpp">
-      <Filter>Source Files\gui\bathroomscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\bathroomscreen_screen\BathroomScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\bathroomscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\bathtubscreen_screen\BathtubScreenPresenter.cpp">
-      <Filter>Source Files\gui\bathtubscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\bathtubscreen_screen\BathtubScreenView.cpp">
-      <Filter>Source Files\gui\bathtubscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\bathtubscreen_screen\BathtubScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\bathtubscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\BathtubWheelElement.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\BathtubWheelElementBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\BathtubWheelElementCenter.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\BathtubWheelElementCenterBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\DeviceInfo.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\DeviceInfoBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\DeviceInfoWheelElements.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\DeviceInfoWheelElementsBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\extractorhoodscreen_screen\ExtractorHoodScreenPresenter.cpp">
-      <Filter>Source Files\gui\extractorhoodscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\extractorhoodscreen_screen\ExtractorHoodScreenView.cpp">
-      <Filter>Source Files\gui\extractorhoodscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\extractorhoodscreen_screen\ExtractorHoodScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\extractorhoodscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\FanKnob.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\FanKnobBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\hallwayscreen_screen\hallwayScreenPresenter.cpp">
-      <Filter>Source Files\gui\hallwayscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\hallwayscreen_screen\hallwayScreenView.cpp">
-      <Filter>Source Files\gui\hallwayscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\hallwayscreen_screen\HallwayScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\hallwayscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\homecontrolscreen_screen\HomeControlScreenPresenter.cpp">
-      <Filter>Source Files\gui\homecontrolscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\homecontrolscreen_screen\HomeControlScreenView.cpp">
-      <Filter>Source Files\gui\homecontrolscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\homecontrolscreen_screen\HomeControlScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\homecontrolscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\HomeUISplashContainer.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\HomeUISplashContainerBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\HomeUIWheelElement.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\HomeUIWheelElementBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\HomeUIWheelLargeElements.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\HomeUIWheelLargeElementsBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\HomeUIWheelSmallElements.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\HomeUIWheelSmallElementsBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\kitchenscreen_screen\KitchenScreenPresenter.cpp">
-      <Filter>Source Files\gui\kitchenscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\kitchenscreen_screen\KitchenScreenView.cpp">
-      <Filter>Source Files\gui\kitchenscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\kitchenscreen_screen\KitchenScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\kitchenscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\ovenscreen_screen\OvenScreenPresenter.cpp">
-      <Filter>Source Files\gui\ovenscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\ovenscreen_screen\OvenScreenView.cpp">
-      <Filter>Source Files\gui\ovenscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\ovenscreen_screen\OvenScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\ovenscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\OvenSplashScreen.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\OvenSplashScreenBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\OvenTemperatureContainer.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\OvenTemperatureContainerBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\OvenTimerContainer.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\OvenTimerContainerBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\OvenTimerWheelCenterElement.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\OvenTimerWheelCenterElementBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\OvenTimerWheelElement.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\OvenTimerWheelElementBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\OvenWheelElement.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\OvenWheelElementBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\RecipeListElement.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\RecipeListElementBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\recipescreen_screen\RecipeScreenPresenter.cpp">
-      <Filter>Source Files\gui\recipescreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\recipescreen_screen\RecipeScreenView.cpp">
-      <Filter>Source Files\gui\recipescreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\recipescreen_screen\RecipeScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\recipescreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\recipeselectedscreen_screen\RecipeSelectedScreenPresenter.cpp">
-      <Filter>Source Files\gui\recipeselectedscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\recipeselectedscreen_screen\RecipeSelectedScreenView.cpp">
-      <Filter>Source Files\gui\recipeselectedscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\recipeselectedscreen_screen\RecipeSelectedScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\recipeselectedscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\RoomInfo.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\RoomInfoBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\containers\RoomInfoWheelElements.cpp">
-      <Filter>Source Files\gui\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\RoomInfoWheelElementsBase.cpp">
-      <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\gui\src\containers\WasherContainer.cpp">
       <Filter>Source Files\gui\containers</Filter>
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\WasherContainerBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\washerscreen_screen\WasherScreenPresenter.cpp">
-      <Filter>Source Files\gui\washerscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\washerscreen_screen\WasherScreenView.cpp">
-      <Filter>Source Files\gui\washerscreen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\washerscreen_screen\WasherScreenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\washerscreen_screen</Filter>
     </ClCompile>
     <ClCompile Include="..\..\gui\src\containers\WasherWheelCenterItem.cpp">
       <Filter>Source Files\gui\containers</Filter>
@@ -554,6 +281,45 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\WasherWheelItemBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\about_screen\AboutPresenter.cpp">
+      <Filter>Source Files\gui\about_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\about_screen\AboutView.cpp">
+      <Filter>Source Files\gui\about_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\about_screen\AboutViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\about_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\instructions_screen\InstructionsPresenter.cpp">
+      <Filter>Source Files\gui\instructions_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\instructions_screen\InstructionsView.cpp">
+      <Filter>Source Files\gui\instructions_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\instructions_screen\InstructionsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\instructions_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screensaver_screen\ParticleEffect.cpp">
+      <Filter>Source Files\gui\screensaver_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screensaver_screen\ScreenSaverPresenter.cpp">
+      <Filter>Source Files\gui\screensaver_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screensaver_screen\ScreenSaverView.cpp">
+      <Filter>Source Files\gui\screensaver_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screensaver_screen\ScreenSaverViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screensaver_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\washing_screen\WashingPresenter.cpp">
+      <Filter>Source Files\gui\washing_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\washing_screen\WashingView.cpp">
+      <Filter>Source Files\gui\washing_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\washing_screen\WashingViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\washing_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -997,215 +763,11 @@
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\extractorhoodscreen_screen\AnimatedImage2.hpp">
-      <Filter>Header Files\gui\extractorhoodscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\bathroomscreen_screen\BathroomScreenPresenter.hpp">
-      <Filter>Header Files\gui\bathroomscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\bathroomscreen_screen\BathroomScreenView.hpp">
-      <Filter>Header Files\gui\bathroomscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\bathroomscreen_screen\BathroomScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\bathroomscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\bathtubscreen_screen\BathtubScreenPresenter.hpp">
-      <Filter>Header Files\gui\bathtubscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\bathtubscreen_screen\BathtubScreenView.hpp">
-      <Filter>Header Files\gui\bathtubscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\bathtubscreen_screen\BathtubScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\bathtubscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\BathtubWheelElement.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\BathtubWheelElementBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\BathtubWheelElementCenter.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\BathtubWheelElementCenterBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\common\Defines.hpp">
-      <Filter>Header Files\gui\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\DeviceInfo.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\DeviceInfoBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\DeviceInfoWheelElements.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\DeviceInfoWheelElementsBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\extractorhoodscreen_screen\ExtractorHoodScreenPresenter.hpp">
-      <Filter>Header Files\gui\extractorhoodscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\extractorhoodscreen_screen\ExtractorHoodScreenView.hpp">
-      <Filter>Header Files\gui\extractorhoodscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\extractorhoodscreen_screen\ExtractorHoodScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\extractorhoodscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\FanKnob.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\FanKnobBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\hallwayscreen_screen\hallwayScreenPresenter.hpp">
-      <Filter>Header Files\gui\hallwayscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\hallwayscreen_screen\hallwayScreenView.hpp">
-      <Filter>Header Files\gui\hallwayscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\hallwayscreen_screen\HallwayScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\hallwayscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\homecontrolscreen_screen\HomeControlScreenPresenter.hpp">
-      <Filter>Header Files\gui\homecontrolscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\homecontrolscreen_screen\HomeControlScreenView.hpp">
-      <Filter>Header Files\gui\homecontrolscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\homecontrolscreen_screen\HomeControlScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\homecontrolscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\HomeUISplashContainer.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\HomeUISplashContainerBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\HomeUIWheelElement.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\HomeUIWheelElementBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\HomeUIWheelLargeElements.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\HomeUIWheelLargeElementsBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\HomeUIWheelSmallElements.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\HomeUIWheelSmallElementsBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\kitchenscreen_screen\KitchenScreenPresenter.hpp">
-      <Filter>Header Files\gui\kitchenscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\kitchenscreen_screen\KitchenScreenView.hpp">
-      <Filter>Header Files\gui\kitchenscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\kitchenscreen_screen\KitchenScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\kitchenscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\ovenscreen_screen\OvenScreenPresenter.hpp">
-      <Filter>Header Files\gui\ovenscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\ovenscreen_screen\OvenScreenView.hpp">
-      <Filter>Header Files\gui\ovenscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\ovenscreen_screen\OvenScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\ovenscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\OvenSplashScreen.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\OvenSplashScreenBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\OvenTemperatureContainer.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\OvenTemperatureContainerBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\OvenTimerContainer.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\OvenTimerContainerBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\OvenTimerWheelCenterElement.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\OvenTimerWheelCenterElementBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\OvenTimerWheelElement.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\OvenTimerWheelElementBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\OvenWheelElement.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\OvenWheelElementBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\RecipeListElement.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\RecipeListElementBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\recipescreen_screen\RecipeScreenPresenter.hpp">
-      <Filter>Header Files\gui\recipescreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\recipescreen_screen\RecipeScreenView.hpp">
-      <Filter>Header Files\gui\recipescreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\recipescreen_screen\RecipeScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\recipescreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\recipeselectedscreen_screen\RecipeSelectedScreenPresenter.hpp">
-      <Filter>Header Files\gui\recipeselectedscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\recipeselectedscreen_screen\RecipeSelectedScreenView.hpp">
-      <Filter>Header Files\gui\recipeselectedscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\recipeselectedscreen_screen\RecipeSelectedScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\recipeselectedscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\RoomInfo.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\RoomInfoBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\containers\RoomInfoWheelElements.hpp">
-      <Filter>Header Files\gui\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\RoomInfoWheelElementsBase.hpp">
-      <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\containers\WasherContainer.hpp">
       <Filter>Header Files\gui\containers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\WasherContainerBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\washerscreen_screen\WasherScreenPresenter.hpp">
-      <Filter>Header Files\gui\washerscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\washerscreen_screen\WasherScreenView.hpp">
-      <Filter>Header Files\gui\washerscreen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\washerscreen_screen\WasherScreenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\washerscreen_screen</Filter>
     </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\containers\WasherWheelCenterItem.hpp">
       <Filter>Header Files\gui\containers</Filter>
@@ -1218,6 +780,45 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\WasherWheelItemBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\about_screen\AboutPresenter.hpp">
+      <Filter>Header Files\gui\about_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\about_screen\AboutView.hpp">
+      <Filter>Header Files\gui\about_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\about_screen\AboutViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\about_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\instructions_screen\InstructionsPresenter.hpp">
+      <Filter>Header Files\gui\instructions_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\instructions_screen\InstructionsView.hpp">
+      <Filter>Header Files\gui\instructions_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\instructions_screen\InstructionsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\instructions_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screensaver_screen\ParticleEffect.hpp">
+      <Filter>Header Files\gui\screensaver_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screensaver_screen\ScreenSaverPresenter.hpp">
+      <Filter>Header Files\gui\screensaver_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screensaver_screen\ScreenSaverView.hpp">
+      <Filter>Header Files\gui\screensaver_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screensaver_screen\ScreenSaverViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screensaver_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\washing_screen\WashingPresenter.hpp">
+      <Filter>Header Files\gui\washing_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\washing_screen\WashingView.hpp">
+      <Filter>Header Files\gui\washing_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\washing_screen\WashingViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\washing_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

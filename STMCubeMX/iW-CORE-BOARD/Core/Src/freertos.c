@@ -49,8 +49,15 @@ osThreadId_t TouchGFXTaskHandle;
 const osThreadAttr_t TouchGFXTask_attributes = {
   .name = "GUI_Task",
   .priority = (osPriority_t) osPriorityNormal,
-  .stack_size = 4096 * 5
+  .stack_size = 4096 * 7
 };
+
+//osThreadId_t videoTaskHandle;
+//const osThreadAttr_t videoTask_attributes = {
+//  .name = "videoTask",
+//  .stack_size = 1000 * 4,
+//  .priority = (osPriority_t) osPriorityLow,
+//};
 
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
@@ -63,7 +70,8 @@ const osThreadAttr_t defaultTask_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-extern void TouchGFX_Task(void* argument);;
+extern void TouchGFX_Task(void* argument);
+extern void videoTaskFunc(void *argument);
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
@@ -135,6 +143,8 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   TouchGFXTaskHandle = osThreadNew(TouchGFX_Task, NULL, &TouchGFXTask_attributes);
+
+//  videoTaskHandle = osThreadNew(videoTaskFunc, NULL, &videoTask_attributes);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */

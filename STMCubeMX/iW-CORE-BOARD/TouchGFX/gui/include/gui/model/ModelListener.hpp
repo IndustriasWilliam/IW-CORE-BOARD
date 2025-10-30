@@ -2,6 +2,7 @@
 #define MODELLISTENER_HPP
 
 #include <gui/model/Model.hpp>
+#include <gui/common/FrontendApplication.hpp>
 
 /**
  * ModelListener is the interface through which the Model can inform the currently
@@ -28,9 +29,15 @@ public:
         model = m;
     }
 
-    virtual void mcuLoadUpdated(uint8_t mcuLoad) {}
-    virtual void autoDemoTick() {}
-    virtual void autoDemoStart() {}
+    virtual void gotoScreenSaverMode()
+    {
+        static_cast<FrontendApplication*>(Application::getInstance())->gotoScreenSaverScreenNoTransition();
+    }
+
+    virtual void gotoWashingScreenMode()
+    {
+        static_cast<FrontendApplication*>(Application::getInstance())->gotoWashingScreenNoTransition();
+    }
 
 protected:
     Model* model;

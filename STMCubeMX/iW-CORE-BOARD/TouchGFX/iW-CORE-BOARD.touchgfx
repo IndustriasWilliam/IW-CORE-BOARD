@@ -2,858 +2,7 @@
   "Application": {
     "Screens": [
       {
-        "Name": "HallwayScreen",
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "windowBg",
-            "X": 109,
-            "Y": 35,
-            "Width": 260,
-            "Height": 140,
-            "RelativeFilename": "hallway\\window_bg.png"
-          },
-          {
-            "Type": "TiledImage",
-            "Name": "cloud_2",
-            "X": 271,
-            "Y": 49,
-            "Width": 93,
-            "Height": 79,
-            "FileName": "Hallway\\sky.png",
-            "OffsetX": 156
-          },
-          {
-            "Type": "TiledImage",
-            "Name": "cloud_1",
-            "X": 115,
-            "Y": 49,
-            "Width": 93,
-            "Height": 79,
-            "FileName": "Hallway\\sky.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "hallback",
-            "Width": 480,
-            "Height": 272,
-            "RelativeFilename": "hallway\\st_housedemo_ui_bg.png"
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonBathroom",
-            "X": 58,
-            "Y": 83,
-            "Width": 170,
-            "Height": 70,
-            "Pressed": "hallway\\bathroom_pressed.png",
-            "Released": "hallway\\bathroom_normal.png",
-            "Alpha": 0,
-            "Fadeable": true,
-            "Moveable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonKitchen",
-            "X": 250,
-            "Y": 83,
-            "Width": 170,
-            "Height": 70,
-            "Pressed": "hallway\\kitchen_pressed.png",
-            "Released": "hallway\\kitchen_normal.png",
-            "Alpha": 0,
-            "Fadeable": true,
-            "Moveable": true
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "GoToKitchen",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonKitchen"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "KitchenScreen"
-            }
-          },
-          {
-            "InteractionName": "GoToBathroom",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonBathroom"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "West",
-              "ActionComponent": "BathroomScreen"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "KitchenScreen",
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "background",
-            "Width": 480,
-            "Height": 272,
-            "RelativeFilename": "kitchen\\kitchen_ui_bg.png",
-            "Clickable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "buttoHallway",
-            "X": 2,
-            "Y": 2,
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "bathroom\\go_back_button.png",
-            "Released": "bathroom\\go_back_button.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageLight",
-            "Width": 360,
-            "Height": 239,
-            "Visible": false,
-            "RelativeFilename": "kitchen\\lights_on.png"
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonExtractorHood",
-            "X": 77,
-            "Width": 240,
-            "Height": 60,
-            "Pressed": "kitchen\\air_select.png",
-            "Released": "kitchen\\air_select.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonThermo",
-            "X": 22,
-            "Y": 68,
-            "Width": 80,
-            "Height": 80,
-            "Pressed": "kitchen\\termo_select.png",
-            "Released": "kitchen\\termo_select.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "buttonOven",
-            "X": 351,
-            "Y": 89,
-            "Width": 129,
-            "Height": 183,
-            "Alpha": 0,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "Y": 20,
-                "IconReleased": "kitchen\\oven_select.png",
-                "IconPressed": "kitchen\\oven_select.png"
-              }
-            ],
-            "Fadeable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "imageCookpot",
-            "X": 49,
-            "Y": 40,
-            "Width": 150,
-            "Height": 190,
-            "Visible": false,
-            "RelativeFilename": "kitchen\\cookpot_on.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageOvenOn",
-            "X": 375,
-            "Y": 137,
-            "Width": 105,
-            "Height": 80,
-            "Visible": false,
-            "RelativeFilename": "kitchen\\oven_on.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageHoodUI",
-            "X": 173,
-            "Y": 8,
-            "Width": 39,
-            "Height": 24,
-            "Visible": false,
-            "RelativeFilename": "kitchen\\fan_display_on.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageHomeUI",
-            "X": 43,
-            "Y": 98,
-            "Width": 38,
-            "Height": 26,
-            "Visible": false,
-            "RelativeFilename": "kitchen\\recipies_display_on.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageOvenUI",
-            "X": 415,
-            "Y": 96,
-            "Width": 32,
-            "Height": 21,
-            "Visible": false,
-            "RelativeFilename": "kitchen\\oven_display_on.png"
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "GoToHallway",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttoHallway"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "West",
-              "ActionComponent": "HallwayScreen"
-            }
-          },
-          {
-            "InteractionName": "InteractionEnterScreen",
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "startGlowAnimaton"
-            }
-          },
-          {
-            "InteractionName": "InteractionEnterExtractorHood",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonExtractorHood"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "ExtractorHoodScreen"
-            }
-          },
-          {
-            "InteractionName": "InteractionGoToOven",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonOven"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "OvenScreen"
-            }
-          },
-          {
-            "InteractionName": "InteractionGoToHomeControl",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonThermo"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "HomeControlScreen"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "BathtubScreen",
-        "CanvasBufferSize": 7200,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "background",
-            "Width": 480,
-            "Height": 272,
-            "RelativeFilename": "bathtub\\bathtub_ui_bg.png"
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonBathroom",
-            "Width": 70,
-            "Height": 60,
-            "Pressed": "bathtub\\top_go_back.png",
-            "Released": "bathtub\\top_go_back.png"
-          },
-          {
-            "Type": "Container",
-            "Name": "containerCircleLight",
-            "Y": 143,
-            "Width": 221,
-            "Height": 108,
-            "Components": [
-              {
-                "Type": "Circle",
-                "Name": "circleLight1",
-                "Width": 64,
-                "Height": 64,
-                "Color": {
-                  "Red": 204,
-                  "Green": 70,
-                  "Blue": 70
-                },
-                "CenterX": 32.0,
-                "CenterY": 32.0,
-                "Radius": 32.0,
-                "EndAngle": 360.0,
-                "CapPrecision": "Butt",
-                "Alpha": 0,
-                "Fadeable": true
-              },
-              {
-                "Type": "Circle",
-                "Name": "circleLight2",
-                "X": 66,
-                "Y": 1,
-                "Width": 64,
-                "Height": 64,
-                "Color": {
-                  "Red": 204,
-                  "Green": 70,
-                  "Blue": 70
-                },
-                "CenterX": 32.0,
-                "CenterY": 32.0,
-                "Radius": 32.0,
-                "EndAngle": 360.0,
-                "CapPrecision": "Butt",
-                "Alpha": 0,
-                "Fadeable": true
-              },
-              {
-                "Type": "Circle",
-                "Name": "circleLight3",
-                "X": 135,
-                "Y": 34,
-                "Width": 64,
-                "Height": 64,
-                "Color": {
-                  "Red": 204,
-                  "Green": 70,
-                  "Blue": 70
-                },
-                "CenterX": 32.0,
-                "CenterY": 32.0,
-                "Radius": 32.0,
-                "EndAngle": 360.0,
-                "CapPrecision": "Butt",
-                "Alpha": 0,
-                "Fadeable": true
-              }
-            ]
-          },
-          {
-            "Type": "Container",
-            "Name": "containerTempWheel",
-            "X": 480,
-            "Y": 64,
-            "Width": 146,
-            "Height": 196,
-            "Moveable": true,
-            "Components": [
-              {
-                "Type": "Image",
-                "Name": "imageTempWheelBg",
-                "Y": 2,
-                "Width": 146,
-                "Height": 194,
-                "RelativeFilename": "bathtub\\temperature_wheel\\temperature_bg.png",
-                "Moveable": true
-              },
-              {
-                "Type": "Image",
-                "Name": "imageSelectedTempMarker",
-                "Y": 90,
-                "Width": 146,
-                "Height": 64,
-                "RelativeFilename": "bathtub\\temperature_wheel\\gradient_center.png"
-              },
-              {
-                "Type": "ScrollWheel",
-                "Name": "scrollWheelTemperature",
-                "X": 4,
-                "Y": 61,
-                "Width": 138,
-                "Height": 124,
-                "SelectedItemOffset": 37,
-                "UseSelectedStyle": true,
-                "SelectedItemTemplateName": "BathtubWheelElementCenter",
-                "ItemTemplateName": "BathtubWheelElement",
-                "NumberofItems": 25,
-                "InitialElement": 10,
-                "Easing": "Back",
-                "EasingOption": "Out",
-                "SwipeAcceleration": 1.0,
-                "DragAcceleration": 1.0
-              },
-              {
-                "Type": "Image",
-                "Name": "imageTempWheelGradient",
-                "Y": 61,
-                "Width": 146,
-                "Height": 126,
-                "RelativeFilename": "bathtub\\temperature_wheel\\gradient_overlay.png"
-              },
-              {
-                "Type": "ToggleButton",
-                "Name": "toggleButtonTempUnit",
-                "X": 13,
-                "Y": 29,
-                "Width": 120,
-                "Height": 24,
-                "InitialStatePressed": true,
-                "Pressed": "bathtub\\temperature_wheel\\c_on.png",
-                "Released": "bathtub\\temperature_wheel\\f_on.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "imageWheelSelectTemp",
-                "X": -3,
-                "Y": 91,
-                "Width": 153,
-                "Height": 64,
-                "RelativeFilename": "bathtub\\wheel_select_top.png"
-              }
-            ]
-          },
-          {
-            "Type": "Container",
-            "Name": "containerLightColor",
-            "X": 480,
-            "Y": 64,
-            "Width": 146,
-            "Height": 196,
-            "Moveable": true,
-            "Components": [
-              {
-                "Type": "Image",
-                "Name": "imageColorWheel",
-                "Y": 1,
-                "Width": 146,
-                "Height": 194,
-                "RelativeFilename": "bathtub\\light color\\lightcolor_bg.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "imagePicker",
-                "X": 53,
-                "Y": 102,
-                "Width": 40,
-                "Height": 40,
-                "RelativeFilename": "bathtub\\light color\\lightcolor_selector_dot.png"
-              },
-              {
-                "Type": "ToggleButton",
-                "Name": "toggleButtonLight",
-                "X": 13,
-                "Y": 28,
-                "Width": 120,
-                "Height": 24,
-                "Pressed": "bathtub\\light color\\lighton.png",
-                "Released": "bathtub\\light color\\lightoff.png"
-              }
-            ]
-          },
-          {
-            "Type": "Container",
-            "Name": "containerJetControl",
-            "X": 480,
-            "Y": 64,
-            "Width": 146,
-            "Height": 196,
-            "Moveable": true,
-            "Components": [
-              {
-                "Type": "Image",
-                "Name": "imageJetWheelBg",
-                "Y": 2,
-                "Width": 146,
-                "Height": 194,
-                "RelativeFilename": "bathtub\\jets control\\jets_bg.png",
-                "Moveable": true
-              },
-              {
-                "Type": "Image",
-                "Name": "imageSelectedJetSpeedMarker",
-                "Y": 90,
-                "Width": 146,
-                "Height": 64,
-                "RelativeFilename": "bathtub\\temperature_wheel\\gradient_center.png"
-              },
-              {
-                "Type": "ScrollWheel",
-                "Name": "scrollWheelJetSpeed",
-                "X": 4,
-                "Y": 61,
-                "Width": 138,
-                "Height": 124,
-                "SelectedItemOffset": 37,
-                "UseSelectedStyle": true,
-                "SelectedItemTemplateName": "BathtubWheelElementCenter",
-                "IsCircular": true,
-                "ItemTemplateName": "BathtubWheelElement",
-                "NumberofItems": 3,
-                "Easing": "Back",
-                "EasingOption": "Out",
-                "SwipeAcceleration": 1.0,
-                "DragAcceleration": 1.0
-              },
-              {
-                "Type": "Image",
-                "Name": "imageJetSpeedWheelGradient",
-                "Y": 61,
-                "Width": 146,
-                "Height": 126,
-                "RelativeFilename": "bathtub\\temperature_wheel\\gradient_overlay.png"
-              },
-              {
-                "Type": "ToggleButton",
-                "Name": "toggleButtonJetSpeed",
-                "X": 13,
-                "Y": 29,
-                "Width": 120,
-                "Height": 24,
-                "Pressed": "bathtub\\light color\\lighton.png",
-                "Released": "bathtub\\light color\\lightoff.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "imageWheelSelectJet",
-                "X": -3,
-                "Y": 91,
-                "Width": 153,
-                "Height": 64,
-                "RelativeFilename": "bathtub\\wheel_select_top.png"
-              }
-            ]
-          },
-          {
-            "Type": "ToggleButton",
-            "Name": "toggleButtonPower",
-            "X": 410,
-            "Width": 70,
-            "Height": 60,
-            "Pressed": "bathtub\\power_icon.png",
-            "Released": "bathtub\\power_icon.png"
-          },
-          {
-            "Type": "Container",
-            "Name": "topBarButtonsContainer",
-            "X": 81,
-            "Y": -60,
-            "Width": 317,
-            "Height": 60,
-            "Moveable": true,
-            "Components": [
-              {
-                "Type": "RadioButton",
-                "Name": "radioButtonLight",
-                "X": 217,
-                "Width": 100,
-                "Height": 60,
-                "FileNameSelected": "bathtub\\light_on.png",
-                "FileNameSelectedPressed": "bathtub\\light_on.png",
-                "FileNameUnselected": "bathtub\\light_off.png",
-                "FileNameUnselectedPressed": "bathtub\\light_off.png",
-                "RadioButtonGroup": "radioButtonGroup"
-              },
-              {
-                "Type": "RadioButton",
-                "Name": "radioButtonJets",
-                "X": 108,
-                "Width": 100,
-                "Height": 60,
-                "FileNameSelected": "bathtub\\jets_on_img.png",
-                "FileNameSelectedPressed": "bathtub\\jets_on_img.png",
-                "FileNameUnselected": "bathtub\\jets_off_img.png",
-                "FileNameUnselectedPressed": "bathtub\\jets_off_img.png",
-                "RadioButtonGroup": "radioButtonGroup"
-              },
-              {
-                "Type": "RadioButton",
-                "Name": "radioButtonTemperature",
-                "Width": 100,
-                "Height": 60,
-                "FileNameSelected": "bathtub\\temp_on.png",
-                "FileNameSelectedPressed": "bathtub\\temp_on.png",
-                "FileNameUnselected": "bathtub\\temp_off.png",
-                "FileNameUnselectedPressed": "bathtub\\temp_off.png",
-                "RadioButtonGroup": "radioButtonGroup"
-              }
-            ]
-          },
-          {
-            "Type": "Image",
-            "Name": "imageWater",
-            "X": -19,
-            "Y": 272,
-            "Width": 265,
-            "Height": 115,
-            "RelativeFilename": "bathtub\\bathtub_water.png",
-            "Moveable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "imageBathtubFront",
-            "Y": 162,
-            "Width": 310,
-            "Height": 110,
-            "RelativeFilename": "bathtub\\bathtub_overlay.png"
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "InteractionGoToBathroom",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonBathroom"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "BathroomScreen"
-            }
-          },
-          {
-            "InteractionName": "InteractionPowerButtonClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButtonPower"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "powerButtonClicked"
-            }
-          },
-          {
-            "InteractionName": "InteractionLightButtonClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButtonLight"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "lightButtonClicked"
-            }
-          },
-          {
-            "InteractionName": "InteractionTempUnitButtonClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButtonTempUnit"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "tempUnitButtonClicked"
-            }
-          },
-          {
-            "InteractionName": "InteractionJetSpeedOnOffButtonClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "toggleButtonJetSpeed"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "jetSpeedOnOffButtonClicked"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "BathroomScreen",
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "background",
-            "Width": 480,
-            "Height": 272,
-            "RelativeFilename": "bathroom\\bathroom_bg.png",
-            "Clickable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonBack",
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "bathroom\\go_back_button.png",
-            "Released": "bathroom\\go_back_button.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageBathtubUI",
-            "X": 235,
-            "Y": 138,
-            "Width": 23,
-            "Height": 19,
-            "Visible": false,
-            "RelativeFilename": "bathroom\\bathtub_display_on.png"
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonBathtub",
-            "X": 84,
-            "Y": 142,
-            "Width": 230,
-            "Height": 130,
-            "Pressed": "bathroom\\bathtub_glow.png",
-            "Released": "bathroom\\bathtub_glow.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonWasher",
-            "X": 360,
-            "Width": 120,
-            "Height": 160,
-            "Pressed": "bathroom\\washing_machine_glow.png",
-            "Released": "bathroom\\washing_machine_glow.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonHomeControl",
-            "X": 36,
-            "Y": 57,
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "bathroom\\homecontrol_glow.png",
-            "Released": "bathroom\\homecontrol_glow.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "imageBathtubWater",
-            "X": 116,
-            "Y": 165,
-            "Width": 164,
-            "Height": 18,
-            "Visible": false,
-            "RelativeFilename": "bathroom\\bathtub_water_on.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageWasherActive",
-            "X": 389,
-            "Y": 59,
-            "Width": 53,
-            "Height": 53,
-            "Visible": false,
-            "RelativeFilename": "bathroom\\washing_machine_on.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageHomeUI",
-            "X": 60,
-            "Y": 83,
-            "Width": 13,
-            "Height": 9,
-            "Visible": false,
-            "RelativeFilename": "bathroom\\homecontrol_display_on.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageWasherUI",
-            "X": 423,
-            "Y": 17,
-            "Width": 23,
-            "Height": 18,
-            "Visible": false,
-            "RelativeFilename": "bathroom\\washing_machine_display_on.png"
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "GoToHallway",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonBack"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "West",
-              "ActionComponent": "HallwayScreen"
-            }
-          },
-          {
-            "InteractionName": "GoToWasher",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonWasher"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "WasherScreen"
-            }
-          },
-          {
-            "InteractionName": "GoToBathtub",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonBathtub"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "BathtubScreen"
-            }
-          },
-          {
-            "InteractionName": "ScreenIsEntered",
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "startGlowAnimaton"
-            }
-          },
-          {
-            "InteractionName": "GoToHomeControl",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonHomeControl"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "HomeControlScreen"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "WasherScreen",
+        "Name": "Washing",
         "OverrideDefaultBufferSize": true,
         "CanvasBufferSize": 14000,
         "Components": [
@@ -866,1685 +15,416 @@
           },
           {
             "Type": "Button",
-            "Name": "buttonBath",
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "washer\\washer_demo_icon.png",
-            "Released": "washer\\washer_demo_icon.png"
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "InteractionGoToBathroom",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonBath"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "BathroomScreen"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "ExtractorHoodScreen",
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "background",
-            "Width": 480,
-            "Height": 272,
-            "RelativeFilename": "extractorhood\\aircontrol_bg.png"
-          },
-          {
-            "Type": "Button",
-            "Name": "buttoKitchen",
-            "X": 15,
-            "Y": 15,
+            "Name": "aboutButton",
             "Width": 40,
             "Height": 40,
-            "Pressed": "kitchen\\homebtn.png",
-            "Released": "kitchen\\homebtn.png"
+            "Pressed": "Washer\\icon_about_40px.png",
+            "Released": "Washer\\icon_about_40px.png"
           },
           {
-            "Type": "Image",
-            "Name": "fanBg",
-            "X": 121,
-            "Width": 238,
-            "Height": 255,
-            "RelativeFilename": "extractorhood\\fan_bg.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "gitter",
-            "X": 143,
-            "Y": 16,
-            "Width": 194,
-            "Height": 194,
-            "RelativeFilename": "extractorhood\\gitter.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageFanBtn",
-            "X": 15,
-            "Y": 83,
-            "Width": 80,
-            "Height": 80,
-            "RelativeFilename": "extractorhood\\fan_button_on.png",
-            "Moveable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "imageLightBtn",
-            "X": 385,
-            "Y": 83,
-            "Width": 80,
-            "Height": 80,
-            "RelativeFilename": "extractorhood\\light_button_on.png",
-            "Moveable": true
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonFan",
-            "X": 15,
-            "Y": 74,
-            "Width": 81,
-            "Height": 137,
-            "ButtonTrigger": {
-              "Type": "ToggleButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "ImageButtonStyle",
-                "Y": 8,
-                "ImageReleased": "extractorhood\\extractorhoodbuttonoverlay.png",
-                "ImagePressed": "extractorhood\\extractorhoodbuttonoverlay.png"
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonLight",
-            "X": 385,
-            "Y": 74,
-            "Width": 81,
-            "Height": 137,
-            "ButtonTrigger": {
-              "Type": "ToggleButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "ImageButtonStyle",
-                "Y": 8,
-                "ImageReleased": "extractorhood\\extractorhoodbuttonoverlay.png",
-                "ImagePressed": "extractorhood\\extractorhoodbuttonoverlay.png"
-              }
-            ]
-          },
-          {
-            "Type": "CustomContainerInstance",
-            "Name": "fanKnob",
-            "Y": 192,
-            "Width": 480,
-            "Height": 80,
-            "CustomContainerDefinitionName": "FanKnob"
+            "Type": "Button",
+            "Name": "instructionsButton",
+            "X": 440,
+            "Width": 40,
+            "Height": 40,
+            "Pressed": "Washer\\icon_instructions_40px.png",
+            "Released": "Washer\\icon_instructions_40px.png"
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "InteractionGoToKitchen",
+            "InteractionName": "goToAboutScreen",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "buttoKitchen"
+              "TriggerComponent": "aboutButton"
             },
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "KitchenScreen"
+              "ActionComponent": "About"
             }
           },
           {
-            "InteractionName": "InteractionLightButtonCliked",
+            "InteractionName": "gotToInstructions",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "flexButtonLight"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "lightButtonClicked"
-            }
-          },
-          {
-            "InteractionName": "InteractionFanButtonClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "flexButtonFan"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "fanButttonClicked"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "RecipeScreen",
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "background",
-            "Y": 70,
-            "Width": 480,
-            "Height": 202,
-            "RelativeFilename": "recipes\\main_ui_bg.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "topbar",
-            "Width": 480,
-            "Height": 70,
-            "RelativeFilename": "recipes\\top_ui_bg.png"
-          },
-          {
-            "Type": "ScrollList",
-            "Name": "scrollListRecipeSelector",
-            "Y": 70,
-            "Width": 480,
-            "Height": 202,
-            "ItemTemplateName": "RecipeListElement",
-            "NumberofItems": 7,
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 1.0,
-            "DragAcceleration": 1.0
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonBack",
-            "Width": 70,
-            "Height": 70,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "X": 11,
-                "Y": 13,
-                "IconReleased": "recipes\\back_top_ui.png",
-                "IconPressed": "recipes\\back_top_ui.png"
-              }
-            ]
-          },
-          {
-            "Type": "TiledImage",
-            "Name": "tiledImageGradientTop",
-            "Y": 70,
-            "Width": 480,
-            "Height": 27,
-            "FileName": "recipes\\scroll_gradient_overlay.png"
-          },
-          {
-            "Type": "TiledImage",
-            "Name": "tiledImageGradientBottom",
-            "Y": 212,
-            "Width": 480,
-            "Height": 60,
-            "FileName": "recipes\\scroll_gradient_overlay.png",
-            "OffsetY": 114
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "InteractionReturnToKitchen",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "flexButtonBack"
+              "TriggerComponent": "instructionsButton"
             },
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "HomeControlScreen"
+              "ActionComponent": "Instructions"
             }
           },
           {
-            "InteractionName": "ChangeScreenCodeGen",
+            "InteractionName": "goToScreenSaver",
             "Trigger": {
               "Type": "TriggerNone"
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionCover",
-              "ScreenTransitionDirection": "North",
-              "ActionComponent": "RecipeSelectedScreen"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "RecipeSelectedScreen",
-        "Components": [
-          {
-            "Type": "ScrollableContainer",
-            "Name": "scrollableContainerRecipe",
-            "Width": 480,
-            "Height": 272,
-            "VerticalScrollEnabled": true,
-            "ScrollbarsAlpha": 255,
-            "Components": [
-              {
-                "Type": "Box",
-                "Name": "boxBg",
-                "Y": 320,
-                "Width": 480,
-                "Height": 1006,
-                "Color": {
-                  "Red": 42,
-                  "Green": 33,
-                  "Blue": 28
-                }
-              },
-              {
-                "Type": "Image",
-                "Name": "imageDish",
-                "Width": 480,
-                "Height": 320,
-                "RelativeFilename": "recipes\\paste_big_bg.png"
-              },
-              {
-                "Type": "FlexButton",
-                "Name": "flexButtonBack",
-                "Width": 82,
-                "Height": 78,
-                "ButtonTrigger": {
-                  "Type": "ClickButtonTrigger"
-                },
-                "ButtonStyles": [
-                  {
-                    "Type": "IconButtonStyle",
-                    "X": 22,
-                    "Y": 21,
-                    "IconReleased": "recipes\\go_back.png",
-                    "IconPressed": "recipes\\go_back.png"
-                  }
-                ]
-              },
-              {
-                "Type": "Image",
-                "Name": "imageDifficulty",
-                "X": 210,
-                "Y": 247,
-                "Width": 60,
-                "Height": 60,
-                "RelativeFilename": "recipes\\difficulty_icon.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "imageTimeIcon",
-                "X": 118,
-                "Y": 247,
-                "Width": 60,
-                "Height": 60,
-                "RelativeFilename": "recipes\\time_icon.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "imagePlatesIcon",
-                "X": 303,
-                "Y": 247,
-                "Width": 60,
-                "Height": 60,
-                "RelativeFilename": "recipes\\plates_icon.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "imageHeadline",
-                "X": 22,
-                "Y": 320,
-                "Width": 430,
-                "Height": 70,
-                "RelativeFilename": "recipes\\top_text.png"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredientAmount1",
-                "X": 28,
-                "Y": 459,
-                "Width": 50,
-                "Height": 22,
-                "TextId": "__SingleUse_5TR0",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredientAmount2",
-                "X": 28,
-                "Y": 483,
-                "Width": 72,
-                "Height": 22,
-                "TextId": "__SingleUse_FMN9",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredientAmount3",
-                "X": 28,
-                "Y": 507,
-                "Width": 58,
-                "Height": 22,
-                "TextId": "__SingleUse_XHI9",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredientAmount4",
-                "X": 28,
-                "Y": 531,
-                "Width": 101,
-                "Height": 22,
-                "TextId": "__SingleUse_ZJFC",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredientAmount5",
-                "X": 28,
-                "Y": 555,
-                "Width": 109,
-                "Height": 22,
-                "TextId": "__SingleUse_RBFH",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredientAmount6",
-                "X": 28,
-                "Y": 579,
-                "Width": 50,
-                "Height": 22,
-                "TextId": "__SingleUse_EO12",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredientAmount7",
-                "X": 28,
-                "Y": 603,
-                "Width": 70,
-                "Height": 22,
-                "TextId": "__SingleUse_7FOL",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredientAmount8",
-                "X": 28,
-                "Y": 627,
-                "Width": 70,
-                "Height": 22,
-                "TextId": "__SingleUse_0JIQ",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredientAmount9",
-                "X": 28,
-                "Y": 651,
-                "Width": 115,
-                "Height": 22,
-                "TextId": "__SingleUse_D64F",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredient1",
-                "X": 173,
-                "Y": 459,
-                "Width": 167,
-                "Height": 22,
-                "TextId": "__SingleUse_02PB",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredient2",
-                "X": 173,
-                "Y": 483,
-                "Width": 146,
-                "Height": 22,
-                "TextId": "__SingleUse_9B81",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredient3",
-                "X": 173,
-                "Y": 507,
-                "Width": 160,
-                "Height": 22,
-                "TextId": "__SingleUse_TUHX",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredient4",
-                "X": 173,
-                "Y": 531,
-                "Width": 181,
-                "Height": 22,
-                "TextId": "__SingleUse_L8WZ",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredient5",
-                "X": 173,
-                "Y": 555,
-                "Width": 58,
-                "Height": 22,
-                "TextId": "__SingleUse_OJMR",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredient6",
-                "X": 173,
-                "Y": 579,
-                "Width": 111,
-                "Height": 22,
-                "TextId": "__SingleUse_2Z2A",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredient7",
-                "X": 173,
-                "Y": 603,
-                "Width": 91,
-                "Height": 22,
-                "TextId": "__SingleUse_8CIN",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredient8",
-                "X": 173,
-                "Y": 627,
-                "Width": 224,
-                "Height": 22,
-                "TextId": "__SingleUse_8262",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredient9",
-                "X": 173,
-                "Y": 651,
-                "Width": 146,
-                "Height": 22,
-                "TextId": "__SingleUse_P9LZ",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 215,
-                  "Green": 215,
-                  "Blue": 215
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaIngredientHeadline",
-                "X": 28,
-                "Y": 423,
-                "Width": 116,
-                "Height": 27,
-                "TextId": "__SingleUse_WDID",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 134,
-                  "Blue": 7
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "Box",
-                "Name": "boxLine2",
-                "X": 30,
-                "Y": 708,
-                "Width": 420,
-                "Height": 1,
-                "Color": {
-                  "Red": 72,
-                  "Green": 53,
-                  "Blue": 43
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaMethodHeadline",
-                "X": 28,
-                "Y": 742,
-                "Width": 78,
-                "Height": 27,
-                "TextId": "__SingleUse_Q9JM",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 134,
-                  "Blue": 7
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaStep1Headline",
-                "X": 28,
-                "Y": 781,
-                "Width": 53,
-                "Height": 25,
-                "TextId": "__SingleUse_7091",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaStep1Directions",
-                "X": 28,
-                "Y": 813,
-                "Width": 395,
-                "Height": 66,
-                "TextId": "__SingleUse_WSB4",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 203,
-                  "Green": 202,
-                  "Blue": 202
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaStep2Headline",
-                "X": 28,
-                "Y": 904,
-                "Width": 53,
-                "Height": 25,
-                "TextId": "__SingleUse_TMNA",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaStep2Directions",
-                "X": 28,
-                "Y": 936,
-                "Width": 415,
-                "Height": 110,
-                "TextId": "__SingleUse_9PD7",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 203,
-                  "Green": 202,
-                  "Blue": 202
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaStep3Headline",
-                "X": 28,
-                "Y": 1075,
-                "Width": 53,
-                "Height": 25,
-                "TextId": "__SingleUse_2U30",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaStep3Directions",
-                "X": 28,
-                "Y": 1107,
-                "Width": 395,
-                "Height": 88,
-                "TextId": "__SingleUse_YOIM",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 203,
-                  "Green": 202,
-                  "Blue": 202
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "Box",
-                "Name": "boxLine3",
-                "X": 30,
-                "Y": 1229,
-                "Width": 156,
-                "Height": 1,
-                "Color": {
-                  "Red": 72,
-                  "Green": 53,
-                  "Blue": 43
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "boxLine4",
-                "X": 292,
-                "Y": 1228,
-                "Width": 158,
-                "Height": 1,
-                "Color": {
-                  "Red": 72,
-                  "Green": 53,
-                  "Blue": 43
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaNutritionHeadline",
-                "X": 199,
-                "Y": 1220,
-                "Width": 76,
-                "Height": 19,
-                "TextId": "__SingleUse_W7DK",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaNutritionValue1",
-                "X": 48,
-                "Y": 1250,
-                "Width": 62,
-                "Height": 25,
-                "TextId": "__SingleUse_BJB2",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 134,
-                  "Blue": 7
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaNutritionValue2",
-                "X": 147,
-                "Y": 1250,
-                "Width": 20,
-                "Height": 25,
-                "TextId": "__SingleUse_QQCH",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 134,
-                  "Blue": 7
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaNutritionValue3",
-                "X": 208,
-                "Y": 1250,
-                "Width": 59,
-                "Height": 25,
-                "TextId": "__SingleUse_CR0P",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 134,
-                  "Blue": 7
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaNutritionValue4",
-                "X": 309,
-                "Y": 1250,
-                "Width": 30,
-                "Height": 25,
-                "TextId": "__SingleUse_0BIC",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 134,
-                  "Blue": 7
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaNutritionValue5",
-                "X": 392,
-                "Y": 1250,
-                "Width": 30,
-                "Height": 25,
-                "TextId": "__SingleUse_VKZG",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 134,
-                  "Blue": 7
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreatextAreaNutritionType1",
-                "X": 60,
-                "Y": 1280,
-                "Width": 39,
-                "Height": 14,
-                "TextId": "__SingleUse_ALL5",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 146,
-                  "Green": 144,
-                  "Blue": 143
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreatextAreaNutritionType2",
-                "X": 144,
-                "Y": 1280,
-                "Width": 26,
-                "Height": 14,
-                "TextId": "__SingleUse_GSXS",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 146,
-                  "Green": 144,
-                  "Blue": 143
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreatextAreaNutritionType3",
-                "X": 215,
-                "Y": 1280,
-                "Width": 45,
-                "Height": 14,
-                "TextId": "__SingleUse_SWEZ",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 146,
-                  "Green": 144,
-                  "Blue": 143
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreatextAreaNutritionType4",
-                "X": 303,
-                "Y": 1280,
-                "Width": 43,
-                "Height": 14,
-                "TextId": "__SingleUse_P13K",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 146,
-                  "Green": 144,
-                  "Blue": 143
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreatextAreaNutritionType5",
-                "X": 382,
-                "Y": 1280,
-                "Width": 51,
-                "Height": 14,
-                "TextId": "__SingleUse_LVUT",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 146,
-                  "Green": 144,
-                  "Blue": 143
-                },
-                "AutoSize": true
-              },
-              {
-                "Type": "Box",
-                "Name": "boxLine5",
-                "X": 27,
-                "Y": 1310,
-                "Width": 420,
-                "Height": 1,
-                "Color": {
-                  "Red": 72,
-                  "Green": 53,
-                  "Blue": 43
-                }
-              },
-              {
-                "Type": "Box",
-                "Name": "boxLine6",
-                "X": 27,
-                "Y": 1307,
-                "Width": 420,
-                "Height": 1,
-                "Color": {
-                  "Red": 72,
-                  "Green": 53,
-                  "Blue": 43
-                }
-              }
-            ]
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "InteractionGoToRecipeSelect",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "flexButtonBack"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionCover",
-              "ScreenTransitionDirection": "South",
-              "ActionComponent": "RecipeScreen"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "OvenScreen",
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "background",
-            "Width": 480,
-            "Height": 272,
-            "RelativeFilename": "oven_ui\\main_bg.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageButtomBar",
-            "Y": 192,
-            "Width": 480,
-            "Height": 80,
-            "RelativeFilename": "oven_ui\\bottombar.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "Container",
-            "Name": "containerScreenElements",
-            "Width": 480,
-            "Height": 272,
-            "Components": [
-              {
-                "Type": "Image",
-                "Name": "imageButtomBarWheel",
-                "Y": 172,
-                "Width": 480,
-                "Height": 100,
-                "RelativeFilename": "oven_ui\\main oven select\\main_bundbar_bg.png",
-                "Alpha": 0,
-                "Fadeable": true
-              },
-              {
-                "Type": "Button",
-                "Name": "buttonKitchen",
-                "Width": 60,
-                "Height": 60,
-                "Pressed": "oven_ui\\go_back_kitchen.png",
-                "Released": "oven_ui\\go_back_kitchen.png",
-                "Alpha": 0,
-                "Fadeable": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaOvenMode",
-                "X": 90,
-                "Y": 21,
-                "Width": 300,
-                "Height": 30,
-                "TextId": "OvenModeFan",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Alpha": 0,
-                "Fadeable": true
-              },
-              {
-                "Type": "Button",
-                "Name": "buttonStartStop",
-                "X": 169,
-                "Y": 200,
-                "Width": 140,
-                "Height": 64,
-                "Pressed": "oven_ui\\main oven select\\start_knap_pressed.png",
-                "Released": "oven_ui\\main oven select\\start_knap.png",
-                "Alpha": 0,
-                "Fadeable": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaTemperature",
-                "Y": 210,
-                "Width": 120,
-                "Height": 41,
-                "TextId": "__SingleUse_MBA9",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Alpha": 0,
-                "Wildcard1": {
-                  "TextId": "__SingleUse_I80A",
-                  "UseBuffer": true,
-                  "BufferSize": 4
-                },
-                "Fadeable": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaTimer",
-                "X": 338,
-                "Y": 210,
-                "Width": 140,
-                "Height": 41,
-                "TextId": "__SingleUse_0G3E",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Alpha": 0,
-                "Wildcard1": {
-                  "UseBuffer": true,
-                  "BufferSize": 3
-                },
-                "Wildcard2": {
-                  "UseBuffer": true,
-                  "BufferSize": 3
-                },
-                "Fadeable": true
-              },
-              {
-                "Type": "Button",
-                "Name": "buttonTemperature",
-                "Y": 192,
-                "Width": 165,
-                "Height": 80,
-                "Pressed": "oven_ui\\main oven select\\buttonoverlay.png",
-                "Released": "oven_ui\\main oven select\\buttonoverlay.png"
-              },
-              {
-                "Type": "Button",
-                "Name": "buttonTimer",
-                "X": 315,
-                "Y": 192,
-                "Width": 165,
-                "Height": 80,
-                "Pressed": "oven_ui\\main oven select\\buttonoverlay.png",
-                "Released": "oven_ui\\main oven select\\buttonoverlay.png"
-              },
-              {
-                "Type": "Button",
-                "Name": "buttonOk",
-                "X": 170,
-                "Y": 200,
-                "Width": 140,
-                "Height": 64,
-                "Visible": false,
-                "Pressed": "oven_ui\\set temperature\\ok_button_pressed.png",
-                "Released": "oven_ui\\set timer\\ok_button.png",
-                "Alpha": 0,
-                "Fadeable": true
-              },
-              {
-                "Type": "ScrollWheel",
-                "Name": "scrollWheelOvenProgram",
-                "X": -1,
-                "Y": 62,
-                "Width": 480,
-                "Height": 110,
-                "SelectedItemOffset": 184,
-                "UseSelectedStyle": true,
-                "SelectedItemTemplateName": "OvenWheelElement",
-                "IsHorizontal": true,
-                "IsCircular": true,
-                "ItemTemplateName": "OvenWheelElement",
-                "NumberofItems": 7,
-                "InitialElement": 3,
-                "Easing": "Back",
-                "EasingOption": "Out",
-                "SwipeAcceleration": 2.5,
-                "DragAcceleration": 1.0
-              }
-            ]
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "InteractionGoToKitchen",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonKitchen"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "KitchenScreen"
-            }
-          },
-          {
-            "InteractionName": "InteractionButtonPowerClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonStartStop"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "buttonTurnOnOff"
-            }
-          },
-          {
-            "InteractionName": "InteractionTempButtonClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonTemperature"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "tempButtonClicked"
-            }
-          },
-          {
-            "InteractionName": "InteractionTimerButtonClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonTimer"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "timerButtonClicked"
-            }
-          },
-          {
-            "InteractionName": "InteractionOkButtonClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonOk"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "okButtonClicked"
+              "ActionComponent": "ScreenSaver"
             }
           }
         ]
       },
       {
-        "Name": "HomeControlScreen",
+        "Name": "About",
         "Components": [
           {
-            "Type": "Image",
-            "Name": "background",
+            "Type": "Box",
+            "Name": "boxBackground",
             "Width": 480,
             "Height": 272,
-            "RelativeFilename": "homecontrol ui\\mainscreen\\main_bg_home_control.png"
-          },
-          {
-            "Type": "ScrollWheel",
-            "Name": "scrollWheelRoomSelector",
-            "Y": 60,
-            "Width": 480,
-            "Height": 135,
-            "SelectedItemOffset": 163,
-            "UseSelectedStyle": true,
-            "SelectedItemTemplateName": "HomeUIWheelElement",
-            "IsHorizontal": true,
-            "IsCircular": true,
-            "ItemTemplateName": "HomeUIWheelElement",
-            "NumberofItems": 5,
-            "InitialElement": 1,
-            "ItemMargin": 15,
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 3.0,
-            "DragAcceleration": 1.0
-          },
-          {
-            "Type": "ScrollWheel",
-            "Name": "scrollWheelRoomInfo",
-            "X": 43,
-            "Y": 53,
-            "Width": 390,
-            "Height": 146,
-            "Visible": false,
-            "IsHorizontal": true,
-            "IsCircular": true,
-            "ItemTemplateName": "RoomInfoWheelElements",
-            "NumberofItems": 2,
-            "Easing": "Cubic",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 1.0,
-            "DragAcceleration": 1.0
-          },
-          {
-            "Type": "Container",
-            "Name": "containerDevicesWheel",
-            "X": 51,
-            "Width": 378,
-            "Height": 272,
-            "Visible": false,
-            "Components": [
-              {
-                "Type": "ScrollList",
-                "Name": "scrollListKitchenDevices",
-                "X": 1,
-                "Width": 380,
-                "Height": 272,
-                "PaddingBefore": 63,
-                "ItemTemplateName": "DeviceInfoWheelElements",
-                "NumberofItems": 4,
-                "Easing": "Back",
-                "EasingOption": "Out",
-                "SwipeAcceleration": 1.7,
-                "DragAcceleration": 1.0,
-                "Moveable": true
-              },
-              {
-                "Type": "ScrollList",
-                "Name": "scrollListBathroomDevices",
-                "X": 429,
-                "Width": 380,
-                "Height": 272,
-                "PaddingBefore": 63,
-                "ItemTemplateName": "DeviceInfoWheelElements",
-                "NumberofItems": 3,
-                "Easing": "Back",
-                "EasingOption": "Out",
-                "SwipeAcceleration": 1.7,
-                "DragAcceleration": 1.0,
-                "Moveable": true
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "switchRoomLeft",
-            "Y": 81,
-            "Width": 52,
-            "Height": 133,
-            "Visible": false,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "X": 15,
-                "Y": 56,
-                "IconReleased": "homecontrol ui\\mainscreen\\arrow_left.png",
-                "IconPressed": "homecontrol ui\\mainscreen\\arrow_left_pressed.png"
-              }
-            ],
-            "Fadeable": true
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "switchRoomRight",
-            "X": 430,
-            "Y": 81,
-            "Width": 52,
-            "Height": 133,
-            "Visible": false,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "IconButtonStyle",
-                "X": 15,
-                "Y": 56,
-                "IconReleased": "homecontrol ui\\mainscreen\\arrow_right.png",
-                "IconPressed": "homecontrol ui\\mainscreen\\arrow_right_pressed.png"
-              }
-            ],
-            "Fadeable": true
-          },
-          {
-            "Type": "RadioButton",
-            "Name": "radioButtonTemperature",
-            "Y": 193,
-            "Width": 120,
-            "Height": 80,
-            "Alpha": 0,
-            "Selected": true,
-            "FileNameSelected": "homecontrol ui\\mainscreen\\temperature_selected.png",
-            "FileNameSelectedPressed": "homecontrol ui\\mainscreen\\temperature_selected.png",
-            "FileNameUnselected": "homecontrol ui\\mainscreen\\temperature_normal.png",
-            "FileNameUnselectedPressed": "homecontrol ui\\mainscreen\\temperature_normal.png",
-            "RadioButtonGroup": "radioButtonGroup",
-            "Fadeable": true
-          },
-          {
-            "Type": "RadioButton",
-            "Name": "radioButtonDevices",
-            "X": 120,
-            "Y": 193,
-            "Width": 120,
-            "Height": 80,
-            "Alpha": 0,
-            "FileNameSelected": "homecontrol ui\\mainscreen\\devices_selected.png",
-            "FileNameSelectedPressed": "homecontrol ui\\mainscreen\\devices_selected.png",
-            "FileNameUnselected": "homecontrol ui\\mainscreen\\devices_normal.png",
-            "FileNameUnselectedPressed": "homecontrol ui\\mainscreen\\devices_normal.png",
-            "RadioButtonGroup": "radioButtonGroup",
-            "Fadeable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonPersonalize",
-            "X": 360,
-            "Y": 193,
-            "Width": 120,
-            "Height": 80,
-            "Pressed": "homecontrol ui\\mainscreen\\pesonalize.png",
-            "Released": "homecontrol ui\\mainscreen\\pesonalize.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonMusicRecipes",
-            "X": 240,
-            "Y": 193,
-            "Width": 120,
-            "Height": 80,
-            "Pressed": "homecontrol ui\\mainscreen\\music.png",
-            "Released": "homecontrol ui\\mainscreen\\music.png",
-            "Alpha": 0,
-            "Fadeable": true
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
           },
           {
             "Type": "Image",
-            "Name": "imageTopGradient",
+            "Name": "imageBanner",
+            "Y": 46,
+            "Width": 480,
+            "Height": 119,
+            "RelativeFilename": "About\\banner.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "aboutText",
+            "X": 40,
+            "Y": 11,
+            "Width": 68,
+            "Height": 44,
+            "TextId": "AboutText",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Button",
+            "Name": "buttonback",
+            "Width": 40,
+            "Height": 40,
+            "Pressed": "Washer\\back_arrow.png",
+            "Released": "Washer\\back_arrow.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "pointImage",
+            "X": 32,
+            "Y": 49,
+            "Width": 114,
+            "Height": 122,
+            "RelativeFilename": "About\\about_selected.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "touchGFXText",
+            "Y": 182,
             "Width": 480,
             "Height": 90,
-            "Visible": false,
-            "RelativeFilename": "homecontrol ui\\device boxes\\top_gradient_overlay.png",
-            "Fadeable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonPreviousRoom",
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "homecontrol ui\\mainscreen\\go_back_button_bath.png",
-            "Released": "homecontrol ui\\mainscreen\\go_back_button_bath.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "buttonBack",
-            "Width": 60,
-            "Height": 60,
-            "Visible": false,
-            "Pressed": "homecontrol ui\\mainscreen\\go_back_button_pressed.png",
-            "Released": "homecontrol ui\\mainscreen\\go_back_button_pressed.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaHomeUIHeadline",
-            "X": 79,
-            "Y": 15,
-            "Width": 323,
-            "Height": 30,
-            "TextId": "HomeUIHeadlineRoomTemperatures",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 30,
-              "Green": 125,
-              "Blue": 200
-            },
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaDate",
-            "X": 392,
-            "Y": 11,
-            "Width": 75,
-            "Height": 14,
-            "TextId": "__SingleUse_DFI7",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 58,
-              "Green": 80,
-              "Blue": 110
-            },
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaTime",
-            "X": 392,
-            "Y": 25,
-            "Width": 75,
-            "Height": 14,
-            "TextId": "__SingleUse_D4P1",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 58,
-              "Green": 80,
-              "Blue": 110
-            },
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "glowTemp",
-            "X": 20,
-            "Y": 187,
-            "Width": 80,
-            "Height": 80,
-            "RelativeFilename": "homecontrol ui\\mainscreen\\select_glow.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "glowDevices",
-            "X": 140,
-            "Y": 187,
-            "Width": 80,
-            "Height": 80,
-            "RelativeFilename": "homecontrol ui\\mainscreen\\select_glow.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "glowRecipe",
-            "X": 260,
-            "Y": 187,
-            "Width": 80,
-            "Height": 80,
-            "RelativeFilename": "homecontrol ui\\mainscreen\\select_glow.png",
-            "Alpha": 0,
-            "Fadeable": true
-          },
-          {
-            "Type": "CustomContainerInstance",
-            "Name": "homeUISplashContainer",
-            "Width": 480,
-            "Height": 272,
-            "CustomContainerDefinitionName": "HomeUISplashContainer",
-            "Clickable": true
+            "RelativeFilename": "About\\touchgfx_txt.png"
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "GoToPrevRoom",
+            "InteractionName": "goToWasherScreen",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "buttonPreviousRoom"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "goToPrevRoom"
-            }
-          },
-          {
-            "InteractionName": "InteractionRadioDevicesSelected",
-            "Trigger": {
-              "Type": "TriggerRadioButtonSelected",
-              "TriggerComponent": "radioButtonDevices"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "radioDevicesSelected"
-            }
-          },
-          {
-            "InteractionName": "InteractionRadioTemperatureSelected",
-            "Trigger": {
-              "Type": "TriggerRadioButtonSelected",
-              "TriggerComponent": "radioButtonTemperature"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "radioTemperatureSelected"
-            }
-          },
-          {
-            "InteractionName": "InteractionRoomInfoLeftClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "switchRoomLeft"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "roomInfoLeftClicked"
-            }
-          },
-          {
-            "InteractionName": "InteractionRoomInfoRightClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "switchRoomRight"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "roomInfoRightClicked"
-            }
-          },
-          {
-            "InteractionName": "InteractionBackButtonPressed",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonBack"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "backButtonPressed"
-            }
-          },
-          {
-            "InteractionName": "MusicRecipesPressed",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonMusicRecipes"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "buttonMuiscRecipesPressed"
-            }
-          },
-          {
-            "InteractionName": "buttonPersonalizePressed",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonPersonalize"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "buttonPersPressed"
-            }
-          },
-          {
-            "InteractionName": "GoToBathRoom",
-            "Trigger": {
-              "Type": "TriggerNone"
+              "TriggerComponent": "buttonback"
             },
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "BathroomScreen"
+              "ActionComponent": "Washing"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Instructions",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "boxBackground",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
             }
           },
           {
-            "InteractionName": "GoToKitchen",
+            "Type": "Image",
+            "Name": "backgroundImage",
+            "Y": 44,
+            "Width": 480,
+            "Height": 199,
+            "RelativeFilename": "Instructions\\video_background.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "instructionsButtonText",
+            "X": 40,
+            "Y": 11,
+            "Width": 113,
+            "Height": 35,
+            "TextId": "InstructionsText",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Button",
+            "Name": "backButton",
+            "Width": 40,
+            "Height": 40,
+            "Pressed": "Washer\\back_arrow.png",
+            "Released": "Washer\\back_arrow.png"
+          },
+          {
+            "Type": "Video",
+            "Name": "washerVideo",
+            "X": 146,
+            "Y": 53,
+            "Width": 302,
+            "Height": 182,
+            "VideoFileName": "washer.avi",
+            "AutoPlay": true
+          },
+          {
+            "Type": "Button",
+            "Name": "videoPauseButton",
+            "X": 146,
+            "Y": 53,
+            "Width": 302,
+            "Height": 182,
+            "Pressed": "Instructions\\video_pause_button_302x182.png",
+            "Released": "Instructions\\video_pause_button_302x182.png",
+            "Alpha": 0
+          },
+          {
+            "Type": "Button",
+            "Name": "videoPlayButton",
+            "X": 146,
+            "Y": 53,
+            "Width": 302,
+            "Height": 182,
+            "Visible": false,
+            "Pressed": "Instructions\\video_play_button_302x182.png",
+            "Released": "Instructions\\video_play_button_302x182.png",
+            "Alpha": 0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "instructionsStepNr",
+            "X": 7,
+            "Y": 64,
+            "Width": 120,
+            "Height": 26,
+            "TextId": "VideoStep1",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "instructionsText",
+            "X": 7,
+            "Y": 90,
+            "Width": 120,
+            "Height": 126,
+            "TextId": "VideoText1",
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "goToWasherScreen",
             "Trigger": {
-              "Type": "TriggerNone"
+              "Type": "TriggerClicked",
+              "TriggerComponent": "backButton"
             },
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "KitchenScreen"
+              "ActionComponent": "Washing"
             }
           },
           {
-            "InteractionName": "GoToRecipeScreen",
+            "InteractionName": "videoPause",
             "Trigger": {
-              "Type": "TriggerNone"
+              "Type": "TriggerClicked",
+              "TriggerComponent": "videoPauseButton"
             },
             "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "RecipeScreen"
+              "Type": "ActionPause",
+              "ActionComponent": "washerVideo"
+            }
+          },
+          {
+            "InteractionName": "videoPlay",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "videoPlayButton"
+            },
+            "Action": {
+              "Type": "ActionPlay",
+              "ActionComponent": "washerVideo"
+            }
+          },
+          {
+            "InteractionName": "videoDone",
+            "Trigger": {
+              "Type": "TriggerVideoEnded",
+              "TriggerComponent": "washerVideo"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "videoPlayButton"
+            }
+          },
+          {
+            "InteractionName": "videoPauseButtonFadein",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "videoPauseButton"
+            },
+            "Action": {
+              "Type": "ActionFade",
+              "Easing": "Quart",
+              "EasingOption": "Out",
+              "Duration": 100,
+              "ActionComponent": "videoPauseButton"
+            }
+          },
+          {
+            "InteractionName": "videoPauseButtonFadeout",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "videoPauseButtonFadein"
+            },
+            "Action": {
+              "Type": "ActionFade",
+              "Alpha": 0,
+              "Easing": "Circ",
+              "EasingOption": "In",
+              "Duration": 100,
+              "ActionComponent": "videoPauseButton"
+            }
+          },
+          {
+            "InteractionName": "videoPlayButtonFadein",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "videoPlayButton"
+            },
+            "Action": {
+              "Type": "ActionFade",
+              "Easing": "Quart",
+              "EasingOption": "Out",
+              "Duration": 100,
+              "ActionComponent": "videoPlayButton"
+            }
+          },
+          {
+            "InteractionName": "videoPlayButtonFadeout",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "videoPlayButtonFadein"
+            },
+            "Action": {
+              "Type": "ActionFade",
+              "Alpha": 0,
+              "Easing": "Circ",
+              "EasingOption": "In",
+              "Duration": 100,
+              "ActionComponent": "videoPlayButton"
+            }
+          },
+          {
+            "InteractionName": "videoPlayBurronHide",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "videoPlayButtonFadeout"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "videoPlayButton"
+            }
+          },
+          {
+            "InteractionName": "videoPlayButtonShow",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "videoPauseButton"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "videoPlayButton"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "ScreenSaver",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "RelativeFilename": "ScreenSaver\\screensaver_background.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "logo",
+            "X": 59,
+            "Y": 90,
+            "Width": 362,
+            "Height": 93,
+            "RelativeFilename": "ScreenSaver\\TGFX_shadow_logo.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "quitButton",
+            "X": 415,
+            "Y": 216,
+            "Width": 55,
+            "Height": 42,
+            "Pressed": "ScreenSaver\\gotoMenu.png",
+            "Released": "ScreenSaver\\gotoMenu.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "goToWasherScreen",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "quitButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "endScreenSaverAnimation"
+            }
+          },
+          {
+            "InteractionName": "logoFadeout",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "goToWasherScreen"
+            },
+            "Action": {
+              "Type": "ActionFade",
+              "Alpha": 0,
+              "Easing": "Cubic",
+              "EasingOption": "In",
+              "Duration": 605,
+              "ActionComponent": "logo"
             }
           }
         ]
@@ -3066,1164 +946,6 @@
           }
         ],
         "Interactions": []
-      },
-      {
-        "Name": "RecipeListElement",
-        "Width": 480,
-        "Height": 75,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "imageRecipe",
-            "X": 5,
-            "Y": 5,
-            "Width": 100,
-            "Height": 70,
-            "RelativeFilename": "recipes\\pasta_01.png",
-            "Fadeable": true
-          },
-          {
-            "Type": "Box",
-            "Name": "boxLine",
-            "X": 125,
-            "Y": 2,
-            "Width": 335,
-            "Height": 1,
-            "Visible": false,
-            "Color": {
-              "Red": 72,
-              "Green": 53,
-              "Blue": 43
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaRecipeHeadline",
-            "X": 124,
-            "Y": 8,
-            "Width": 325,
-            "Height": 28,
-            "TextId": "RecipeHeadline1",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaRecipeText",
-            "X": 124,
-            "Y": 35,
-            "Width": 325,
-            "Height": 36,
-            "TextId": "RecipeText1",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 157,
-              "Green": 123,
-              "Blue": 100
-            },
-            "Fadeable": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "FanKnob",
-        "Width": 480,
-        "Height": 80,
-        "Components": [
-          {
-            "Type": "Container",
-            "Name": "containerKnob",
-            "X": 61,
-            "Width": 80,
-            "Height": 80,
-            "Components": [
-              {
-                "Type": "Image",
-                "Name": "imageKnob",
-                "Width": 80,
-                "Height": 80,
-                "RelativeFilename": "extractorhood\\spped_knob.png"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaKnob",
-                "X": 10,
-                "Y": 17,
-                "Width": 60,
-                "Height": 45,
-                "TextId": "__SingleUse_N64L",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 57,
-                  "Green": 57,
-                  "Blue": 57
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_3NAW",
-                  "UseBuffer": true,
-                  "BufferSize": 3
-                }
-              }
-            ]
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "BathtubWheelElementCenter",
-        "X": 10,
-        "Y": 7,
-        "Width": 138,
-        "Height": 48,
-        "Components": [
-          {
-            "Type": "TextArea",
-            "Name": "elementValue",
-            "X": 44,
-            "Y": 6,
-            "Width": 50,
-            "Height": 37,
-            "TextId": "__SingleUse_GG1M",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_H7JZ",
-              "UseBuffer": true,
-              "BufferSize": 4
-            }
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "BathtubWheelElement",
-        "X": 10,
-        "Y": 10,
-        "Width": 138,
-        "Height": 48,
-        "Components": [
-          {
-            "Type": "TextArea",
-            "Name": "elementValue",
-            "X": 44,
-            "Y": 9,
-            "Width": 50,
-            "Height": 37,
-            "TextId": "__SingleUse_7FW7",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_2TYP",
-              "UseBuffer": true,
-              "BufferSize": 4
-            }
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "OvenWheelElement",
-        "Width": 110,
-        "Height": 110,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "imageMode",
-            "X": 4,
-            "Y": 7,
-            "Width": 102,
-            "Height": 102,
-            "RelativeFilename": "oven_ui\\main oven select\\icon_hotair.png",
-            "Fadeable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "imageSelectedMode",
-            "X": 5,
-            "Y": 6,
-            "Width": 100,
-            "Height": 100,
-            "Visible": false,
-            "RelativeFilename": "oven_ui\\main oven select\\icon_hotair_active.png",
-            "Fadeable": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "OvenTimerWheelElement",
-        "Width": 128,
-        "Height": 48,
-        "Components": [],
-        "Interactions": []
-      },
-      {
-        "Name": "OvenTimerContainer",
-        "Width": 480,
-        "Height": 272,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "backgroundTimer",
-            "Width": 480,
-            "Height": 272,
-            "RelativeFilename": "oven_ui\\set timer\\background_bg.png"
-          },
-          {
-            "Type": "ScrollWheel",
-            "Name": "scrollWheelHours",
-            "X": 98,
-            "Y": 48,
-            "Width": 128,
-            "Height": 125,
-            "SelectedItemOffset": 42,
-            "UseSelectedStyle": true,
-            "SelectedItemTemplateName": "OvenTimerWheelCenterElement",
-            "IsCircular": true,
-            "ItemTemplateName": "OvenTimerWheelElement",
-            "NumberofItems": 24,
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 1.5,
-            "DragAcceleration": 1.0
-          },
-          {
-            "Type": "ScrollWheel",
-            "Name": "scrollWheelMinutes",
-            "X": 254,
-            "Y": 48,
-            "Width": 128,
-            "Height": 125,
-            "SelectedItemOffset": 42,
-            "UseSelectedStyle": true,
-            "SelectedItemTemplateName": "OvenTimerWheelCenterElement",
-            "IsCircular": true,
-            "ItemTemplateName": "OvenTimerWheelElement",
-            "NumberofItems": 60,
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 1.5,
-            "DragAcceleration": 1.0
-          },
-          {
-            "Type": "Image",
-            "Name": "imageHourSelectedItem",
-            "X": 84,
-            "Y": 83,
-            "Width": 156,
-            "Height": 64,
-            "RelativeFilename": "oven_ui\\set timer\\main_timer_select.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageMinuteSelectedItem",
-            "X": 240,
-            "Y": 83,
-            "Width": 156,
-            "Height": 64,
-            "RelativeFilename": "oven_ui\\set timer\\main_timer_select.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageGradientHour",
-            "X": 92,
-            "Y": 47,
-            "Width": 140,
-            "Height": 137,
-            "RelativeFilename": "oven_ui\\set timer\\gradient_timer_overlay.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "imageGradientMinutes",
-            "X": 248,
-            "Y": 47,
-            "Width": 140,
-            "Height": 137,
-            "RelativeFilename": "oven_ui\\set timer\\gradient_timer_overlay.png"
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "OvenTemperatureContainer",
-        "Width": 480,
-        "Height": 192,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "tempWheel",
-            "Y": 32,
-            "Width": 480,
-            "Height": 160,
-            "RelativeFilename": "oven_ui\\set temperature\\temp_wheel_01.png"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "selectedTemp",
-            "X": 157,
-            "Y": 9,
-            "Width": 136,
-            "Height": 49,
-            "TextId": "__SingleUse_52RS",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_RDMG",
-              "UseBuffer": true,
-              "BufferSize": 4
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "ovenHeat",
-            "X": 194,
-            "Y": 161,
-            "Width": 93,
-            "Height": 22,
-            "TextId": "__SingleUse_8X03",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "OvenTimerWheelCenterElement",
-        "Width": 128,
-        "Height": 48,
-        "Components": [],
-        "Interactions": []
-      },
-      {
-        "Name": "HomeUISplashContainer",
-        "Width": 480,
-        "Height": 272,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "background",
-            "Width": 480,
-            "Height": 272,
-            "RelativeFilename": "homecontrol ui\\splash ui\\homecontrol_ui_bg.png",
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaTemp",
-            "X": 190,
-            "Y": 88,
-            "Width": 101,
-            "Height": 108,
-            "TextId": "__SingleUse_HO82",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 52,
-              "Green": 75,
-              "Blue": 101
-            },
-            "AutoSize": true,
-            "Wildcard1": {
-              "TextId": "__SingleUse_7I27",
-              "UseBuffer": true,
-              "BufferSize": 3
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaTempUnit",
-            "X": 230,
-            "Y": 78,
-            "Width": 21,
-            "Height": 29,
-            "TextId": "__SingleUse_NBNH",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 52,
-              "Green": 75,
-              "Blue": 101
-            },
-            "AutoSize": true,
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaHeadline",
-            "X": 173,
-            "Y": 19,
-            "Width": 130,
-            "Height": 28,
-            "TextId": "HomeUISplashBathroom",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 52,
-              "Green": 75,
-              "Blue": 101
-            },
-            "AutoSize": true,
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaBottomline",
-            "X": 193,
-            "Y": 188,
-            "Width": 100,
-            "Height": 19,
-            "TextId": "__SingleUse_XE1F",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 52,
-              "Green": 75,
-              "Blue": 101
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaWakeUp",
-            "X": 120,
-            "Y": 223,
-            "Width": 241,
-            "Height": 30,
-            "TextId": "__SingleUse_P0VB",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 90,
-              "Green": 118,
-              "Blue": 146
-            },
-            "AutoSize": true,
-            "Fadeable": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "HomeUIWheelElement",
-        "Width": 120,
-        "Height": 135,
-        "Components": [],
-        "Interactions": []
-      },
-      {
-        "Name": "RoomInfo",
-        "X": 45,
-        "Width": 390,
-        "Height": 146,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "swipeBG",
-            "X": -45,
-            "Width": 480,
-            "Height": 146,
-            "RelativeFilename": "homecontrol ui\\mainscreen\\selectedtempbg.png",
-            "Fadeable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "imageAirHumidty",
-            "X": 11,
-            "Y": 42,
-            "Width": 100,
-            "Height": 80,
-            "RelativeFilename": "homecontrol ui\\mainscreen\\info_air_humidity.png",
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaAirHum",
-            "X": 11,
-            "Y": 12,
-            "Width": 98,
-            "Height": 17,
-            "TextId": "HomeUIInfo",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 77,
-              "Green": 108,
-              "Blue": 139
-            },
-            "AutoSize": true,
-            "Fadeable": true
-          },
-          {
-            "Type": "Container",
-            "Name": "containerLarge",
-            "X": 130,
-            "Y": 7,
-            "Width": 123,
-            "Height": 134,
-            "Components": [
-              {
-                "Type": "TextArea",
-                "Name": "textAreaBottomlineLarge",
-                "X": 27,
-                "Y": 120,
-                "Width": 73,
-                "Height": 14,
-                "TextId": "HomeUIWheelHeatingUpCenter",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 52,
-                  "Green": 75,
-                  "Blue": 103
-                },
-                "Fadeable": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaDevicesLarge",
-                "X": 29,
-                "Y": 55,
-                "Width": 69,
-                "Height": 70,
-                "TextId": "__SingleUse_VTBC",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 52,
-                  "Green": 75,
-                  "Blue": 101
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_P97C",
-                  "UseBuffer": true,
-                  "BufferSize": 3
-                },
-                "Fadeable": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaRoomLarge",
-                "X": 3,
-                "Y": 2,
-                "Width": 120,
-                "Height": 19,
-                "TextId": "__SingleUse_XE6F",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 52,
-                  "Green": 75,
-                  "Blue": 101
-                },
-                "Fadeable": true
-              },
-              {
-                "Type": "Image",
-                "Name": "imageSliderLarge",
-                "X": 2,
-                "Y": 35,
-                "Width": 120,
-                "Height": 80,
-                "RelativeFilename": "homecontrol ui\\mainscreen\\main_slider_temp.png",
-                "Fadeable": true
-              },
-              {
-                "Type": "TextArea",
-                "Name": "textAreaDegreeLarge",
-                "X": 57,
-                "Y": 48,
-                "Width": 15,
-                "Height": 21,
-                "TextId": "__SingleUse_BJOQ",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 46,
-                  "Green": 64,
-                  "Blue": 86
-                },
-                "AutoSize": true,
-                "Fadeable": true
-              }
-            ]
-          },
-          {
-            "Type": "Image",
-            "Name": "imageSchedule",
-            "X": 298,
-            "Y": 39,
-            "Width": 51,
-            "Height": 53,
-            "RelativeFilename": "homecontrol ui\\mainscreen\\schedule_icon.png",
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaTemperature",
-            "X": 48,
-            "Y": 46,
-            "Width": 44,
-            "Height": 27,
-            "TextId": "__SingleUse_GQOM",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 61,
-              "Green": 82,
-              "Blue": 106
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_4PDE",
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaHumidty",
-            "X": 48,
-            "Y": 90,
-            "Width": 44,
-            "Height": 27,
-            "TextId": "__SingleUse_H9W4",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 61,
-              "Green": 82,
-              "Blue": 106
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_4OJ6",
-              "UseBuffer": true,
-              "BufferSize": 10
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaSchedule",
-            "X": 285,
-            "Y": 10,
-            "Width": 77,
-            "Height": 19,
-            "TextId": "__SingleUse_SIW6",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 77,
-              "Green": 108,
-              "Blue": 139
-            },
-            "AutoSize": true,
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaScheduleDays",
-            "X": 284,
-            "Y": 95,
-            "Width": 79,
-            "Height": 19,
-            "TextId": "__SingleUse_YTVE",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 46,
-              "Green": 65,
-              "Blue": 87
-            },
-            "AutoSize": true,
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaScheduleTime",
-            "X": 267,
-            "Y": 111,
-            "Width": 111,
-            "Height": 14,
-            "TextId": "__SingleUse_HF53",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 46,
-              "Green": 65,
-              "Blue": 87
-            },
-            "AutoSize": true,
-            "Fadeable": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "DeviceInfo",
-        "Width": 380,
-        "Height": 124,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "imageDevice",
-            "Width": 380,
-            "Height": 124,
-            "RelativeFilename": "homecontrol ui\\device boxes\\bathtub_small.png",
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaDeviceName",
-            "X": 117,
-            "Y": 19,
-            "Width": 193,
-            "Height": 24,
-            "TextId": "HomeUIDeviceNameBathtub",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 53,
-              "Green": 174,
-              "Blue": 67
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaState1",
-            "X": 117,
-            "Y": 48,
-            "Width": 155,
-            "Height": 17,
-            "TextId": "HomeUIOvenInfo",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 77,
-              "Green": 108,
-              "Blue": 139
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_P8EB",
-              "UseBuffer": true,
-              "BufferSize": 20
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaState2",
-            "X": 117,
-            "Y": 67,
-            "Width": 141,
-            "Height": 17,
-            "TextId": "HomeUIOvenInfo",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 77,
-              "Green": 108,
-              "Blue": 139
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_DGKG",
-              "UseBuffer": true,
-              "BufferSize": 20
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaState3",
-            "X": 118,
-            "Y": 86,
-            "Width": 140,
-            "Height": 17,
-            "TextId": "HomeUIOvenInfo",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 77,
-              "Green": 108,
-              "Blue": 139
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_Q75Q",
-              "UseBuffer": true,
-              "BufferSize": 20
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaState1Value",
-            "X": 258,
-            "Y": 48,
-            "Width": 95,
-            "Height": 17,
-            "TextId": "HomeUIOvenInfoValue",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 77,
-              "Green": 108,
-              "Blue": 139
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_PPNC",
-              "UseBuffer": true,
-              "BufferSize": 20
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaState2Value",
-            "X": 243,
-            "Y": 67,
-            "Width": 110,
-            "Height": 17,
-            "TextId": "HomeUIOvenInfoValue",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 77,
-              "Green": 108,
-              "Blue": 139
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_AS7O",
-              "UseBuffer": true,
-              "BufferSize": 20
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaState3Value",
-            "X": 213,
-            "Y": 86,
-            "Width": 140,
-            "Height": 17,
-            "TextId": "HomeUIOvenInfoValue",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 77,
-              "Green": 108,
-              "Blue": 139
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_MCIX",
-              "UseBuffer": true,
-              "BufferSize": 20
-            },
-            "Fadeable": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "HomeUIWheelLargeElements",
-        "Width": 120,
-        "Height": 135,
-        "Components": [
-          {
-            "Type": "TextArea",
-            "Name": "textAreaBottomlineLarge",
-            "X": 24,
-            "Y": 120,
-            "Width": 73,
-            "Height": 14,
-            "TextId": "HomeUIWheelHeatingUpCenter",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 52,
-              "Green": 75,
-              "Blue": 103
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaDevicesLarge",
-            "X": 26,
-            "Y": 56,
-            "Width": 69,
-            "Height": 70,
-            "TextId": "__SingleUse_SAQX",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 52,
-              "Green": 75,
-              "Blue": 101
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_5KEZ",
-              "UseBuffer": true,
-              "BufferSize": 3
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaRoomLarge",
-            "Y": 3,
-            "Width": 120,
-            "Height": 19,
-            "TextId": "HomeUIWheelBathroomSelected",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 52,
-              "Green": 75,
-              "Blue": 101
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "imageSliderLarge",
-            "Y": 35,
-            "Width": 120,
-            "Height": 80,
-            "RelativeFilename": "homecontrol ui\\mainscreen\\main_slider_temp.png",
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaDegreeLarge",
-            "X": 54,
-            "Y": 48,
-            "Width": 15,
-            "Height": 21,
-            "TextId": "__SingleUse_TJYI",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 46,
-              "Green": 64,
-              "Blue": 86
-            },
-            "AutoSize": true,
-            "Fadeable": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "HomeUIWheelSmallElements",
-        "Width": 120,
-        "Height": 135,
-        "Components": [
-          {
-            "Type": "TextArea",
-            "Name": "textAreaBottomline",
-            "X": 24,
-            "Y": 110,
-            "Width": 73,
-            "Height": 15,
-            "TextId": "HomeUIWheelIdle",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 111,
-              "Green": 134,
-              "Blue": 158
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaDevices",
-            "X": 38,
-            "Y": 64,
-            "Width": 45,
-            "Height": 51,
-            "TextId": "__SingleUse_4VPO",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 52,
-              "Green": 75,
-              "Blue": 101
-            },
-            "Wildcard1": {
-              "TextId": "__SingleUse_AG3M",
-              "UseBuffer": true,
-              "BufferSize": 3
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaRoom",
-            "Y": 7,
-            "Width": 120,
-            "Height": 17,
-            "TextId": "HomeUIWheelBathroom",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 111,
-              "Green": 134,
-              "Blue": 158
-            },
-            "Fadeable": true
-          },
-          {
-            "Type": "Image",
-            "Name": "imageSlider",
-            "X": 20,
-            "Y": 48,
-            "Width": 80,
-            "Height": 53,
-            "RelativeFilename": "homecontrol ui\\mainscreen\\main_slider_temp_small.png",
-            "Alpha": 248,
-            "Fadeable": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaDegree",
-            "X": 55,
-            "Y": 57,
-            "Width": 10,
-            "Height": 14,
-            "TextId": "__SingleUse_7QP1",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 47,
-              "Green": 64,
-              "Blue": 87
-            },
-            "Alpha": 254,
-            "AutoSize": true,
-            "Fadeable": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "RoomInfoWheelElements",
-        "X": 45,
-        "Width": 390,
-        "Height": 146,
-        "Components": [],
-        "Interactions": []
-      },
-      {
-        "Name": "DeviceInfoWheelElements",
-        "Width": 380,
-        "Height": 124,
-        "Components": [],
-        "Interactions": []
-      },
-      {
-        "Name": "OvenSplashScreen",
-        "Width": 480,
-        "Height": 272,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "background",
-            "Width": 480,
-            "Height": 272,
-            "RelativeFilename": "oven_ui\\power\\oven_power_bg_clean.png"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaHour",
-            "X": 129,
-            "Y": 156,
-            "Width": 100,
-            "Height": 96,
-            "TextId": "__SingleUse_AZTP",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaMinute",
-            "X": 251,
-            "Y": 156,
-            "Width": 100,
-            "Height": 96,
-            "TextId": "__SingleUse_BVWG",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaDivider",
-            "X": 229,
-            "Y": 156,
-            "Width": 22,
-            "Height": 96,
-            "TextId": "__SingleUse_X3W4",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 167,
-              "Green": 228,
-              "Blue": 246
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaAmPm",
-            "X": 333,
-            "Y": 212,
-            "Width": 40,
-            "Height": 29,
-            "TextId": "__SingleUse_ZVQC",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 167,
-              "Green": 228,
-              "Blue": 246
-            }
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "powerButton",
-            "Width": 480,
-            "Height": 272,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "ImageButtonStyle",
-                "ImageReleased": "oven_ui\\btn_bg.png",
-                "ImagePressed": "oven_ui\\btn_bg.png"
-              },
-              {
-                "Type": "IconButtonStyle",
-                "X": 170,
-                "Y": 40,
-                "IconReleased": "oven_ui\\power\\power_button_big.png",
-                "IconPressed": "oven_ui\\power\\power_button_pressed_big.png"
-              }
-            ]
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "screenPressed",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "powerButton"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "screenIsPressed"
-            }
-          }
-        ]
       }
     ],
     "Name": "MyApplication",
@@ -4232,7 +954,7 @@
       "Height": 272
     },
     "SelectedColorDepth": 24,
-    "StartupScreenName": "HallwayScreen",
+    "StartupScreenName": "ScreenSaver",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

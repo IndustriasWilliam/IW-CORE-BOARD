@@ -17,6 +17,7 @@ public:
 
     void tickEvent();
     void clickEvent(const ClickEvent& event);
+    virtual void handleDragEvent(const DragEvent& evt);
 
     virtual void rightButtonClicked();
     virtual void leftButtonClicked();
@@ -24,9 +25,7 @@ public:
     virtual void buttonPausedClicked();
 
     void setProgramTextAndTime(int16_t item);
-    void fadeOutProgramTexts();
-    void fadeOutProgramTextsNow();
-    void updateProgramTexts();
+    void fadeInOutProgramTexts(const int duration, const int delay, bool fadeIn);
     void gotoWaitingStart();
 
     Bitmap getSelectedIconBitmap(int16_t index) const;
@@ -84,12 +83,19 @@ protected:
     Callback<WasherContainer, const AnimatedImage&> centerAnimatedImageCallback;
     void centerAnimatedImageDone(const AnimatedImage&);
 
+    Callback<WasherContainer> washerWheelanimationEndedCallback;
+    void washerWheelanimationEndedHandler();
+
     int16_t currentItem;
     bool paused;
     uint16_t touchTimer;
-    uint32_t animationTimer;
     uint16_t currentProgram;
     uint16_t washingTime;
+    uint16_t animationTimer;
+    int16_t totalDrag;
+    const int washerProgramTextFadeDelay = 0;
+    const int washerProgramTextFadeDuration = 5;
+
 };
 
 #endif // WASHERCONTAINER_HPP
